@@ -1,0 +1,84 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Data Table Css -->
+    <link href="{{ asset('bundles/app/plugins/data-table/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/app/plugins/data-table/css/buttons.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/app/plugins/data-table/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="card-header-text">Grupos del sistema</h6><br>
+                        </div>
+                        <div class="col-md-6">
+                            <a type="button" href="{{ path('grupo_new') }}" class="btn btn-primary waves-effect waves-light f-right"> <i class="icofont icofont-plus m-r-5"></i>  Nuevo Grupo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-block">
+                    <table id="simpletable" class="table dt-responsive table-striped table-bordered nowrap table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nombre del grupo</th>
+                                <th>Descripción</th>
+                                <th>Módulos</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Nombre del grupo</th>
+                                <th>Descripción</th>
+                                <th>Módulos</th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            {% for group in groups %}
+                            <tr>
+                                <td>{{ group.name }}</td>
+                                <td>{{ group.description }}</td>
+                                <td>
+                                    {% for roles in group.roles %}
+                                        {{ roles }} <br>
+                                    {% endfor %}
+                                </td>
+                                <td class="action-icon">
+                                    <a href="{{ path('grupo_edit', { 'id': group.id }) }}" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                    <a href="{{ path('group_fastest_delete', { 'id': group.id }) }}" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <!-- Data Table Javascripts -->
+    <script src="{{ asset('bundles/app/plugins/data-table/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/plugins/data-table/js/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/plugins/data-table/js/jszip.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/plugins/data-table/js/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/plugins/data-table/js/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('bundles/app/plugins/data-table/js/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/plugins/data-table/js/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/plugins/data-table/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/plugins/data-table/js/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/plugins/data-table/js/responsive.bootstrap4.min.js') }}"></script>
+
+    <script src="{{ asset('bundles/app/pages/data-table.js') }}"></script>
+
+{% endblock javascripts %}

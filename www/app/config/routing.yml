@@ -1,0 +1,14 @@
+usuario:
+    resource: "@UsuarioBundle/Controller/"
+    type:     annotation
+
+grupousuario:
+        resource: "@FOSUserBundle/Resources/config/routing/group.xml"
+        prefix: /grupousuario
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

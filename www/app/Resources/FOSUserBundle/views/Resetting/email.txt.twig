@@ -1,0 +1,17 @@
+
+{% block subject %}
+    Recuperar contraseña
+{% endblock %}
+
+{% block body_text %}
+
+    Hola {{ user.username }}
+
+    Para cambiar la contraseña del sistema haga clic en el siguiente enlace:
+
+    {{ confirmationUrl }}
+
+{% endblock %}
+
+{% block body_html %}
+{% endblock %}

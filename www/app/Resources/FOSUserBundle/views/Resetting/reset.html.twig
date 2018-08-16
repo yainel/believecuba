@@ -1,0 +1,62 @@
+{% extends "base.html.twig" %}
+
+{% block header %}{% endblock %}
+{% block plegable %}{% endblock %}
+{% block mainmenu %}{% endblock %}
+{% block message %}{% endblock %}
+
+{% block content %}
+    <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="login-card card-block">
+                        {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'md-float-material' } }) }}
+                            <div class="text-center">
+                                <img src="{{ asset('bundles/app/images/logo-blue.png') }}">
+
+                            </div>
+
+                            <h3 class="text-center txt-primary">
+                                Introduzca sus datos
+                            </h3>
+
+                            <div class="md-input-wrapper">
+                                {{ form_widget(form.plainPassword.first, {'attr': {'class': 'md-form-control placeholder-no-fix'}}) }}
+                                <label>Nueva contraseña</label>
+                            </div>
+                            <div class="md-input-wrapper">
+                                {{ form_widget(form.plainPassword.second, {'attr': {'class': 'md-form-control placeholder-no-fix'}}) }}
+                                <label>Repetir nueva contraseña</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="rkmd-checkbox checkbox-rotate checkbox-ripple m-b-25">
+                                        {% if form_errors(form.plainPassword.first) %}
+                                            <i class="icofont icofont-lock text-danger"></i>
+                                            <span class="text-danger">Las contraseñas no coinciden</span>
+                                        {% else %}
+                                            <i class="icofont icofont-lock"></i>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-10 offset-xs-1">
+                                    <button type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">CAMBIAR CONTRASEÑA</button>
+                                </div>
+                            </div>
+                        {{ form_end(form) }}
+                        <!-- end of form -->
+                    </div>
+                    <!-- end of login-card -->
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+    </section>
+{% endblock content %}

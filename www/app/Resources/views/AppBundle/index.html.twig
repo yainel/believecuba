@@ -1,0 +1,784 @@
+{% extends "landing.html.twig" %}
+
+{% block content %}
+
+<!-- Nav-bar Start -->
+<!--<div class="container-fluid">-->
+<!--<nav class="navbar" data-spy="affix" data-offset-top="197">-->
+<nav class="navbar navbar-sticky-top navbar-light bg-facebook" data-spy="affix" data-offset-top="197">
+    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="container">
+        <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+            <ul class="nav navbar-nav pull-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio"><i class=" hidden-md-down icofont icofont-home"></i><div class="hidden-md-up">Inicio</div></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#informacion">Información</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#opiniones">Opiniones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#fotosyvideos">Fotos y Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#eventos">Eventos</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<!--</nav>-->
+<!--</div>-->
+<!-- Nav-bar Ends -->
+
+<!--Our Creatives Section Start-->
+<section id="inicio" class="section-tb our-creatives" style="background-image: url({{ asset('bundles/app/images/believecuba/bg-ny.jpg') }});">
+    <div class="container">
+        <div class="row team">
+            <div class="col-lg-3 col-md-12 text-center">
+                <div class=" team-block">
+                    <img class="img img-fluid" src="{{ asset('bundles/app/images/believecuba/logo.jpg') }}" alt="team1" />
+                    <div class="team-desc" style="border-radius: 5px 5px 0 20px;">
+                        <div class="team-name"><h4>Believecuba</h4></div>
+                        <div class="team-position txt-primary">@believecuba</div>
+                        <ul class="team-socials">
+                            <li class="fb"><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                            <li class="twt"><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+                            <li class="skype"><a href="#"><i class="icofont icofont-social-skype"></i></a></li>
+                            <li class="l_in"><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12">
+                <div id="bs4-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#bs4-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#bs4-carousel" data-slide-to="1"></li>
+                        <li data-target="#bs4-carousel" data-slide-to="2"></li>
+                        <li data-target="#bs4-carousel" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox" style="border-radius: 0 20px 0 0; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.19);">
+                        <div style="height:384px;" class="carousel-item active">
+                            <img src="{{ asset('bundles/app/images/believecuba/carousel/logo_carousel.jpg') }}" alt="First slide" class="img-container">
+                        </div>
+                        <div style="height:384px;" class="carousel-item">
+                            <img src="{{ asset('bundles/app/images/believecuba/carousel/disneyworld.jpg') }}" alt="Second slide">
+                        </div>
+                        <div style="height:384px;" class="carousel-item">
+                            <img src="{{ asset('bundles/app/images/believecuba/carousel/paris.jpg') }}" alt="Third slide">
+                        </div>
+                        <div style="height:384px;" class="carousel-item">
+                            <img src="{{ asset('bundles/app/images/believecuba/carousel/varadero.jpg') }}" alt="Third slide">
+                        </div>
+                    </div>
+                    <!-- end of carousel inner -->
+                    <a class="left carousel-control" href="#bs4-carousel" role="button" data-slide="prev">
+                        <span class="icon-prev" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#bs4-carousel" role="button" data-slide="next" style="border-radius: 0 20px 0 0;">
+                        <span class="icon-next" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!-- carousel indicator -->
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--Our Creatives Section Ends-->
+
+<!--Services start-->
+<section id="servicios">
+    <div class="section-bg">
+        <div class="container-fluid">
+            <div class="text-center">
+                <div class="title">
+                    <h2 class="title-center"> Servicios </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-6 col-sm-6 text-center  mb-25-xs">
+                    <div class="box-process">
+                        <p>
+                        <a href="#" class="ourpro-icon-wrap ourpro-icon-effect-8">
+                            <img src="{{ asset('bundles/app/images/believecuba/servicios/tramites_migratorios.jpg') }}" class="img-thumbnail">
+                        </a>
+                        </p>
+                        <h6>Trámites Migratorios</h6>
+                        <p>Gestionamos los trámites migratorios necesarios en la organización de su viaje.</p>
+                        <p class="text-primary">Duración variable • Precio variable</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-25-xs">
+                    <div class="box-process">
+                        <p>
+                            <a href="#" class="ourpro-icon-wrap ourpro-icon-effect-8">
+                                <img src="{{ asset('bundles/app/images/believecuba/servicios/paquete_vacacional.jpg') }}" class="img-thumbnail">
+                            </a>
+                        </p>
+                        <h6>Paquetes Vacacionales</h6>
+                        <p>Creamos el paquete vacacional perfecto para cada cliente, comparando precios de hoteles, vuelos, excursiones, shows y eventos para hacer de sus vacaciones una aventura inolvidable.</p>
+                        <p class="text-primary">30 Minutos • Precio variable</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 text-center">
+                    <div class="box-process">
+                        <p>
+                            <a href="#" class="ourpro-icon-wrap ourpro-icon-effect-8">
+                                <img src="{{ asset('bundles/app/images/believecuba/servicios/renta_autos.jpg') }}" class="img-thumbnail">
+                            </a>
+                        </p>
+                        <h6>Renta de Autos</h6>
+                        <p>Ofrecemos renta en todas las categorías.</p>
+                        <p class="text-primary">30 Minutos • Precio variable</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-25-xs">
+                    <div class="box-process">
+                        <p>
+                            <a href="#" class="ourpro-icon-wrap ourpro-icon-effect-8">
+                                <img src="{{ asset('bundles/app/images/believecuba/servicios/hoteles.jpg') }}" class="img-thumbnail">
+                            </a>
+                        </p>
+                        <h6>Hoteles</h6>
+                        <p>Brindamos reservas de Hoteles con grandes descuentos en más de 120.000 destinos en todo el mundo.</p>
+                        <p class="text-primary">30 Minutos • Precio variable</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 text-center">
+                    <div class="box-process">
+                        <p>
+                            <a href="#" class="ourpro-icon-wrap ourpro-icon-effect-8">
+                                <img src="{{ asset('bundles/app/images/believecuba/servicios/vuelos.jpg') }}" class="img-thumbnail">
+                            </a>
+                        </p>
+                        <h6>Vuelos</h6>
+                        <p>Reservas de boletos aéreos para vuelos nacionales e internacionales.</p>
+                        <p class="text-primary">30 Minutos • Precio variable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Services Ends-->
+<!--AboutUs Start Section-->
+<section >
+    <div id="historia" class="container-fluid about-sec">
+        <div class="row d-flex about-sec">
+            <div class="col-md-6 col-sm-12 p-0">
+                <img src="{{ asset('bundles/app/images/blog/blog1.jpg') }}" class="img" alt="">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 tablet-sc">
+                            <h2 class="title-center">BELIEVECUBA</h2>
+                            <h6>Viajar es añadir vida a la vida!!!</h6>
+                            <p>
+                                (...)aumenta tu creatividad; mejora tu capacidad de resolver problemas; te hace más humilde; abre tu mente; aumenta la lucidez; te hace más feliz, más paciente; te hace trabajar bien; te ayuda a superar una perdida y a sentirte Vivo.
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="icofont icofont-group"></i>
+                                    <p><strong>Invita a tus amigos </strong> a indicar que les gusta esta página.</p>
+                                </li>
+                                <li>
+                                    <i class="icofont icofont-like"></i>
+                                    <p>A <strong> 1.894 </strong> personas les gusta esto.</p>
+                                </li>
+                                <li>
+                                    <i class="icofont icofont-rss-feed"></i>
+                                    <p><strong> 1.951 </strong> personas siguen esto</p>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--AboutUs End Section-->
+
+<!--Pricing List Section Starts-->
+<section id="informacion" class="section-bg">
+    <div class="container">
+        <div class="row text-center">
+            <div class="title">
+                <h2 class="title-center"> Información </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="pricing-table">
+                    <div class="pricing-table-header">
+                        <h3>Contacto</h3>
+                    </div>
+                    <ul class="pricing-table-items">
+                        <li>
+                            <i class="icofont icofont-plane-ticket"></i> Agencia de turismo
+                        </li>
+                        <li>
+                            <i class="icofont icofont-ui-cell-phone"></i> +1 702-800-1750
+                        </li>
+                        <li>
+                            <i class="icofont icofont-globe"></i> www.believecuba.com
+                        </li>
+                        <li>
+                            <i class="icofont icofont-location-pin"></i> 2840 E Flamingo Rd Suite C 89121 Las Vegas.
+                        </li>
+                        <li>
+                            <i class="icofont icofont-ui-messaging"></i> Los mensajes se responden normalmente en una hora.
+                        </li>
+                        <li>
+                            <i class="icofont icofont-flag"></i> Página creada el 9 de abril de 2017.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-table">
+                    <div class="pricing-table-header">
+                        <h3 class="free-pricing">Horarios
+                        </h3>
+                        <label class="pricing-new">Abierto ahora</label>
+                    </div>
+                    <ul class="pricing-table-items">
+                        <li>
+                            <i class="icofont icofont-close"></i> Lunes : 9:00 - 18:00
+                        </li>
+                        <li>
+                            <i class="icofont icofont-close"></i> Martes : 9:00 - 17:00
+                        </li>
+                        <li>
+                            <i class="icofont icofont-check"></i> Miércoles : 9:00 - 17:00 <code>HOY</code>
+                        </li>
+                        <li>
+                            <i class="icofont icofont-close"></i> Jueves : 9:00 - 18:00
+                        </li>
+                        <li>
+                            <i class="icofont icofont-close"></i> Viernes : 9:00 - 18:00
+                        </li>
+                        <li>
+                            <i class="icofont icofont-close"></i> Sábado : 9:00 - 18:00
+                        </li>
+                         <li>
+                            <i class="icofont icofont-close"></i> Domingo : CERRADO
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-table">
+                    <div class="pricing-table-header">
+                        <h3>Dónde estamos?
+                        </h3>
+                    </div>
+                    <img src="{{ asset('bundles/app/images/believecuba/map_default.png') }}" class="img-thumbnail" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Pricing List  Section Ends-->
+
+<!--Join With Us Section Stars-->
+<section id="joinus" class="join-us">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-12">
+                <h3 class="text-center">Somos una Agencia de Viajes con más de 5 años de experiencia. Brindamos atención personalizada en las reservas de boletos, hoteles, renta de autos, vacaciones al Caribe, Europa y dentro de Estados Unidos.
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Join With Us Section Ends-->
+
+<!--Testimonials Section Starts-->
+<section id="opiniones" data-jarallax='{"speed": 0.2}' class="jarallax testimonial text-center testimonial-bg"
+         style="background-image: url({{ asset('bundles/app/images/believecuba/carousel/logo_carousel_dark.jpg') }});">
+    <div class="container section-tb">
+        <div class="row d-flex">
+            <div class="col-md-12">
+                <!-- TESTIMONIAL CONTAINER  -->
+                <div class="text-center">
+                    <div class="title">
+                        <h2 class="title-center"> Opiniones </h2>
+                    </div>
+                </div>
+                <div id="testimonial-slider" class="testimonial-slider">
+                    <div>
+                        <div class="col-md-8 col-sm-12 col-xs-12 offset-md-2 text-center">
+                            <strong>
+                                 1. Me encantó la atención, enseguida me atendieron con la renta de mi carro, en excelentes condiciones y todo bien rápido. Estoy sumamente agradecida y se los recomiendo para que no escojan otro lugar donde rentar su carro, de verdad impresionada. Me encanto colaborar con ustedes muchas gracias.
+                            </strong>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-md-8 col-sm-12 col-xs-12 offset-md-2 text-center">
+                            <strong>
+                                2. Me siento muy satisfecho con el trabajo y la atención de estos especialistas y apasionados de Believecuba. Todo salió según lo planificado. Exelente atención aquí en Las Vegas y una buena coordinación con Cuba. Los felicito.
+                            </strong>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-md-8 col-sm-12 col-xs-12 offset-md-2 text-center">
+                            <strong>
+                                3. Holisticly empower leveraged ROI whereas effective web-readiness. Completely enable
+                                emerging
+                                meta-services with cross-platform web services. Quickly initiate inexpensive total
+                                linkage rather
+                                than extensible scenarios. Holisticly empower leveraged ROI whereas effective
+                                web-readiness.
+                            </strong>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-md-8 col-sm-12 col-xs-12 offset-md-2 text-center">
+                            <strong>
+                                4. Holisticly empower leveraged ROI whereas effective web-readiness. Completely enable
+                                emerging
+                                meta-services with cross-platform web services. Quickly initiate inexpensive total
+                                linkage rather
+                                than extensible scenarios. Holisticly empower leveraged ROI whereas effective
+                                web-readiness.
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+                <div id="testimonial-carousel" class="testimonial-thumbs">
+                    <div>
+                        <img src="{{ asset('bundles/app/images/landingpage/testimonials1.png') }}" alt=""/>
+                        <div>
+                            <h5 class="text-uppercase">Janny Guanche</h5>
+                            <h6>16 de Mayo de 2018</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="{{ asset('bundles/app/images/landingpage/testimonials2.png') }}" alt=""/>
+                        <div>
+                            <h5 class="text-uppercase">Alberto Matienzo</h5>
+                            <h6>1 de Junio de 2018</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="{{ asset('bundles/app/images/landingpage/testimonials3.png') }}" alt=""/>
+                        <div>
+                            <h5 class="text-uppercase">Elizabeth Doe</h5>
+                            <h6>13 de Febrero de 2018</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="{{ asset('bundles/app/images/landingpage/testimonials2.png') }}" alt=""/>
+                        <div>
+                            <h5 class="text-uppercase">Amit Shah</h5>
+                            <h6>29 de Abril</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Testimonials Section Ends-->
+
+<!--What We Do Section Start-->
+<section id="fotosyvideos" class="section-bg">
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="title">
+                <h2 class="title-center">Fotos y Videos</h2>
+            </div>
+        </div>
+        <div class="port-tab">
+            <div class="port-filt-group">
+                <ul class="portfolioFilter text-center">
+                    <li>
+                        <button data-filter="*" class="btn current">Todos</button>
+                    </li>
+                    <li>
+                        <button data-filter=".pic" class="btn">Fotos</button>
+                    </li>
+                    <li>
+                        <button data-filter=".vid" class="btn">Videos</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid">
+                <div class="portfolioContainer">
+                    <div class="col-md-3 col-sm-6 col-xs-12 pic grid-item ">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/believecuba/fotos/pic001.jpg') }}" alt="Portfolio1">
+                            <a class="example-image-link" href="{{ asset('bundles/app/images/believecuba/fotos/pic001.jpg') }}" data-lightbox="example-1">
+                                <div class="port-content d-flex">
+                                    <div class="port-text">
+                                        <i class="ion-plus"></i>
+                                        <h4>Una vez que viajas, el viaje nunca termina. La mente nunca puede desprenderse del viaje.”
+                                            Pat Conroy</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 pic grid-item ">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/believecuba/fotos/pic002.jpg') }}" alt="Portfolio1">
+                            <a class="example-image-link" href="{{ asset('bundles/app/images/believecuba/fotos/pic002.jpg') }}" data-lightbox="example-1">
+                                <div class="port-content d-flex">
+                                    <div class="port-text">
+                                        <i class="ion-plus"></i>
+                                        <h4>Comentario sobre el destino</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 pic grid-item ">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/believecuba/fotos/pic003.jpg') }}" alt="Portfolio1">
+                            <a class="example-image-link" href="{{ asset('bundles/app/images/believecuba/fotos/pic003.jpg') }}" data-lightbox="example-1">
+                                <div class="port-content d-flex">
+                                    <div class="port-text">
+                                        <i class="ion-plus"></i>
+                                        <h4>Comentario sobre el destino</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 pic grid-item ">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/believecuba/fotos/pic004.jpg') }}" alt="Portfolio1">
+                            <a class="example-image-link" href="{{ asset('bundles/app/images/believecuba/fotos/pic004.jpg') }}" data-lightbox="example-1">
+                                <div class="port-content d-flex">
+                                    <div class="port-text">
+                                        <i class="ion-plus"></i>
+                                        <h4>Comentario sobre el destino</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 pic grid-item ">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/believecuba/fotos/pic005.jpg') }}" alt="Portfolio1">
+                            <a class="example-image-link" href="{{ asset('bundles/app/images/believecuba/fotos/pic005.jpg') }}" data-lightbox="example-1">
+                                <div class="port-content d-flex">
+                                    <div class="port-text">
+                                        <i class="ion-plus"></i>
+                                        <h4>Comentario sobre el destino</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 pic grid-item ">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/believecuba/fotos/pic006.jpg') }}" alt="Portfolio1">
+                            <a class="example-image-link" href="{{ asset('bundles/app/believecuba/fotos/pic006.jpg') }}" data-lightbox="example-1">
+                                <div class="port-content d-flex">
+                                    <div class="port-text">
+                                        <i class="ion-plus"></i>
+                                        <h4>Comentario sobre el destino</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 pic grid-item">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/believecuba/fotos/pic007.jpg') }}" alt="Portfolio2">
+                            <a class="example-image-link" href="{{ asset('bundles/app/images/believecuba/fotos/pic007.jpg') }}" data-lightbox="example-1">
+                                <div class="port-content d-flex">
+                                    <div class="port-text">
+                                        <i class="ion-plus"></i>
+                                        <h4>Comentario sobre el destino</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 pic grid-item">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/believecuba/fotos/pic008.jpg') }}" alt="Portfolio3">
+                            <a class="example-image-link" href="{{ asset('bundles/app/images/believecuba/fotos/pic008.jpg') }}" data-lightbox="example-1">
+                                <div class="port-content d-flex">
+                                    <div class="port-text">
+                                        <i class="ion-plus"></i>
+                                        <h4>Comentario sobre el destino</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 pic grid-item">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/landingpage/portfolio4.jpg') }}" alt="Portfolio14">
+                            <a class="example-image-link" href="{{ asset('bundles/app/images/landingpage/getin4-big.jpg') }}" data-lightbox="example-1">
+                                <div class="port-content d-flex">
+                                    <div class="port-text">
+                                        <i class="ion-plus"></i>
+                                        <h4>Comentario sobre el destino</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 vid grid-item">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/landingpage/portfolio6.jpg') }}" alt="Portfolio6">
+                            <div class="port-content d-flex">
+                                <div class="port-text">
+                                    <i class="ion-plus"></i>
+                                    <h4>project name</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 vid price grid-item">
+                        <div class="text-center port-main" style="height: 300px; width: 100%;">
+                            <iframe
+                                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FPlayStation%2Fvideos%2F10155554431506803%2F&show_text=0&width=560"
+                                width="560" height="315"
+                                style="border:none;overflow:hidden"
+                                scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"
+                            ></iframe>
+                            <a class="example-image-link" href="#" data-lightbox="example-1">
+                                <iframe
+                                        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FPlayStation%2Fvideos%2F10155554431506803%2F&show_text=0&width=560"
+                                        width="560" height="315"
+                                        style="border:none;overflow:hidden"
+                                        scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"
+                                ></iframe>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 vid photography">
+                        <div class="text-center port-main">
+                            <img class="img img-fluid" src="{{ asset('bundles/app/images/landingpage/portfolio2.jpg') }}" alt="Portfolio12">
+                            <a class="example-image-link" href="{{ asset('bundles/app/images/landingpage/getin1-big.jpg') }}" data-lightbox="example-1">
+                                <div class="port-content d-flex">
+                                    <div class="port-text">
+                                        <i class="ion-plus"></i>
+                                        <h4>project name</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--What We Do Section Ends-->
+
+<!--Latest Blog Section Starts-->
+<section id="eventos" class="section-tb">
+    <div class="container">
+        <div class="row text-center">
+            <div class="title">
+                <h2 class="title-center">Eventos</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item col-lg-4 col-md-12 m-b-xs-25">
+                <div class="blog-img">
+                    <a href="#"> <img class="img-full" src="{{ asset('bundles/app/images/landingpage/blog-1.jpg') }}" alt="blog-img"> </a>
+                    <div class="blog-hover-detail d-flex">
+                        <div class="m-x-auto text-center">
+                            <h5 class="text-center">Especial!!! del 23 al 28 Abril</h5>
+                            <ul class="team-socials">
+                                <li class="fb"><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-details">
+                    <h6>Especial!!! del 23 al 28 Abril</h6>
+                    <div class="date-blog m-b-10"><span><i class="icofont icofont-ui-calendar"></i>23 de abr - 28 de abr</span></div>
+                    <p> Organizado por BelieveCuba </p>
+                    <div class="text-right">
+                        <span class="read-more"><a href="#" title="Read More">Leer más <i class="icofont icofont-double-right"></i></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-4 col-md-12 m-b-xs-25">
+                <div class="blog-img">
+                    <img class="img-full " src="{{ asset('bundles/app/images/landingpage/blog-2.jpg') }}" alt="blog-img">
+                    <div class="blog-hover-detail d-flex">
+                        <div class="m-x-auto text-center">
+                            <h5 class="text-center">Sorteo Boleto Gratis a Cuba!</h5>
+                            <ul class="team-socials">
+                                <li class="fb"><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-details">
+                    <h6>Sorteo Boleto Gratis a Cuba!</h6>
+                    <div class="date-blog m-b-10"><span><i class="icofont icofont-ui-calendar"></i> 20 jun 2017</span><span><i class="icofont icofont-ui-clock"></i> Sáb 12:00 PDT </span></div>
+                    <p>Organizado por BelieveCuba</p>
+                    <div class="text-right">
+                        <span class="read-more"><a href="#" title="Read More">Leer más <i class="icofont icofont-double-right"></i></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-4 col-md-12">
+                <div class="blog-img">
+                    <img class="img-full " src="{{ asset('bundles/app/images/landingpage/blog-3.jpg') }}" alt="blog-img">
+                    <div class="blog-hover-detail d-flex">
+                        <div class="m-x-auto text-center">
+                            <h5 class="text-center">Especial!!! del 23 al 28 Abril</h5>
+                            <ul class="team-socials">
+                                <li class="fb"><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-details">
+                    <h6>
+                        Especial!!! del 23 al 28 Abril
+                    </h6>
+                    <div class="date-blog m-b-10"><span><i class="icofont icofont-ui-calendar"></i> 20 jun 2017</span></div>
+                    <p> Organizado por BelieveCuba</p>
+                    <div class="text-right">
+                        <span class="read-more"><a href="#" title="Read More">Leer más <i class="icofont icofont-double-right"></i></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--Latest Blog Section Ends-->
+
+<!--Footer Section Starts-->
+<footer id="eventos"  data-jarallax='{"speed": 0.2}' class="jarallax section-tb footer" style="background-image: url({{ asset('bundles/app/images/landingpage/footer-bg.jpg') }});">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-about m-b-xs-15">
+                <h3 class="footer-header">Contacto</h3>
+                <p>Los mensajes se responden normalmente en una hora.</p>
+                <ul class="footer_widget">
+                    <li class="footer_address">
+                        <i class="icofont icofont-location-pin"></i>
+                        <h5>2840 E Flamingo Rd Suite C
+                            89121 Las Vegas</h5>
+                    </li>
+                    <li class="footer_contact">
+                        <i class="icofont icofont-ui-cell-phone"></i>
+                        <h5>+1 702-800-1750 </h5>
+                    </li>
+                    <li class="footer-web">
+                        <i class="icofont icofont-globe"></i>
+                        <h5>www.believecuba.com</h5>
+                    </li>
+                    <li class="footer_email">
+                        <i class="icofont icofont-close-circled"></i>
+                        <h5>Horario: 9:00 - 15:00</h5>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-gallery m-b-xs-15">
+                <h3 class="footer-header">Fotos</h3>
+                <ul>
+                    <li>
+                        <a href="#"><img src="{{ asset('bundles/app/images/landingpage/1.jpg') }}" alt="" class="img-fluid">
+                            <div class="footer-hvr-effect"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="{{ asset('bundles/app/images/landingpage/2.jpg') }}" alt="" class="img-fluid">
+                            <div class="footer-hvr-effect"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="{{ asset('bundles/app/images/landingpage/3.jpg') }}" alt="" class="img-fluid">
+                            <div class="footer-hvr-effect gradient_bg"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="{{ asset('bundles/app/images/landingpage/4.jpg') }}" alt="" class="img-fluid">
+                            <div class="footer-hvr-effect"></div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#"><img src="{{ asset('bundles/app/images/landingpage/5.jpg') }}" alt="" class="img-fluid">
+                            <div class="footer-hvr-effect"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="{{ asset('bundles/app/images/landingpage/6.jpg') }}" alt="" class="img-fluid">
+                            <div class="footer-hvr-effect"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-menu m-b-xs-15">
+                <h3 class="footer-header">Menú</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <ul>
+                            <li><a href="#inicio"><i class="icofont icofont-rounded-double-right"></i><h5>Inicio</h5></a></li>
+                            <li><a href="#servicios"><i class="icofont icofont-rounded-double-right"></i><h5>Servicios</h5></a>
+                            </li>
+                            <li><a href="#informacion"><i class="icofont icofont-rounded-double-right"></i><h5>Información</h5></a></li>
+                            <li><a href="#opiniones"><i class="icofont icofont-rounded-double-right"></i><h5>Opiniones</h5></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul>
+                            <li><a href="#fotosyvideos"><i class="icofont icofont-rounded-double-right"></i><h5>Fotos y videos</h5></a>
+                            </li>
+                            <li><a href="#eventos"><i class="icofont icofont-rounded-double-right"></i><h5>Eventos</h5></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-news">
+                <h3 class="footer-header">Ofertas</h3>
+                <p>Recibe notificaciones sobre nuevas ofertas</p>
+                <form id="subscribe_form" method="post" action="#">
+
+                    <div class="input-group subscribe-btn">
+                        <input type="text" class="form-control" placeholder="Correo electrónico">
+                        <button class="btn waves-effect waves-light" type="button">
+                            <i class="icofont icofont-double-right"></i>
+                        </button>
+                    </div>
+                    <div>
+                        <div class="d-flex follow-sec">
+                            <h5>Síguenos : </h5>
+                            <ul class="team-socials">
+                                <li class="fb"><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                                <li class="twt"><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+                                <li class="skype"><a href="#"><i class="icofont icofont-social-skype"></i></a></li>
+                                <li class="l_in"><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+{% endblock content %}

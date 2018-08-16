@@ -1,0 +1,74 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="row">
+        {{ form_start(form) }}
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Añadir nuevo Usuario</h5>
+                    <p>Formulario de adición de usuarios.</p>
+                </div>
+                <div class="card-block menu-snaps">
+                    <div class="form-group">
+                        <label class="form-control-label">Nombre completo</label>
+                        {{ form_widget(form.nombrecompleto, {'attr': {'class': 'form-control', 'placeholder': 'Nombre completo'}}) }}
+                        <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Usuario</label>
+                        {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Usuario'}}) }}
+                        <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Correo</label>
+                        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Correo'}}) }}
+                        <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Carné de identidad</label>
+                        {{ form_widget(form.carneidentidad, {'attr': {'class': 'form-control', 'placeholder': 'Carné de identidad'}}) }}
+                        <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Nueva contraseña</label>
+                        {{ form_widget(form.plainpassword.first, {'attr': {'class': 'form-control', 'placeholder': 'Nueva contraseña'}}) }}
+                        <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Repetir nueva contraseña</label>
+                        {{ form_widget(form.plainpassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Repetir nueva contraseña'}}) }}
+                        <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">{{ form_widget(form.enabled) }} Habilitado</label>
+                        <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text"></h5>
+                </div>
+                <div class="card-block menu-snaps">
+                    <label class="form-control-label">Grupos del sistema</label>
+                    {% for group in form.groups %}
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                {{ form_widget(group, {'attr': {'class': 'form-check-input'}}) }}
+                                {{ group.vars.label }}
+                            </label>
+                        </div>
+                    {% endfor %}
+
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-30">Añadir usuario</button>
+                    <button type="reset" class="btn btn-default waves-effect waves-light m-r-30">Cancelar</button>
+                    <a class="btn btn-default waves-effect waves-light m-r-30" href="{{ path('usuario_index') }}">Volver al listado</a>
+                </div>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock content %}

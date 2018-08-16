@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Believecuba - Portal{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="description" content="Believecuba">
+        <meta name="keywords"
+              content="Believecuba, Servicios, Viajes, Ofertas, Precios, Informacion, Eventos, Anuncios, Vacaciones, Testimonio">
+        <meta name="author" content="Believecuba">
+        {% block stylesheets %}
+            <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+
+            <!-- Favicon icon -->
+            <link rel="shortcut icon" href="{{ asset('bundles/app/images/believecuba/logo_favicon.png') }}" type="image/x-icon">
+            <!-- Required Fremwork -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/bootstrap.min.css') }}">
+            <!-- Google font -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/icon/icofont/css/icofont.css') }}">
+            <!-- Jarallax Demo -->
+            <link rel="stylesheet" href="{{ asset('bundles/app/css/jarallax-demo.css') }}">
+            <!-- waves css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/waves/css/waves.min.css') }}">
+            <!--image popup use css-->
+            <link href="{{ asset('bundles/app/') }}plugins/light-box2/css/lightbox.css" rel="stylesheet">
+            <!-- slick.css-->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/slick.css') }}">
+            <!-- Style.css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/main.css') }}">
+            <!-- Responsive.css-->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/responsive.css') }}">    <!-- Style css -->
+            <link rel="stylesheet" href="{{ asset('bundles/app/css/landingpage.css') }}">
+            <!--color css-->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/color/color-1.css') }}" id="color"/>
+
+        {% endblock %}
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        {% block content %} {% endblock %}
+
+        <div class="copyright">
+            <h5 class="text-center"><a href="#"> Believecuba © 2018</a></h5>
+        </div>
+
+        <!-- Move to up -->
+        <a class="waves-effect waves-light scrollup scrollup-icon"><i class="icofont icofont-arrow-up "></i></a>
+
+    </body>
+    {% block javascripts %}
+
+        <!-- Required Jqurey -->
+        <script src="{{ asset('bundles/app/js/jquery-3.1.1.min.js') }}"></script>
+        <script src="{{ asset('bundles/app/js/tether.min.js') }}"></script>
+        <!-- light Box Jquery Start -->
+        <script src="{{ asset('bundles/app/js/lightbox-plus-jquery.min.js') }}"></script>
+        <!-- waves effects.js -->
+        <script src="{{ asset('bundles/app/plugins/waves/js/waves.min.js') }}"></script>
+        <!-- Required Fremwork -->
+        <script src="{{ asset('bundles/app/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/app/js/jarallax.js') }}"></script>
+        <!--slick JS -->
+        <script src="{{ asset('bundles/app/js/slick.min.js') }}"></script>
+        <!-- Isotope js What We Do -->
+        <script src="{{ asset('bundles/app/plugins/isotope/js/jquery.isotope.js') }}"></script>
+        <script src="{{ asset('bundles/app/plugins/isotope/js/isotope.pkgd.min.js') }}"></script>
+        <!-- custom landing page js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/pages/landing-page.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/js/common-pages.js') }}"></script>
+        <script>
+            $(window).on('load',function(){
+                $('#pre-loader').fadeOut('slow');
+            });
+        </script>
+
+    {% endblock %}
+</html>
