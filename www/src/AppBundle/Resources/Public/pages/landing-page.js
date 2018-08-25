@@ -36,7 +36,7 @@ $(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        autoplay: false,
+        autoplay: true,
         draggable: true,
         fade: true,
         asNavFor: '#testimonial-carousel'
@@ -123,7 +123,7 @@ $(document).ready(function() {
     $("#navbarResponsive a").on('click', function(event) {
 
         // Prevent default anchor click behavior
-        //event.preventDefault();
+        event.preventDefault();
 
         // Store hash
         var hash = this.hash;

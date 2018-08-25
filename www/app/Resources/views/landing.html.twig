@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Believecuba - Portal{% endblock %}</title>
+        <title>{% block title %}BelieveCuba - Portal{% endblock %}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -11,34 +11,44 @@
               content="Believecuba, Servicios, Viajes, Ofertas, Precios, Informacion, Eventos, Anuncios, Vacaciones, Testimonio">
         <meta name="author" content="Believecuba">
         {% block stylesheets %}
-            <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
-            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-            <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-            <![endif]-->
-
-            <!-- Favicon icon -->
-            <link rel="shortcut icon" href="{{ asset('bundles/app/images/believecuba/logo_favicon.png') }}" type="image/x-icon">
-            <!-- Required Fremwork -->
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/bootstrap.min.css') }}">
+        <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
             <!-- Google font -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/icon/icofont/css/icofont.css') }}">
+            <!-- simple line icon -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/icon/simple-line-icons/css/simple-line-icons.css') }}">
+            <!-- Required Fremwork -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/bootstrap.min.css') }}">
             <!-- Jarallax Demo -->
-            <link rel="stylesheet" href="{{ asset('bundles/app/css/jarallax-demo.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/jarallax-demo.css') }}">
             <!-- waves css -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/waves/css/waves.min.css') }}">
-            <!--image popup use css-->
-            <link href="{{ asset('bundles/app/') }}plugins/light-box2/css/lightbox.css" rel="stylesheet">
             <!-- slick.css-->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/slick.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/slick-theme.css') }}">
             <!-- Style.css -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/main.css') }}">
             <!-- Responsive.css-->
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/responsive.css') }}">    <!-- Style css -->
-            <link rel="stylesheet" href="{{ asset('bundles/app/css/landingpage.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/responsive.css') }}">
             <!--color css-->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/color/color-1.css') }}" id="color"/>
+            <!-- carousel css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/carousel.css') }}">
+            <!-- owl carousel css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/owl.carousel.css') }}">
+            <!-- swiper css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/swiper.min.css') }}">
+            <!-- Select 2 css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/select2/css/select2.min.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/select2/css/s2-docs.css') }}">
+            <!-- Landing Page -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/landingpage.css') }}">
+            <!-- Modal animation CSS -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/modal/css/component.css') }}">
 
         {% endblock %}
     </head>
@@ -48,38 +58,83 @@
         {% block content %} {% endblock %}
 
         <div class="copyright">
-            <h5 class="text-center"><a href="#"> Believecuba © 2018</a></h5>
+            <h5 class="text-center">BelieveCuba © {{ 'now' | date('Y') }}</h5>
         </div>
 
         <!-- Move to up -->
         <a class="waves-effect waves-light scrollup scrollup-icon"><i class="icofont icofont-arrow-up "></i></a>
 
-    </body>
     {% block javascripts %}
-
         <!-- Required Jqurey -->
-        <script src="{{ asset('bundles/app/js/jquery-3.1.1.min.js') }}"></script>
-        <script src="{{ asset('bundles/app/js/tether.min.js') }}"></script>
-        <!-- light Box Jquery Start -->
-        <script src="{{ asset('bundles/app/js/lightbox-plus-jquery.min.js') }}"></script>
-        <!-- waves effects.js -->
-        <script src="{{ asset('bundles/app/plugins/waves/js/waves.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/js/jquery-3.1.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/js/jquery-ui.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/js/tether.min.js') }}"></script>
         <!-- Required Fremwork -->
-        <script src="{{ asset('bundles/app/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('bundles/app/js/jarallax.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/js/bootstrap.min.js') }}"></script>
+
+        <!-- waves effects.js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/waves/js/waves.min.js') }}"></script>
+
+        <!-- Scrollbar JS-->
+        <script src="{{ asset('bundles/app/plugins/slimscroll/js/jquery.slimscroll.js') }}"></script>
+        <script src="{{ asset('bundles/app/plugins/slimscroll/js/jquery.nicescroll.min.js') }}"></script>
+        <!--classic JS-->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/modal/js/classie.js') }}"></script>
+        <!-- notification -->
+        <script src="{{ asset('bundles/app/plugins/notification/js/bootstrap-growl.min.js') }}"></script>
         <!--slick JS -->
-        <script src="{{ asset('bundles/app/js/slick.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/js/slick.min.js') }}"></script>
+        <!-- custom js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/pages/product-detail.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/pages/elements.js') }}"></script>
+
+        <script type="text/javascript" src="{{ asset('bundles/app/js/jarallax.js') }}"></script>
         <!-- Isotope js What We Do -->
-        <script src="{{ asset('bundles/app/plugins/isotope/js/jquery.isotope.js') }}"></script>
-        <script src="{{ asset('bundles/app/plugins/isotope/js/isotope.pkgd.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/isotope/js/jquery.isotope.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/isotope/js/isotope.pkgd.min.js') }}"></script>
+        <!-- Select 2 js -->
+        <script src="{{ asset('bundles/app/plugins/select2/js/select2.full.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/pages/advance-form.js') }}"></script>
+
+        <!-- owl carousel 2 js -->
+        <script src="{{ asset('bundles/app/js/owl.carousel.min.js') }}"></script>
+        <!-- slider -->
+        <script src="{{ asset('bundles/app/pages/slider.js') }}"></script>
+
+        <!-- Model animation js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/modal/js/modalEffects.js') }}"></script>
+
         <!-- custom landing page js -->
         <script type="text/javascript" src="{{ asset('bundles/app/pages/landing-page.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/js/common-pages.js') }}"></script>
+
         <script>
             $(window).on('load',function(){
                 $('#pre-loader').fadeOut('slow');
             });
         </script>
 
+        <script>
+            (function () {
+                var options = {
+                    whatsapp: "+1 702-800-1750", // WhatsApp number
+                    email: "sales@arfurnitureonline.com", // Email
+                    sms: "+1 702-800-1750", // Sms phone number
+                    call: "+1 702-800-1750", // Call phone number
+                    company_logo_url: "//static.whatshelp.io/img/flag.png", // URL of company logo (png, jpg, gif)
+                    greeting_message: "Hello, how may we help you? Just send us a message now to get assistance.\nHablamos Español", // Text of greeting message
+                    call_to_action: "Any Questions let us know", // Call to action
+                    button_color: "#FFCF1F", // Color of button
+                    position: "right", // Position may be 'right' or 'left'
+                    order: "whatsapp,sms,call,email", // Order of buttons
+                };
+                var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+                s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+                var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+            })();
+        </script>
+
     {% endblock %}
+    </body>
 </html>

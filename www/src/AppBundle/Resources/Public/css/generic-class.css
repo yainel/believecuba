@@ -549,7 +549,8 @@
     background-color: #1da1f2;
 }
 .bg-facebook{
-    background-color: #3b5998;
+    background-color: #36adef;
+    border-top: solid 8px #fbd30d;
 }
 .bg-dark-facebook{
     background-color: #334e88 !important;

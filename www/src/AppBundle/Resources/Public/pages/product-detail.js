@@ -6,17 +6,17 @@ $(document).ready(function() {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         asNavFor: '#small_banner'
     });
     $('#small_banner').slick({
-        slidesToShow:4,
+        slidesToShow:5,
         slidesToScroll: 1,
         asNavFor: '#big_banner',
         dots: false,
         centerMode: true,
-        autoplay: true,
+        autoplay: false,
         arrows: true,
         autoplaySpeed: 2000,
         focusOnSelect: true,

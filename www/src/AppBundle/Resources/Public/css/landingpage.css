@@ -57,7 +57,7 @@
      padding: 60px 0;
  }
  .section-tb{
-     padding: 60px 0;
+     padding: 60px 0 0 0;
  }
  /*Social Icon Start*/
  .socials-icon {
@@ -564,7 +564,7 @@
      position: relative;
  }
  .blog-details{
-     box-shadow: 0 3px 22px rgba(0, 0, 0, 0.12);
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
      padding: 15px;
  }
  .blog-details h6 {
@@ -636,8 +636,8 @@
      cursor: pointer;
  }
  .testimonial-thumbs .slick-slide img {
-     width: 60px;
-     height: 60px;
+     width: 100px;
+     height: 100px;
      border: 1px solid #fff;
      border-radius: 35px;
      cursor: pointer;
@@ -673,7 +673,7 @@
  .slick-dots
  {
      position: absolute;
-     bottom: -25px;
+     bottom: 7px;
      display: block;
      width: 100%;
      padding: 0;
@@ -1090,7 +1090,7 @@
  .scrollup {
      position: fixed;
      bottom: 30px;
-     right: 30px;
+     left: 30px;
      display: none;
      z-index: 998;
      background: #1b8bf9;
@@ -1112,3 +1112,10 @@
  }
 
  /*=======top to bottom button Ends====*/
+
+ .blog-details {
+     min-height: 16em;
+ }
+ .blog-details p {
+     min-height: 6em;
+ }

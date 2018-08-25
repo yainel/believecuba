@@ -5,6 +5,7 @@ services:
     build:
       context: ./bin/webserver
     container_name: 'yga-webserver'
+    restart: 'always'
     #restart: 'always'
     ports:
       - "80:80"
@@ -18,6 +19,7 @@ services:
   mysql:
     build: ./bin/mysql
     container_name: 'yga-mysql'
+    restart: 'always'
     #restart: 'always'
     ports:
       - "3306:3306"
@@ -26,11 +28,4 @@ services:
       - ${MYSQL_LOG_DIR-./logs/mysql}:/var/log/mysql
     environment:
       MYSQL_ROOT_PASSWORD: tiger
-      MYSQL_DATABASE: png
-      MYSQL_USER: png
-      MYSQL_PASSWORD: png
-  #redis:
-  #  container_name: 'png-redis'
-  #  image: redis:latest
-  #  ports:
-  #    - "6379:6379"
+      MYSQL_DATABASE: believecuba

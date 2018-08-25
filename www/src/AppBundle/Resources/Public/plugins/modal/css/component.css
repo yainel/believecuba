@@ -18,28 +18,22 @@ perspective effects (not including the modals and the overlay).
 	perspective: 600px;
 }
 
-.container {
-	background: #e74c3c;
-	min-height: 100%;
-}
-
 .md-modal {
 	position: fixed;
-	top: 50%;
+	width: 100%;
 	left: 50%;
-	width: 50%;
-	max-width: 630px;
-	min-width: 300px;
+	background-color: #fff;
 	height: auto;
-	z-index: 2000;
+	border-bottom: 10px solid #f7b115;
+	z-index: 1001;
 	visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(0);
+	-moz-transform: translateX(-50%) translateY(0);
+	-ms-transform: translateX(-50%) translateY(0);
+	transform: translateX(-50%) translateY(0);
 }
 
 .md-show {
@@ -728,8 +722,4 @@ perspective effects (not including the modals and the overlay).
 	-webkit-transition: all 0.5s 0.1s;
 	-moz-transition: all 0.5s 0.1s;
 	transition: all 0.5s 0.1s;
-}
-
-@media screen and (max-width: 32em) {
-	body { font-size: 75%; }
 }
