@@ -10,6 +10,8 @@
         <meta name="keywords"
               content="Believecuba, Servicios, Viajes, Ofertas, Precios, Informacion, Eventos, Anuncios, Vacaciones, Testimonio">
         <meta name="author" content="Believecuba">
+        <link rel="shortcut icon" href="{{ asset('bundles/app/images/believecuba/logo_favicon.png') }}" type="image/x-icon">
+
         {% block stylesheets %}
         <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,6 +36,9 @@
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/main.css') }}">
             <!-- Responsive.css-->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/responsive.css') }}">
+            <!-- list css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/list-scroll/css/list.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/list-scroll/css/stroll.css') }}">
             <!--color css-->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/color/color-1.css') }}" id="color"/>
             <!-- carousel css -->
@@ -78,6 +83,10 @@
         <!-- Scrollbar JS-->
         <script src="{{ asset('bundles/app/plugins/slimscroll/js/jquery.slimscroll.js') }}"></script>
         <script src="{{ asset('bundles/app/plugins/slimscroll/js/jquery.nicescroll.min.js') }}"></script>
+        <!-- list-scroll js -->
+        <script src="{{ asset('bundles/app/plugins/list-scroll/js/stroll.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/list/js/list.js') }}"></script>
+
         <!--classic JS-->
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/modal/js/classie.js') }}"></script>
         <!-- notification -->
@@ -87,23 +96,21 @@
         <!-- custom js -->
         <script type="text/javascript" src="{{ asset('bundles/app/pages/product-detail.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/pages/elements.js') }}"></script>
-
+        <script type="text/javascript" src="{{ asset('bundles/app/pages/list-custom.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/js/jarallax.js') }}"></script>
         <!-- Isotope js What We Do -->
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/isotope/js/jquery.isotope.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/isotope/js/isotope.pkgd.min.js') }}"></script>
         <!-- Select 2 js -->
         <script src="{{ asset('bundles/app/plugins/select2/js/select2.full.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/app/pages/advance-form.js') }}"></script>
 
+        <!--<script type="text/javascript" src="{{ asset('bundles/app/pages/advance-form.js') }}"></script>-->
         <!-- owl carousel 2 js -->
         <script src="{{ asset('bundles/app/js/owl.carousel.min.js') }}"></script>
         <!-- slider -->
         <script src="{{ asset('bundles/app/pages/slider.js') }}"></script>
-
         <!-- Model animation js -->
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/modal/js/modalEffects.js') }}"></script>
-
         <!-- custom landing page js -->
         <script type="text/javascript" src="{{ asset('bundles/app/pages/landing-page.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/js/common-pages.js') }}"></script>
