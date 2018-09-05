@@ -38,7 +38,7 @@ $(document).ready(function() {
         smartSpeed:1000,
         loop:true,
         slideSpeed:300,
-        items:5,
+        items:4,
         // rtl: true, this start a image from right side to left
         singleItem:true,
         responsiveClass:true,
@@ -50,7 +50,7 @@ $(document).ready(function() {
                 items:2,
             },
             1000:{
-                items:5,
+                items:4,
                 loop:false
             }
         }

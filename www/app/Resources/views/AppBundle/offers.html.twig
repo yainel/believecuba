@@ -1,0 +1,449 @@
+{% extends "landing.html.twig" %}
+
+{% block content %}
+
+    <!-- Nav-bar Start -->
+    <nav class="navbar navbar-sticky-top navbar-light bg-facebook" data-spy="affix" data-offset-top="197">
+
+        <div class="container">
+            <div class="" id="">
+                <ul class="nav navbar-nav pull-left" style="float:left;">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link:hover" href="{{ path('landingpage') }}">
+                            <i class="icofont icofont-arrow-left"></i>Ir a Inicio
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Nav-bar Ends -->
+
+    <section class="section-tb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-12">
+                    <div class="port_details_all_img">
+                        <div class="col-lg-12">
+                            <div id="big_banner">
+                                <div class="port_big_img">
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/301.jpg') }}"
+                                         alt="Big_ Details">
+                                </div>
+                                <div class="port_big_img">
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/508.jpg') }}"
+                                         alt="Big_ Details">
+                                </div>
+                                <div class="port_big_img">
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/2008.jpg') }}"
+                                         alt="Big_ Details">
+                                </div>
+                                <div class="port_big_img">
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/Sandero.jpg') }}"
+                                         alt="Big_ Details">
+                                </div>
+                                <div class="port_big_img">
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/expert_tepee.jpg') }}"
+                                         alt="Big_ Details">
+                                </div>
+                                <div class="port_big_img">
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/Mercedes_c_200.jpg') }}"
+                                         alt="Big_ Details">
+                                </div>
+                                <div class="port_big_img">
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/Picanto.jpg') }}"
+                                         alt="Big_ Details">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 product-right">
+                            <div id="small_banner">
+                                <div>
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/301.jpg') }}"
+                                         alt="small-details">
+                                </div>
+                                <div>
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/508.jpg') }}"
+                                         alt="small-details">
+                                </div>
+                                <div>
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/2008.jpg') }}"
+                                         alt="small-details">
+                                </div>
+                                <div>
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/Sandero.jpg') }}"
+                                         alt="small-details">
+                                </div>
+                                <div>
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/expert_tepee.jpg') }}"
+                                         alt="small-details">
+                                </div>
+                                <div>
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/Mercedes_c_200.jpg') }}"
+                                         alt="small-details">
+                                </div>
+                                <div>
+                                    <img class="img img-fluid"
+                                         src="{{ asset('bundles/app/images/believecuba/autos/Picanto.jpg') }}"
+                                         alt="small-details">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-12">
+                    <div class="row m-b-30 advance-elements">
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Multi Select</div>
+                            <select class="js-example-basic-multiple" multiple="multiple">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Coming</option>
+                                <option value="WY">Hanry Die</option>
+                                <option value="WY">John Doe</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Single Select</div>
+                            <select class="js-example-basic-single">
+                                <optgroup label="Developer">
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </optgroup>
+                                <optgroup label="Designer">
+                                    <option value="WY">Peter</option>
+                                    <option value="WY">Hanry Die</option>
+                                    <option value="WY">John Doe</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">With Placeholder</div>
+                            <select class="js-example-placeholder-multiple" multiple="multiple">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Coming</option>
+                                <option value="WY">Hanry Die</option>
+                                <option value="WY">John Doe</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Limiting the number of selections</div>
+                            <select class="js-example-basic-multiple-limit" multiple="multiple">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Coming</option>
+                                <option value="WY">Hanry Die</option>
+                                <option value="WY">John Doe</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row m-b-30 advance-elements">
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Responsive Width</div>
+                            <select class="js-example-responsive" multiple="multiple" style="width: 75%">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Coming</option>
+                                <option value="WY">Hanry Die</option>
+                                <option value="WY">John Doe</option>
+                                <option value="WY">Harry Poter</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Loading Array Data</div>
+                            <select class="js-example-data-array"></select>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Loading Remote Data ( Ajax )</div>
+                            <select class="js-data-example-ajax">
+                                <option value="3620194" selected="selected">select2</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Disabled Results</div>
+                            <select class="js-example-disabled-results">
+                                <option value="one">First</option>
+                                <option value="two" disabled="disabled">Second (disabled)</option>
+                                <option value="three">Third</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row advance-elements">
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Tagging Support</div>
+                            <select class="js-example-tags" multiple="multiple">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Coming</option>
+                                <option value="WY">Hanry Die</option>
+                                <option value="WY">John Doe</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Automatic Tokenization</div>
+                            <select class="js-example-tokenizer" multiple="multiple">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Coming</option>
+                                <option value="WY">Hanry Die</option>
+                                <option value="WY">John Doe</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">RTL Support</div>
+                            <select class="js-example-rtl" multiple="multiple">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Coming</option>
+                                <option value="WY">Hanry Die</option>
+                                <option value="WY">John Doe</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Diacritics support</div>
+                            <select class="js-example-diacritics" multiple="multiple">
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="WY">Coming</option>
+                                <option value="WY">Hanry Die</option>
+                                <option value="WY">John Doe</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row advance-elements">
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Hiding the search box</div>
+                            <select class="js-example-basic-hide-search" multiple="multiple" style="width: 75%">
+                                <optgroup label="Developer">
+                                    <option value="AL">Smith</option>
+                                    <option value="WY">Peter</option>
+                                    <option value="WY">James</option>
+                                    <option value="WY">Hanry Die</option>
+                                    <option value="WY">John Doe</option>
+                                    <option value="WY">Harry Poter</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="sub-title">Theme support</div>
+                            <select class="js-example-theme-single">
+                                <option value="AL">Smith</option>
+                                <option value="WY">Peter</option>
+                                <option value="WY">James</option>
+                                <option value="WY">Hanry Die</option>
+                                <option value="WY">John Doe</option>
+                                <option value="WY">Harry Poter</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-6 col-lg-8">
+                            <div class="sub-title">Theme support</div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <select class="js-example-disabled">
+                                        <option value="AL">Smith</option>
+                                        <option value="WY">Peter</option>
+                                        <option value="WY">James</option>
+                                        <option value="WY">Hanry Die</option>
+                                        <option value="WY">John Doe</option>
+                                        <option value="WY">Harry Poter</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-b-30 advance-elements">
+                        <div class="col-xl-3">
+                            <div class="sub-title">Date Picker</div>
+                            <div class="form-control-wrapper">
+                                <input type="text" id="date" class="form-control floating-label" placeholder="Date">
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="sub-title">Time Picker</div>
+                            <div class="form-control-wrapper">
+                                <input type="text" id="time" class="form-control floating-label" placeholder="Time">
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="sub-title">Date & Time Picker</div>
+                            <div class="form-control-wrapper">
+                                <input type="text" id="date-format" class="form-control floating-label" placeholder="Begin Date Time">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row advance-elements">
+                        <div class="col-xl-3">
+                            <div class="sub-title">Min Date Set</div>
+                            <div class="form-control-wrapper">
+                                <input type="text" id="min-date" class="form-control floating-label" placeholder="Start Date">
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="sub-title">Min Date Set</div>
+                            <div class="form-control-wrapper">
+                                <input type="text" id="date-fr" class="form-control" value="18/03/2015 08:00" data-dtp="dtp_5xXoR">
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="sub-title">Date Time Range Picker</div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-control-wrapper">
+                                        <input type="text" id="date-start" class="form-control floating-label" placeholder="Start Date">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-control-wrapper">
+                                        <input type="text" id="date-end" class="form-control floating-label" placeholder="End Date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer Section Starts-->
+    <footer id="eventos" data-jarallax='{"speed": 0.2}' class="jarallax section-tb footer"
+            style="background-image: url({{ asset('bundles/app/images/landingpage/footer-bg.jpg') }});">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-about m-b-xs-15">
+                    <h3 class="footer-header">Contacto</h3>
+                    <ul class="footer_widget">
+                        <li class="footer_address">
+                            <i class="icofont icofont-location-pin"></i>
+                            <h5>2840 E Flamingo Rd Suite C
+                                89121 Las Vegas</h5>
+                        </li>
+                        <li class="footer_contact">
+                            <i class="icofont icofont-ui-cell-phone"></i>
+                            <h5>+1 702-800-1750 </h5>
+                        </li>
+                        <li class="footer-web">
+                            <i class="icofont icofont-globe"></i>
+                            <h5>www.believecuba.com</h5>
+                        </li>
+                        <li class="footer_email">
+                            <i class="icofont icofont-plane-ticket"></i>
+                            <h5>Agencia de turismo</h5>
+                        </li>
+                        <li class="footer_email">
+                            <i class="icofont icofont-flag"></i>
+                            <h5>Página creada el 9 de abril de 2017.
+                            </h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-gallery m-b-xs-15">
+                    <h3 class="footer-header">Fotos</h3>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="{{ asset('bundles/app/images/landingpage/1.jpg') }}" alt=""
+                                             class="img-fluid">
+                                <div class="footer-hvr-effect"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="{{ asset('bundles/app/images/landingpage/2.jpg') }}" alt=""
+                                             class="img-fluid">
+                                <div class="footer-hvr-effect"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="{{ asset('bundles/app/images/landingpage/3.jpg') }}" alt=""
+                                             class="img-fluid">
+                                <div class="footer-hvr-effect gradient_bg"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="{{ asset('bundles/app/images/landingpage/4.jpg') }}" alt=""
+                                             class="img-fluid">
+                                <div class="footer-hvr-effect"></div>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#"><img src="{{ asset('bundles/app/images/landingpage/5.jpg') }}" alt=""
+                                             class="img-fluid">
+                                <div class="footer-hvr-effect"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="{{ asset('bundles/app/images/landingpage/6.jpg') }}" alt=""
+                                             class="img-fluid">
+                                <div class="footer-hvr-effect"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-menu m-b-xs-15">
+                    <h3 class="footer-header">Horario</h3>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul>
+                                <li><a href="#"><i class="icofont icofont-rounded-double-right"></i><h5>Lunes : 9:00 -
+                                            18:00</h5></a></li>
+                                <li><a href="#"><i class="icofont icofont-rounded-double-right"></i><h5>Martes : 9:00 -
+                                            17:00</h5></a></li>
+                                <li><a href="#"><i class="icofont icofont-rounded-double-right"></i><h5>Miércoles : 9:00
+                                            - 17:00 HOY</h5></a></li>
+                                <li><a href="#"><i class="icofont icofont-rounded-double-right"></i><h5>Jueves : 9:00 -
+                                            18:00</h5></a></li>
+                                <li><a href="#"><i class="icofont icofont-rounded-double-right"></i><h5>Viernes : 9:00 -
+                                            18:00</h5></a></li>
+                                <li><a href="#eventos"><i class="icofont icofont-rounded-double-right"></i><h5>Sábado :
+                                            9:00 - 18:00</h5></a></li>
+                                <li><a href="#eventos"><i class="icofont icofont-rounded-double-right"></i><h5>Domingo :
+                                            CERRADO</h5></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-news">
+                    <h3 class="footer-header">Boletín</h3>
+                    <p>Recibe notificaciones sobre nuevas ofertas</p>
+                    <form id="subscribe_form" method="post" action="#">
+
+                        <div class="input-group subscribe-btn">
+                            <input type="text" class="form-control" placeholder="Correo electrónico">
+                            <button class="btn waves-effect waves-light" type="button">
+                                <i class="icofont icofont-double-right"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <div class="d-flex follow-sec">
+                                <h5>Síguenos : </h5>
+                                <ul class="team-socials">
+                                    <li class="fb"><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                                    <li class="twt"><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+                                    <li class="skype"><a href="#"><i class="icofont icofont-social-skype"></i></a></li>
+                                    <li class="l_in"><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{% endblock content %}

@@ -32,10 +32,18 @@
             <!-- slick.css-->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/slick.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/slick-theme.css') }}">
-            <!-- Style.css -->
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/main.css') }}">
-            <!-- Responsive.css-->
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/responsive.css') }}">
+            <!-- Select 2 css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/select2/css/select2.min.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/select2/css/s2-docs.css') }}">
+            <!-- Multi Select css -->
+            <link rel="stylesheet" href="{{ asset('bundles/app/plugins/multi-select/css/bootstrap-multiselect.css') }}" />
+            <link rel="stylesheet" href="{{ asset('bundles/app/plugins/multi-select/css/multi-select.css') }}" />
+            <!-- Color Picker css -->
+            <link rel="stylesheet" href="{{ asset('bundles/app/plugins/color-picker/css/spectrum.css') }}" />
+            <!-- Tags css -->
+            <link rel="stylesheet" href="{{ asset('bundles/app/plugins/tags/css/bootstrap-tagsinput.css') }}" />
+            <!-- Switchery css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/switchery/css/switchery.min.css') }}">
             <!-- list css -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/list-scroll/css/list.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/list-scroll/css/stroll.css') }}">
@@ -47,14 +55,17 @@
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/owl.carousel.css') }}">
             <!-- swiper css -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/swiper.min.css') }}">
-            <!-- Select 2 css -->
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/select2/css/select2.min.css') }}" />
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/select2/css/s2-docs.css') }}">
-            <!-- Landing Page -->
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/landingpage.css') }}">
+            <!-- Date Picker css -->
+            <link rel="stylesheet" href="{{ asset('bundles/app/plugins/datepicker/css/bootstrap-material-datetimepicker.css') }}" />
+
             <!-- Modal animation CSS -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/modal/css/component.css') }}">
-
+            <!-- Style.css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/main.css') }}">
+            <!-- Responsive.css-->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/responsive.css') }}">
+            <!-- Landing Page -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/landingpage.css') }}">
         {% endblock %}
     </head>
 
@@ -76,22 +87,19 @@
         <script type="text/javascript" src="{{ asset('bundles/app/js/tether.min.js') }}"></script>
         <!-- Required Fremwork -->
         <script type="text/javascript" src="{{ asset('bundles/app/js/bootstrap.min.js') }}"></script>
-
         <!-- waves effects.js -->
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/waves/js/waves.min.js') }}"></script>
-
         <!-- Scrollbar JS-->
-        <script src="{{ asset('bundles/app/plugins/slimscroll/js/jquery.slimscroll.js') }}"></script>
-        <script src="{{ asset('bundles/app/plugins/slimscroll/js/jquery.nicescroll.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/slimscroll/js/jquery.slimscroll.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/slimscroll/js/jquery.nicescroll.min.js') }}"></script>
         <!-- list-scroll js -->
-        <script src="{{ asset('bundles/app/plugins/list-scroll/js/stroll.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/list-scroll/js/stroll.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/list/js/list.js') }}"></script>
-
         <!--classic JS-->
-        <script type="text/javascript" src="{{ asset('bundles/app/plugins/modal/js/classie.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/search/js/classie.js') }}"></script>
         <!-- notification -->
-        <script src="{{ asset('bundles/app/plugins/notification/js/bootstrap-growl.min.js') }}"></script>
-        <!--slick JS -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/notification/js/bootstrap-growl.min.js') }}"></script>
+        <!-- slick JS -->
         <script type="text/javascript" src="{{ asset('bundles/app/js/slick.min.js') }}"></script>
         <!-- custom js -->
         <script type="text/javascript" src="{{ asset('bundles/app/pages/product-detail.js') }}"></script>
@@ -101,20 +109,44 @@
         <!-- Isotope js What We Do -->
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/isotope/js/jquery.isotope.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/isotope/js/isotope.pkgd.min.js') }}"></script>
-        <!-- Select 2 js -->
-        <script src="{{ asset('bundles/app/plugins/select2/js/select2.full.min.js') }}"></script>
 
-        <!--<script type="text/javascript" src="{{ asset('bundles/app/pages/advance-form.js') }}"></script>-->
+        <!-- Date picker.js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/datepicker/js/moment-with-locales.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/datepicker/js/bootstrap-material-datetimepicker.js') }}"></script>
+        <!-- Select 2 js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/select2/js/select2.full.min.js') }}"></script>
+        <!-- Max-Length js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/max-length/js/bootstrap-maxlength.js') }}"></script>
+        <!-- switchery js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/switchery/js/switchery.min.js') }}"></script>
+        <!-- Multi Select js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/multi-select/js/bootstrap-multiselect.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/multi-select/js/jquery.multi-select.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/multi-select/js/jquery.quicksearch.js') }}"></script>
+        <!-- Tags js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/tags/js/bootstrap-tagsinput.js') }}"></script>
+        <!-- Bootstrap Datepicker js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/bootstrap-datepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
+        <!-- bootstrap range picker -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/bootstrap-datepicker/js/daterangepicker.js') }}"></script>
+        <!-- color picker -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/color-picker/js/spectrum.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/color-picker/js/jscolor.js') }}"></script>
+
+
         <!-- owl carousel 2 js -->
-        <script src="{{ asset('bundles/app/js/owl.carousel.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/js/owl.carousel.min.js') }}"></script>
         <!-- slider -->
-        <script src="{{ asset('bundles/app/pages/slider.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/pages/slider.js') }}"></script>
         <!-- Model animation js -->
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/modal/js/modalEffects.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/pages/advance-form.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/js/main.js') }}"></script>
         <!-- custom landing page js -->
         <script type="text/javascript" src="{{ asset('bundles/app/pages/landing-page.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/js/common-pages.js') }}"></script>
-
+        <script src="{{ asset('bundles/app/js/menu-horizontal.js') }}"></script>
         <script>
             $(window).on('load',function(){
                 $('#pre-loader').fadeOut('slow');

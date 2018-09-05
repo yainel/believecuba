@@ -1,60 +1,6 @@
 "use strict";
 $(document).ready(function() {
-    var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
-    elems.forEach(function(html) {
-        var switchery = new Switchery(html);
-    });
-    var elem1 = document.querySelector('.js-dynamic-lg');
-    var switchery = new Switchery(elem1, {
-        size: 'large'
-    });
-    var elem2 = document.querySelector('.js-dynamic-sm');
-    var switchery = new Switchery(elem2, {
-        size: 'small'
-    });
 
-    var elem_default = document.querySelector('.js-dynamic-default');
-    var switchery = new Switchery(elem_default, {
-        color: '#ddd',
-        jackColor: '#fff'
-    });
-    var elem_primary = document.querySelector('.js-dynamic-primary');
-    var switchery = new Switchery(elem_primary, {
-        color: '#2196F3',
-        jackColor: '#fff'
-    });
-    var elem_danger = document.querySelector('.js-dynamic-danger');
-    var switchery = new Switchery(elem_danger, {
-        color: '#ff5252',
-        jackColor: '#fff'
-    });
-    var elem_info = document.querySelector('.js-dynamic-info');
-    var switchery = new Switchery(elem_info, {
-        color: '#40c4ff',
-        jackColor: '#fff'
-    });
-    var elem_warning = document.querySelector('.js-dynamic-warning');
-    var switchery = new Switchery(elem_warning, {
-        color: '#f57c00',
-        jackColor: '#fff'
-    });
-
-    var elem_secondary = document.querySelector('.js-dynamic-secondary');
-    var switchery = new Switchery(elem_secondary, {
-        color: '#40c4ff',
-        secondaryColor: '#2196F3',
-        jackColor: '#2196F3',
-        jackSecondaryColor: '#ff5252'
-    });
-
-    var elem = document.querySelector('.js-dynamic-state');
-    var switchery = new Switchery(elem);
-    document.querySelector('.js-dynamic-disable').addEventListener('click', function() {
-        switchery.disable();
-    });
-    document.querySelector('.js-dynamic-enable').addEventListener('click', function() {
-        switchery.enable();
-    });
 
     $('.checkbox-ripple').rkmd_checkboxRipple();
     change_checkbox_color();

@@ -29,6 +29,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Eventos</a>
                     </li>
+                    <li class="nav-item search-toggle">
+                        <a class="nav-link" id="morphsearch-search" href="#search"><i class="hidden-md-down icofont icofont-search displayChatbox"></i>
+                            <div class="hidden-md-up">Buscar</div>
+                        </a>
+                    </li>
                 </ul>
 
             </div>
@@ -105,7 +110,7 @@
     <div class="md-overlay"></div>
 
     <section>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 col-md-12 offers">
                     <div class="row text-center">
@@ -124,8 +129,8 @@
                                 <div class="blog-hover-detail d-flex">
                                     <div class="m-x-auto text-center">
                                         <div class="card-block text-center">
-                                            <a href="#" data-modal="modal-12"
-                                               class="md-trigger btn btn-warning waves-effect waves-light">
+                                            <a href="{{ path('offers') }}"
+                                               class="btn btn-warning waves-effect waves-light">
                                                 Ofertas
                                             </a>
                                         </div>
@@ -141,8 +146,8 @@
                                 <div class="blog-hover-detail d-flex">
                                     <div class="m-x-auto text-center">
                                         <div class="card-block text-center">
-                                            <a href="#" data-modal="modal-12"
-                                               class="md-trigger btn btn-warning waves-effect waves-light">
+                                            <a href="{{ path('offers') }}"
+                                               class="btn btn-warning waves-effect waves-light">
                                                 Ofertas
                                             </a>
                                         </div>
@@ -158,8 +163,8 @@
                                 <div class="blog-hover-detail d-flex">
                                     <div class="m-x-auto text-center">
                                         <div class="card-block text-center">
-                                            <a href="#" data-modal="modal-12"
-                                               class="md-trigger btn btn-warning waves-effect waves-light">
+                                            <a href="{{ path('offers') }}"
+                                               class="btn btn-warning waves-effect waves-light">
                                                 Ofertas
                                             </a>
                                         </div>
@@ -175,8 +180,8 @@
                                 <div class="blog-hover-detail d-flex">
                                     <div class="m-x-auto text-center">
                                         <div class="card-block text-center">
-                                            <a href="#" data-modal="modal-12"
-                                               class="md-trigger btn btn-warning waves-effect waves-light">
+                                            <a href="{{ path('offers') }}"
+                                               class="btn btn-warning waves-effect waves-light">
                                                 Ofertas
                                             </a>
                                         </div>
@@ -192,8 +197,8 @@
                                 <div class="blog-hover-detail d-flex">
                                     <div class="m-x-auto text-center">
                                         <div class="card-block text-center">
-                                            <a href="#" data-modal="modal-12"
-                                               class="md-trigger btn btn-warning waves-effect waves-light">
+                                            <a href="{{ path('offers') }}"
+                                               class="btn btn-warning waves-effect waves-light">
                                                 Ofertas
                                             </a>
                                         </div>
@@ -307,165 +312,52 @@
         <!-- end of row -->
     </div>
 
-    <div class="navbar-fixed-top">
-        <div class="md-modal md-effect-7" id="modal-12">
-            <div class="md-content">
-                <div class="row">
-                    <div class="col-md-5 col-sm-12">
-                        <div class="port_details_all_img">
-                            <div class="col-lg-12">
-                                <div id="big_banner">
-                                    <div class="port_big_img">
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/301.jpg') }}"
-                                             alt="Big_ Details">
-                                    </div>
-                                    <div class="port_big_img">
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/508.jpg') }}"
-                                             alt="Big_ Details">
-                                    </div>
-                                    <div class="port_big_img">
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/2008.jpg') }}"
-                                             alt="Big_ Details">
-                                    </div>
-                                    <div class="port_big_img">
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/Sandero.jpg') }}"
-                                             alt="Big_ Details">
-                                    </div>
-                                    <div class="port_big_img">
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/expert_tepee.jpg') }}"
-                                             alt="Big_ Details">
-                                    </div>
-                                    <div class="port_big_img">
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/Mercedes_c_200.jpg') }}"
-                                             alt="Big_ Details">
-                                    </div>
-                                    <div class="port_big_img">
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/Picanto.jpg') }}"
-                                             alt="Big_ Details">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 product-right">
-                                <div id="small_banner">
-                                    <div>
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/301.jpg') }}"
-                                             alt="small-details">
-                                    </div>
-                                    <div>
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/508.jpg') }}"
-                                             alt="small-details">
-                                    </div>
-                                    <div>
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/2008.jpg') }}"
-                                             alt="small-details">
-                                    </div>
-                                    <div>
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/Sandero.jpg') }}"
-                                             alt="small-details">
-                                    </div>
-                                    <div>
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/expert_tepee.jpg') }}"
-                                             alt="small-details">
-                                    </div>
-                                    <div>
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/Mercedes_c_200.jpg') }}"
-                                             alt="small-details">
-                                    </div>
-                                    <div>
-                                        <img class="img img-fluid"
-                                             src="{{ asset('bundles/app/images/believecuba/autos/Picanto.jpg') }}"
-                                             alt="small-details">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-7 col-sm-12 product-detail" id="product-detail">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="card-header"><h5 class="card-header-text">Experience</h5>
-                                    <button type="button" class="btn btn-primary waves-effect waves-light md-close f-right">
-                                        <i  class="icofont icofont-close"></i>
-                                    </button>
-                                </div>
+    <div id="morphsearch" class="morphsearch">
+        <form class="morphsearch-form">
 
-                                <div class="card card-block scroll-list cards">
-                                    <ul class="">
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                        <li><h6>Item1</h6></li>
-                                        <li><h6>Item2</h6></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <input class="morphsearch-input" type="search" placeholder="Buscar..."/>
+
+            <button class="morphsearch-submit" type="submit">Search</button>
+
+        </form>
+        <div class="morphsearch-content">
+            <div class="dummy-column">
+                <h2>People</h2>
+                <a class="dummy-media-object" href="#!">
+                    <img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&amp;d=identicon&amp;r=G" alt="Sara Soueidan"/>
+                    <h3>Sara Soueidan</h3>
+                </a>
+
+                <a class="dummy-media-object" href="#!">
+                    <img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&amp;d=identicon&amp;r=G" alt="Shaun Dona"/>
+                    <h3>Shaun Dona</h3>
+                </a>
             </div>
-        </div>
+            <div class="dummy-column">
+                <h2>Popular</h2>
+                <a class="dummy-media-object" href="#!">
+                    <img src="assets/images/avatar-1.png" alt="PagePreloadingEffect"/>
+                    <h3>Page Preloading Effect</h3>
+                </a>
+
+                <a class="dummy-media-object" href="#!">
+                    <img src="assets/images/avatar-1.png" alt="DraggableDualViewSlideshow"/>
+                    <h3>Draggable Dual-View Slideshow</h3>
+                </a>
+            </div>
+            <div class="dummy-column">
+                <h2>Recent</h2>
+                <a class="dummy-media-object" href="#!">
+                    <img src="assets/images/avatar-1.png" alt="TooltipStylesInspiration"/>
+                    <h3>Tooltip Styles Inspiration</h3>
+                </a>
+                <a class="dummy-media-object" href="#!">
+                    <img src="assets/images/avatar-1.png" alt="NotificationStyles"/>
+                    <h3>Notification Styles Inspiration</h3>
+                </a>
+            </div>
+        </div><!-- /morphsearch-content -->
+        <span class="morphsearch-close"><i class="icofont icofont-search-alt-1"></i></span>
     </div>
 
     <!--Testimonials Section Starts-->
