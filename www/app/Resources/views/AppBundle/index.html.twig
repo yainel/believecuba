@@ -324,35 +324,29 @@
             <div class="dummy-column">
                 <h2>People</h2>
                 <a class="dummy-media-object" href="#!">
-                    <img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&amp;d=identicon&amp;r=G" alt="Sara Soueidan"/>
                     <h3>Sara Soueidan</h3>
                 </a>
 
                 <a class="dummy-media-object" href="#!">
-                    <img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&amp;d=identicon&amp;r=G" alt="Shaun Dona"/>
                     <h3>Shaun Dona</h3>
                 </a>
             </div>
             <div class="dummy-column">
                 <h2>Popular</h2>
                 <a class="dummy-media-object" href="#!">
-                    <img src="assets/images/avatar-1.png" alt="PagePreloadingEffect"/>
                     <h3>Page Preloading Effect</h3>
                 </a>
 
                 <a class="dummy-media-object" href="#!">
-                    <img src="assets/images/avatar-1.png" alt="DraggableDualViewSlideshow"/>
                     <h3>Draggable Dual-View Slideshow</h3>
                 </a>
             </div>
             <div class="dummy-column">
                 <h2>Recent</h2>
                 <a class="dummy-media-object" href="#!">
-                    <img src="assets/images/avatar-1.png" alt="TooltipStylesInspiration"/>
                     <h3>Tooltip Styles Inspiration</h3>
                 </a>
                 <a class="dummy-media-object" href="#!">
-                    <img src="assets/images/avatar-1.png" alt="NotificationStyles"/>
                     <h3>Notification Styles Inspiration</h3>
                 </a>
             </div>
@@ -586,15 +580,100 @@
     <!--What We Do Section Ends-->
 
     <section>
-        <div class="container-fluid about-sec">
-            <div class="row d-flex">
-                <div class="col-md-12 col-sm-12">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 tablet-sc">
-
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 offers">
+                    <div class="row text-center">
+                        <div class="title">
+                            <h2 class="title-center">
                                 Today´s Popular Destinations
-
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="slider-center bg-white" id="todaysdestinations">
+                        <div class="item">
+                            <div class="blog-img">
+                                <img class="img-fluid "
+                                     src="{{ asset('bundles/app/images/believecuba/destinos/NY.jpg') }}"
+                                     alt="blog-img">
+                                <div class="blog-hover-detail d-flex">
+                                    <div class="m-x-auto text-center">
+                                        <div class="card-block text-center">
+                                            <a href="{{ path('offers') }}"
+                                               class="btn btn-warning waves-effect waves-light">
+                                                Ofertas
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog-img">
+                                <img class="img-fluid "
+                                     src="{{ asset('bundles/app/images/believecuba/destinos/Paris1.jpg') }}"
+                                     alt="blog-img">
+                                <div class="blog-hover-detail d-flex">
+                                    <div class="m-x-auto text-center">
+                                        <div class="card-block text-center">
+                                            <a href="{{ path('offers') }}"
+                                               class="btn btn-warning waves-effect waves-light">
+                                                Ofertas
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog-img">
+                                <img class="img-fluid "
+                                     src="{{ asset('bundles/app/images/believecuba/destinos/Punta_cana.jpg') }}"
+                                     alt="blog-img">
+                                <div class="blog-hover-detail d-flex">
+                                    <div class="m-x-auto text-center">
+                                        <div class="card-block text-center">
+                                            <a href="{{ path('offers') }}"
+                                               class="btn btn-warning waves-effect waves-light">
+                                                Ofertas
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog-img">
+                                <img class="img-fluid "
+                                     src="{{ asset('bundles/app/images/believecuba/destinos/Santiago-de-chile.jpg') }}"
+                                     alt="blog-img">
+                                <div class="blog-hover-detail d-flex">
+                                    <div class="m-x-auto text-center">
+                                        <div class="card-block text-center">
+                                            <a href="{{ path('offers') }}"
+                                               class="btn btn-warning waves-effect waves-light">
+                                                Ofertas
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="blog-img">
+                                <img class="img-fluid "
+                                     src="{{ asset('bundles/app/images/believecuba/destinos/Madrid.jpg') }}"
+                                     alt="blog-img">
+                                <div class="blog-hover-detail d-flex">
+                                    <div class="m-x-auto text-center">
+                                        <div class="card-block text-center">
+                                            <a href="{{ path('offers') }}"
+                                               class="btn btn-warning waves-effect waves-light">
+                                                Ofertas
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
