@@ -433,8 +433,26 @@ $(document).ready(function() {
             time: false,
             clearButton: true
         });
+        $('#pickupdate').bootstrapMaterialDatePicker({
+            time: false,
+            clearButton: true
+        });
+        $('#returndate').bootstrapMaterialDatePicker({
+            time: false,
+            clearButton: true
+        });
 
         $('#time').bootstrapMaterialDatePicker({
+            date: false,
+            shortTime: false,
+            format: 'HH:mm'
+        });
+        $('#pickuptime').bootstrapMaterialDatePicker({
+            date: false,
+            shortTime: false,
+            format: 'HH:mm'
+        });
+        $('#returntime').bootstrapMaterialDatePicker({
             date: false,
             shortTime: false,
             format: 'HH:mm'
