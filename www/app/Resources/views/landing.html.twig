@@ -21,14 +21,14 @@
         <![endif]-->
             <!-- Google font -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/icon/icofont/css/icofont.css') }}">
-            <!-- simple line icon -->
+            <!-- Font Awesome -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/font-awesome.min.css') }}">
+            <!-- Simple line icon -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/icon/simple-line-icons/css/simple-line-icons.css') }}">
             <!-- Required Fremwork -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/bootstrap.min.css') }}">
             <!-- Jarallax Demo -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/jarallax-demo.css') }}">
-            <!-- waves css -->
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/waves/css/waves.min.css') }}">
             <!-- slick.css-->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/slick.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/slick-theme.css') }}">
@@ -50,16 +50,12 @@
             <!--color css-->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/color/color-1.css') }}" id="color"/>
             <!-- carousel css -->
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/carousel.css') }}">
             <!-- owl carousel css -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/owl.carousel.css') }}">
             <!-- swiper css -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/swiper.min.css') }}">
             <!-- Date Picker css -->
             <link rel="stylesheet" href="{{ asset('bundles/app/plugins/datepicker/css/bootstrap-material-datetimepicker.css') }}" />
-
-            <!-- Modal animation CSS -->
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/modal/css/component.css') }}">
             <!-- Style.css -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/main.css') }}">
             <!-- Responsive.css-->
@@ -69,13 +65,11 @@
         {% endblock %}
     </head>
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body class="horizontal-fixed fixed" data-spy="scroll" data-target=".navbar" data-offset="50">
 
         {% block content %} {% endblock %}
 
-        <div class="copyright">
-            <h5 class="text-center">BelieveCuba © {{ 'now' | date('Y') }}</h5>
-        </div>
+
 
         <!-- Move to up -->
         <a class="waves-effect waves-light scrollup scrollup-icon"><i class="icofont icofont-arrow-up "></i></a>

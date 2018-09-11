@@ -2,305 +2,746 @@
 
 {% block content %}
 
-    <!-- Nav-bar Start -->
-    <nav class="navbar navbar-sticky-top navbar-light bg-facebook" data-spy="affix" data-offset-top="197">
-        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="container">
-            <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-                <ul class="nav navbar-nav pull-right">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#inicio"><i class=" hidden-md-down icofont icofont-home"></i>
-                            <div class="hidden-md-up">Inicio</div>
+    <header class="main-header-top hidden-print">
+        <a href="#" class="logo hidden-sm-down hidden-xs-down navbar-sticky-top">
+            <img class="img-fluid able-logo"
+                 src="{{ asset('bundles/app/images/believecuba/logo-h.png') }}" alt="Theme-logo">
+        </a>
+        <nav class="navbar navbar-static-top">
+            <a href="#" data-toggle="offcanvas" class="sidebar-toggle hidden-md-up"></a>
+            <div class="navbar-custom-menu">
+                <ul class="top-nav">
+                    <li class="">
+                        <a href="#" class="drop icon-circle">
+                            <i class="icofont icofont-ui-email"></i> info@believecuba.com
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Servicios</a>
+                    <li class="hidden-sm-down">
+                        <a href="#" class="drop icon-circle">
+                            <i class="icofont icofont-phone"></i> +1 702-800-1750
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Información</a>
+                    <li class="hidden-sm-down">
+                        <a href="#" class="drop">
+                            <i class="icofont icofont-user"></i> Sign In / Sign Up
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Opiniones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fotos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Eventos</a>
-                    </li>
-                    <li class="nav-item search-toggle">
-                        <a class="nav-link" id="morphsearch-search" href="#search"><i class="hidden-md-down icofont icofont-search displayChatbox"></i>
-                            <div class="hidden-md-up">Buscar</div>
+                    <li class="">
+                        <a href="#" class="drop">
+                            <i class="icofont icofont-globe"></i> English
                         </a>
                     </li>
                 </ul>
-
             </div>
-        </div>
-    </nav>
-    <!-- Nav-bar Ends -->
+        </nav>
+    </header>
 
-    <!--Our Creatives Section Start-->
-    <section id="inicio" class="section-tb our-creatives"
-             style="background-image: url({{ asset('bundles/app/images/believecuba/bg-ny.jpg') }});">
-        <div class="container">
-            <div class="row team">
-                <div class="col-lg-3 col-md-12 text-center">
-                    <div class=" team-block">
-                        <img class="img img-fluid" src="{{ asset('bundles/app/images/believecuba/logo.jpg') }}"
-                             alt="team1"/>
-                        <div class="team-desc" style="border-radius: 5px 5px 0 20px;">
-                            <div class="team-name"><h4>BelieveCuba</h4></div>
-                            <div class="team-position txt-primary">@believeCuba</div>
-                            <ul class="team-socials">
-                                <li class="fb"><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                <li class="twt"><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                <li class="skype"><a href="#"><i class="icofont icofont-social-skype"></i></a></li>
-                                <li class="l_in"><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
-                            </ul>
+    <aside class="main-sidebar hidden-print">
+        <div class="sidebar" id="sidebar-scroll">
+            <div class="user-panel">
+                <div class="f-left image hidden-sm-down"><img src="{{ asset('bundles/app/images/believecuba/logo-horizontal.png') }}" alt="User Image" class="img-circle">
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#"><i class="fa fa-hotel"></i><span> Hoteles </span></a></li>
+                <li><a href="#"><i class="fa fa-plane"></i><span> Vuelos </span></a></li>
+                <li><a href="#"><i class="fa fa-bus"></i><span> Traslados </span></a></li>
+                <li><a href="#"><i class="fa fa-map-signs"></i><span> Actividades </span></a></li>
+                <li><a href="#"><i class="fa fa-picture-o"></i><span> Albumes </span></a></li>
+                <li><a href="#"><i class="fa fa-object-group"></i><span> Opiniones </span></a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="container-carousel hidden-sm-down">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bs4-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="{{ asset('bundles/app/images/believecuba/carousel/logo_carousel.jpg') }}"
+                                 alt="First slide" class="img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('bundles/app/images/believecuba/carousel/disneyworld.jpg') }}"
+                                 alt="Second slide" class="img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('bundles/app/images/believecuba/carousel/paris.jpg') }}"
+                                 alt="Third slide" class="img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('bundles/app/images/believecuba/carousel/varadero.jpg') }}"
+                                 alt="Fourth slide" class="img-fluid">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-12">
-                    <div id="bs4-carousel" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#bs4-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#bs4-carousel" data-slide-to="1"></li>
-                            <li data-target="#bs4-carousel" data-slide-to="2"></li>
-                            <li data-target="#bs4-carousel" data-slide-to="3"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox"
-                             style="max-height: 25.6em; border-radius: 0 20px 0 0; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.19);">
-                            <div class="carousel-item active">
-                                <img src="{{ asset('bundles/app/images/believecuba/carousel/logo_carousel.jpg') }}"
-                                     alt="First slide" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden-md-up sm-carousel">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="{{ asset('bundles/app/images/believecuba/carousel/logo_carousel-sm.jpg') }}" class="img-container">
+            </div>
+        </div>
+    </div>
+
+    <div class="container reservas">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="card-block tab-icon tab-with-img">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs md-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab">
+                                <div class="hidden-sm-down">
+                                    <i class="fa fa-hotel"></i>
+                                    Hoteles
+                                </div>
+                                <div class="hidden-md-up">
+                                    <i class="fa fa-hotel fa-2x"></i>
+                                </div>
+                            </a>
+
+                            <div class="slide"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab2" role="tab">
+                                <div class="hidden-sm-down">
+                                    <i class="fa fa-plane"></i>
+                                    Vuelos
+                                </div>
+                                <div class="hidden-md-up">
+                                    <i class="fa fa-plane fa-2x"></i>
+                                </div>
+                            </a>
+                            <div class="slide"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab3" role="tab">
+                                <div class="hidden-sm-down">
+                                    <i class="fa fa-bus"></i>
+                                    Traslados
+                                </div>
+                                <div class="hidden-md-up">
+                                    <i class="fa fa-bus fa-2x"></i>
+                                </div>
+                            </a>
+                            <div class="slide"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab4" role="tab">
+                                <div class="hidden-sm-down">
+                                    <i class="fa fa-map-signs"></i>
+                                    Actividades
+                                </div>
+                                <div class="hidden-md-up">
+                                    <i class="fa fa-map-signs fa-2x"></i>
+                                </div>
+                            </a>
+                            <div class="slide"></div>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                            <div class="row m-b-30 advance-elements">
+                                <div class="col-md-12">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-hotel"></i> Reservación de Hotel</div>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-building"></i> Ciudad de Destino</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Destino</option>
+                                        <option value="AL">La Habana</option>
+                                        <option value="WY">Santiago</option>
+                                        <option value="WY">Varadero</option>
+                                        <option value="WY">Trinidad</option>
+                                        <option value="WY">Viñales</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-credit-card"></i> País de residencia</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">País</option>
+                                        <option value="AL">Canada</option>
+                                        <option value="WY">Estados Unidos</option>
+                                        <option value="WY">Mexico</option>
+                                        <option value="WY">España</option>
+                                        <option value="WY">Rusia</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-calendar"></i> Fecha de llegada</div>
+                                    <div class="form-control-wrapper">
+                                        <input type="text" id="date-start-hoteles" class="form-control floating-label" placeholder="Llegada">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-calendar-check-o"></i> Fecha de salida</div>
+                                    <div class="form-control-wrapper">
+                                        <input type="text" id="date-end-hoteles" class="form-control floating-label" placeholder="Salida">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('bundles/app/images/believecuba/carousel/disneyworld.jpg') }}"
-                                     alt="Second slide" class="img-fluid">
+                            <div class="row m-b-30 advance-elements">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-bed"></i> Habitaciones</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Cantidad</option>
+                                        <option value="AL">1</option>
+                                        <option value="WY">2</option>
+                                        <option value="WY">3</option>
+                                        <option value="WY">4</option>
+                                        <option value="WY">5</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-male"></i> Adultos</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Adultos</option>
+                                        <option value="AL">1</option>
+                                        <option value="WY">2</option>
+                                        <option value="WY">3</option>
+                                        <option value="WY">4</option>
+                                        <option value="WY">5</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-child"></i> Niños</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Niños</option>
+                                        <option value="AL">1</option>
+                                        <option value="WY">2</option>
+                                        <option value="WY">3</option>
+                                        <option value="WY">4</option>
+                                        <option value="WY">5</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('bundles/app/images/believecuba/carousel/paris.jpg') }}"
-                                     alt="Third slide" class="img-fluid">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('bundles/app/images/believecuba/carousel/varadero.jpg') }}"
-                                     alt="Fourth slide" class="img-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 text-right">
+                                    <div class="sub-title sub-title-light"></div>
+                                    <button type="button" class="btn btn-default waves-effect waves-light"><i class="fa fa-check"></i> Reservar Hotel</button>
+                                </div>
                             </div>
                         </div>
-                        <!-- end of carousel inner -->
-                        <a class="left carousel-control" href="#bs4-carousel" role="button" data-slide="prev">
-                            <span class="icon-prev" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#bs4-carousel" role="button" data-slide="next"
-                           style="border-radius: 0 20px 0 0;">
-                            <span class="icon-next" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                    <!-- carousel indicator -->
+                        <div class="tab-pane" id="tab2" role="tabpanel">
+                            <div class="row m-b-30 advance-elements">
+                                <div class="col-md-12">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-plane"></i> Vuelos</div>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-building"></i> Ciudad de Destino</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Destino</option>
+                                        <option value="AL">La Habana</option>
+                                        <option value="WY">Santiago</option>
+                                        <option value="WY">Varadero</option>
+                                        <option value="WY">Trinidad</option>
+                                        <option value="WY">Viñales</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-credit-card"></i> País de residencia</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">País</option>
+                                        <option value="AL">Canada</option>
+                                        <option value="WY">Estados Unidos</option>
+                                        <option value="WY">Mexico</option>
+                                        <option value="WY">España</option>
+                                        <option value="WY">Rusia</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-calendar"></i> Fecha de llegada</div>
+                                    <div class="form-control-wrapper">
+                                        <input type="text" id="date-start-vuelos" class="form-control floating-label" placeholder="Llegada">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-calendar-check-o"></i> Fecha de salida</div>
+                                    <div class="form-control-wrapper">
+                                        <input type="text" id="date-end-vuelos" class="form-control floating-label" placeholder="Salida">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 text-right">
+                                    <div class="sub-title sub-title-light"></div>
+                                    <button type="button" class="btn btn-default waves-effect waves-light"><i class="fa fa-check"></i> Reservar Vuelo</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab3" role="tabpanel">
+                            <div class="row m-b-30 advance-elements">
+                                <div class="col-md-12">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-bus"></i> Traslados</div>
+                                </div>
+                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-building"></i> Ciudad</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Ciudad</option>
+                                        <option value="AL">La Habana</option>
+                                        <option value="WY">Santiago</option>
+                                        <option value="WY">Varadero</option>
+                                        <option value="WY">Trinidad</option>
+                                        <option value="WY">Viñales</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-chevron-up"></i> Recojo</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="AL">Aeropuerto</option>
+                                        <option value="WY">Hotel</option>
+                                        <option value="WY">Puerto</option>
+                                        <option value="WY">Estacion</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-search"></i> Buscar</div>
+                                    <select class="js-example-basic-single">
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-chevron-down"></i> Dejar en</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="AL">Aeropuerto</option>
+                                        <option value="WY">Hotel</option>
+                                        <option value="WY">Puerto</option>
+                                        <option value="WY">Estacion</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-search"></i> Buscar</div>
+                                    <select class="js-example-basic-single">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-b-30 advance-elements">
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-calendar"></i> Fecha de servicio</div>
+                                    <div class="form-control-wrapper">
+                                        <input type="text" id="date-servicio" class="form-control floating-label" placeholder="Fecha">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-clock-o"></i> Hora de vuelo</div>
+                                    <div class="form-control-wrapper">
+                                        <input type="text" id="time-vuelo" class="form-control floating-label" placeholder="Hora">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-credit-card"></i> Pais de residencia</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">País</option>
+                                        <option value="AL">Canada</option>
+                                        <option value="WY">Estados Unidos</option>
+                                        <option value="WY">Mexico</option>
+                                        <option value="WY">España</option>
+                                        <option value="WY">Rusia</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-male"></i> Adultos</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Adultos</option>
+                                        <option value="AL">1</option>
+                                        <option value="WY">2</option>
+                                        <option value="WY">3</option>
+                                        <option value="WY">4</option>
+                                        <option value="WY">5</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-child"></i> Niños</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Niños</option>
+                                        <option value="AL">1</option>
+                                        <option value="WY">2</option>
+                                        <option value="WY">3</option>
+                                        <option value="WY">4</option>
+                                        <option value="WY">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 text-right">
+                                    <div class="sub-title sub-title-light"></div>
+                                    <button type="button" class="btn btn-default waves-effect waves-light"><i class="fa fa-check"></i> Reservar Traslado</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab4" role="tabpanel">
+                            <div class="row m-b-30 advance-elements">
+                                <div class="col-md-12">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-map-signs"></i> Actividades</div>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-building"></i> Ciudad de Destino</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Destino</option>
+                                        <option value="AL">La Habana</option>
+                                        <option value="WY">Santiago</option>
+                                        <option value="WY">Varadero</option>
+                                        <option value="WY">Trinidad</option>
+                                        <option value="WY">Viñales</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-credit-card"></i> País de residencia</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">País</option>
+                                        <option value="AL">Canada</option>
+                                        <option value="WY">Estados Unidos</option>
+                                        <option value="WY">Mexico</option>
+                                        <option value="WY">España</option>
+                                        <option value="WY">Rusia</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-calendar"></i> Fecha de llegada</div>
+                                    <div class="form-control-wrapper">
+                                        <input type="text" id="date-start-actividades" class="form-control floating-label" placeholder="Llegada">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-calendar-check-o"></i> Fecha de salida</div>
+                                    <div class="form-control-wrapper">
+                                        <input type="text" id="date-end-actividades" class="form-control floating-label" placeholder="Salida">
+                                    </div>
+                                </div>
 
+                            </div>
+                            <div class="row m-b-30 advance-elements">
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-male"></i> Adultos</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Adultos</option>
+                                        <option value="AL">1</option>
+                                        <option value="WY">2</option>
+                                        <option value="WY">3</option>
+                                        <option value="WY">4</option>
+                                        <option value="WY">5</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-child"></i> Niños</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="">Niños</option>
+                                        <option value="AL">1</option>
+                                        <option value="WY">2</option>
+                                        <option value="WY">3</option>
+                                        <option value="WY">4</option>
+                                        <option value="WY">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 text-right">
+                                    <div class="sub-title sub-title-light"></div>
+                                    <button type="button" class="btn btn-default waves-effect waves-light"><i class="fa fa-check"></i> Reservar Actividad</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <div class="md-overlay"></div>
+    </div>
 
     <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 offers">
-                    <div class="row text-center">
-                        <div class="title">
-                            <h2 class="title-center">
-                                Today´s Deals
-                            </h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row text-center">
+                    <div class="title">
+                        <h2 class="title-center">Today´s Deals</h2>
+                    </div>
+                </div>
+                <div class="slider-center bg-white" id="todaydeals">
+                    <div class="item">
+                        <div class="blog-img">
+                            <img class="img-fluid "
+                                 src="{{ asset('bundles/app/images/believecuba/destinos/cancun.jpg') }}"
+                                 alt="blog-img">
+                            <div class="blog-hover-detail d-flex">
+                                <div class="m-x-auto text-center">
+                                    <div class="card-block text-center">
+                                        <a href="#"
+                                           class="btn btn-warning waves-effect waves-light">
+                                            Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-details">
+                            <h6>Trámites Migratorios</h6>
+                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración Variable</span><span><i
+                                            class="fa fa-money"></i> Precio Variable</span></div>
+                            <p> Gestionamos los trámites migratorios necesarios en la organización de su viaje. </p>
+                            <div class="text-right">
+                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="slider-center bg-white" id="todaydeals">
-                        <div class="item">
-                            <div class="blog-img">
-                                <img class="img-fluid "
-                                     src="{{ asset('bundles/app/images/believecuba/destinos/cancun.jpg') }}"
-                                     alt="blog-img">
-                                <div class="blog-hover-detail d-flex">
-                                    <div class="m-x-auto text-center">
-                                        <div class="card-block text-center">
-                                            <a href="{{ path('offers') }}"
-                                               class="btn btn-warning waves-effect waves-light">
-                                                Ofertas
-                                            </a>
-                                        </div>
+                    <div class="item">
+                        <div class="blog-img">
+                            <img class="img-fluid "
+                                 src="{{ asset('bundles/app/images/believecuba/destinos/Madrid.jpg') }}"
+                                 alt="blog-img">
+                            <div class="blog-hover-detail d-flex">
+                                <div class="m-x-auto text-center">
+                                    <div class="card-block text-center">
+                                        <a href="#"
+                                           class="btn btn-warning waves-effect waves-light">
+                                            Details
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="blog-img">
-                                <img class="img-fluid "
-                                     src="{{ asset('bundles/app/images/believecuba/destinos/dubai.jpg') }}"
-                                     alt="blog-img">
-                                <div class="blog-hover-detail d-flex">
-                                    <div class="m-x-auto text-center">
-                                        <div class="card-block text-center">
-                                            <a href="{{ path('offers') }}"
-                                               class="btn btn-warning waves-effect waves-light">
-                                                Ofertas
-                                            </a>
-                                        </div>
+                        <div class="blog-details">
+                            <h6>Paquetes Vacacionales</h6>
+                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
+                                            class="fa fa-money"></i> Precio Variable</span></div>
+                            <p> Creamos el paquete vacacional perfecto para cada cliente, comparando precios de hoteles,
+                                vuelos, excursiones, shows y eventos para hacer de sus vacaciones una aventura
+                                inolvidable.</p>
+                            <div class="text-right">
+                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="blog-img">
+                            <img class="img-fluid "
+                                 src="{{ asset('bundles/app/images/believecuba/destinos/dubai.jpg') }}"
+                                 alt="blog-img">
+                            <div class="blog-hover-detail d-flex">
+                                <div class="m-x-auto text-center">
+                                    <div class="card-block text-center">
+                                        <a href="#"
+                                           class="btn btn-warning waves-effect waves-light">
+                                            Details
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="blog-img">
-                                <img class="img-fluid "
-                                     src="{{ asset('bundles/app/images/believecuba/destinos/havana.jpg') }}"
-                                     alt="blog-img">
-                                <div class="blog-hover-detail d-flex">
-                                    <div class="m-x-auto text-center">
-                                        <div class="card-block text-center">
-                                            <a href="{{ path('offers') }}"
-                                               class="btn btn-warning waves-effect waves-light">
-                                                Ofertas
-                                            </a>
-                                        </div>
+                        <div class="blog-details">
+                            <h6>Renta de Autos</h6>
+                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
+                                            class="fa fa-money"></i> Precio Variable</span></div>
+                            <p> Ofrecemos renta en todas las categorías.</p>
+                            <div class="text-right">
+                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="blog-img">
+                            <img class="img-fluid "
+                                 src="{{ asset('bundles/app/images/believecuba/destinos/havana.jpg') }}"
+                                 alt="blog-img">
+                            <div class="blog-hover-detail d-flex">
+                                <div class="m-x-auto text-center">
+                                    <div class="card-block text-center">
+                                        <a href="#"
+                                           class="btn btn-warning waves-effect waves-light">
+                                            Details
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="blog-img">
-                                <img class="img-fluid "
-                                     src="{{ asset('bundles/app/images/believecuba/destinos/lasvegas.jpg') }}"
-                                     alt="blog-img">
-                                <div class="blog-hover-detail d-flex">
-                                    <div class="m-x-auto text-center">
-                                        <div class="card-block text-center">
-                                            <a href="{{ path('offers') }}"
-                                               class="btn btn-warning waves-effect waves-light">
-                                                Ofertas
-                                            </a>
-                                        </div>
+                        <div class="blog-details">
+                            <h6>Hoteles</h6>
+                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
+                                            class="fa fa-money"></i> Precio Variable</span></div>
+                            <p> Brindamos reservas de Hoteles con grandes descuentos en más de 120.000 destinos en todo
+                                el mundo.</p>
+                            <div class="text-right">
+                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="blog-img">
+                            <img class="img-fluid "
+                                 src="{{ asset('bundles/app/images/believecuba/destinos/lasvegas.jpg') }}"
+                                 alt="blog-img">
+                            <div class="blog-hover-detail d-flex">
+                                <div class="m-x-auto text-center">
+                                    <div class="card-block text-center">
+                                        <a href="#"
+                                           class="btn btn-warning waves-effect waves-light">
+                                            Details
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="blog-img">
-                                <img class="img-fluid "
-                                     src="{{ asset('bundles/app/images/believecuba/destinos/Madrid.jpg') }}"
-                                     alt="blog-img">
-                                <div class="blog-hover-detail d-flex">
-                                    <div class="m-x-auto text-center">
-                                        <div class="card-block text-center">
-                                            <a href="{{ path('offers') }}"
-                                               class="btn btn-warning waves-effect waves-light">
-                                                Ofertas
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="blog-details">
+                            <h6>Vuelos</h6>
+                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
+                                            class="fa fa-money"></i> Precio Variable</span></div>
+                            <p> Reservas de boletos aéreos para vuelos nacionales e internacionales.</p>
+                            <div class="text-right">
+                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- end of slider-center -->
             </div>
         </div>
+    </div>
     </section>
 
+    <section>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 offers">
                 <div class="row text-center">
                     <div class="title">
-                        <h2 class="title-center">Ofertas</h2>
+                        <h2 class="title-center">Best Destinations</h2>
                     </div>
                 </div>
-                <div class="slider-center bg-white" id="idslidercenter">
+                <div class="slider-center bg-white" id="todaysdestinations">
                     <div class="item">
                         <div class="blog-img">
                             <img class="img-fluid "
-                                 src="{{ asset('bundles/app/images/believecuba/servicios/tramites_migratorios.jpg') }}"
+                                 src="{{ asset('bundles/app/images/believecuba/destinos/cancun.jpg') }}"
                                  alt="blog-img">
+                            <div class="blog-hover-detail d-flex">
+                                <div class="m-x-auto text-center">
+                                    <div class="card-block text-center">
+                                        <a href="#"
+                                           class="btn btn-warning waves-effect waves-light">
+                                            Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="blog-details">
                             <h6>Trámites Migratorios</h6>
-                            <div class="date-blog m-b-10"><span><i class="icofont icofont-time"></i> Duración Variable</span><span><i
-                                            class="icofont icofont-money"></i> Precio Variable</span></div>
+                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración Variable</span><span><i
+                                            class="fa fa-money"></i> Precio Variable</span></div>
                             <p> Gestionamos los trámites migratorios necesarios en la organización de su viaje. </p>
                             <div class="text-right">
-                                <a href="#" class="btn btn-warning waves-effect waves-light">Servicios</a>
+                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-img">
                             <img class="img-fluid "
-                                 src="{{ asset('bundles/app/images/believecuba/servicios/paquete_vacacional.jpg') }}"
+                                 src="{{ asset('bundles/app/images/believecuba/destinos/Madrid.jpg') }}"
                                  alt="blog-img">
+                            <div class="blog-hover-detail d-flex">
+                                <div class="m-x-auto text-center">
+                                    <div class="card-block text-center">
+                                        <a href="#"
+                                           class="btn btn-warning waves-effect waves-light">
+                                            Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="blog-details">
                             <h6>Paquetes Vacacionales</h6>
-                            <div class="date-blog m-b-10"><span><i class="icofont icofont-time"></i> Duración 30 Minutos</span><span><i
-                                            class="icofont icofont-money"></i> Precio Variable</span></div>
+                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
+                                            class="fa fa-money"></i> Precio Variable</span></div>
                             <p> Creamos el paquete vacacional perfecto para cada cliente, comparando precios de hoteles,
                                 vuelos, excursiones, shows y eventos para hacer de sus vacaciones una aventura
                                 inolvidable.</p>
                             <div class="text-right">
-                                <a href="#" class="btn btn-warning waves-effect waves-light">Servicios</a>
+                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-img">
                             <img class="img-fluid "
-                                 src="{{ asset('bundles/app/images/believecuba/servicios/renta_autos.jpg') }}"
+                                 src="{{ asset('bundles/app/images/believecuba/destinos/dubai.jpg') }}"
                                  alt="blog-img">
+                            <div class="blog-hover-detail d-flex">
+                                <div class="m-x-auto text-center">
+                                    <div class="card-block text-center">
+                                        <a href="#"
+                                           class="btn btn-warning waves-effect waves-light">
+                                            Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="blog-details">
                             <h6>Renta de Autos</h6>
-                            <div class="date-blog m-b-10"><span><i class="icofont icofont-time"></i> Duración 30 Minutos</span><span><i
-                                            class="icofont icofont-money"></i> Precio Variable</span></div>
+                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
+                                            class="fa fa-money"></i> Precio Variable</span></div>
                             <p> Ofrecemos renta en todas las categorías.</p>
                             <div class="text-right">
-                                <a href="#" class="btn btn-warning waves-effect waves-light">Servicios</a>
+                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-img">
                             <img class="img-fluid "
-                                 src="{{ asset('bundles/app/images/believecuba/servicios/hoteles.jpg') }}"
+                                 src="{{ asset('bundles/app/images/believecuba/destinos/havana.jpg') }}"
                                  alt="blog-img">
+                            <div class="blog-hover-detail d-flex">
+                                <div class="m-x-auto text-center">
+                                    <div class="card-block text-center">
+                                        <a href="#"
+                                           class="btn btn-warning waves-effect waves-light">
+                                            Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="blog-details">
                             <h6>Hoteles</h6>
-                            <div class="date-blog m-b-10"><span><i class="icofont icofont-time"></i> Duración 30 Minutos</span><span><i
-                                            class="icofont icofont-money"></i> Precio Variable</span></div>
+                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
+                                            class="fa fa-money"></i> Precio Variable</span></div>
                             <p> Brindamos reservas de Hoteles con grandes descuentos en más de 120.000 destinos en todo
                                 el mundo.</p>
                             <div class="text-right">
-                                <a href="#" class="btn btn-warning waves-effect waves-light">Servicios</a>
+                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="blog-img">
                             <img class="img-fluid "
-                                 src="{{ asset('bundles/app/images/believecuba/servicios/vuelos.jpg') }}"
+                                 src="{{ asset('bundles/app/images/believecuba/destinos/lasvegas.jpg') }}"
                                  alt="blog-img">
+                            <div class="blog-hover-detail d-flex">
+                                <div class="m-x-auto text-center">
+                                    <div class="card-block text-center">
+                                        <a href="#"
+                                           class="btn btn-warning waves-effect waves-light">
+                                            Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="blog-details">
                             <h6>Vuelos</h6>
-                            <div class="date-blog m-b-10"><span><i class="icofont icofont-time"></i> Duración 30 Minutos</span><span><i
-                                            class="icofont icofont-money"></i> Precio Variable</span></div>
+                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
+                                            class="fa fa-money"></i> Precio Variable</span></div>
                             <p> Reservas de boletos aéreos para vuelos nacionales e internacionales.</p>
                             <div class="text-right">
-                                <a href="#" class="btn btn-warning waves-effect waves-light">Servicios</a>
+                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -311,404 +752,34 @@
         </div>
         <!-- end of row -->
     </div>
-
-    <div id="morphsearch" class="morphsearch">
-        <form class="morphsearch-form">
-
-            <input class="morphsearch-input" type="search" placeholder="Buscar..."/>
-
-            <button class="morphsearch-submit" type="submit">Search</button>
-
-        </form>
-        <div class="morphsearch-content">
-            <div class="dummy-column">
-                <h2>People</h2>
-                <a class="dummy-media-object" href="#!">
-                    <h3>Sara Soueidan</h3>
-                </a>
-
-                <a class="dummy-media-object" href="#!">
-                    <h3>Shaun Dona</h3>
-                </a>
-            </div>
-            <div class="dummy-column">
-                <h2>Popular</h2>
-                <a class="dummy-media-object" href="#!">
-                    <h3>Page Preloading Effect</h3>
-                </a>
-
-                <a class="dummy-media-object" href="#!">
-                    <h3>Draggable Dual-View Slideshow</h3>
-                </a>
-            </div>
-            <div class="dummy-column">
-                <h2>Recent</h2>
-                <a class="dummy-media-object" href="#!">
-                    <h3>Tooltip Styles Inspiration</h3>
-                </a>
-                <a class="dummy-media-object" href="#!">
-                    <h3>Notification Styles Inspiration</h3>
-                </a>
-            </div>
-        </div><!-- /morphsearch-content -->
-        <span class="morphsearch-close"><i class="icofont icofont-search-alt-1"></i></span>
-    </div>
-
-    <!--Testimonials Section Starts-->
-    <div data-jarallax='{"speed": 0.2}' class="jarallax testimonial text-center testimonial-bg"
-             style="background-image: url({{ asset('bundles/app/images/believecuba/event_bg_dark.png') }});">
-        <div class="container section-tb">
-            <div class="row d-flex">
-                <div class="col-md-12">
-                    <!-- TESTIMONIAL CONTAINER  -->
-                    <div class="text-center">
-                        <div class="title">
-                            <h2 class="title-center"> Opiniones </h2>
-                        </div>
-                    </div>
-                    <div id="testimonial-slider" class="testimonial-slider">
-                        <div>
-                            <div class="col-md-8 col-sm-12 col-xs-12 offset-md-2 text-center">
-                                <h5>
-                                    Me siento muy satisfecho con el trabajo y la atención de estos especialistas y apasionados de BelieveCuba. Exelente atención aquí en las Vegas y la buena coordinación con Cuba.
-                                </h5>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="col-md-8 col-sm-12 col-xs-12 offset-md-2 text-center">
-                                <h5>
-                                    Tuve la suerte de encontrarme con esta compañía a traves de un amigo con la cual quede muy complacido con su trabajo y profesionalismo a la hora de atenderme en cualquier horario.
-                                </h5>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="col-md-8 col-sm-12 col-xs-12 offset-md-2 text-center">
-                                <h5>
-                                    Realmente super agradecido por el servicio de BelieveCuba. En menos de 10 días ya me estaban llamando de la oficina para decirme que ya el pasaporte estaba listo y prorrogado.
-                                </h5>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="col-md-8 col-sm-12 col-xs-12 offset-md-2 text-center">
-                                <h5>
-                                    Me encanto la atención. Enseguida me atendieron con la renta del auto y todo bien rápido. Estoy sumamente agradecida y se los recomiendo. De verdad impresionada, me encanto colaborar con ustedes. Muchas gracias.
-                                </h5>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="col-md-8 col-sm-12 col-xs-12 offset-md-2 text-center">
-                                <h5>
-                                    Super contenta con el cervicio, muy bueno y rápido. De seguro pasaré unas buenas vacaciones con la familia gracias a #BelieveCuba. Se lo recomiendo a todos.
-                                </h5>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="col-md-8 col-sm-12 col-xs-12 offset-md-2 text-center">
-                                <h5>
-                                    Agradecida de conocer Las Vegas, de manos de ustedes Belivecuba. Atención de primera. Unas vacaciones espectaculares y todo eso fue posible gracias al servicio brindado.
-                                </h5>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div id="testimonial-carousel" class="testimonial-thumbs">
-                        <div>
-                            <img class="img-circle" src="{{ asset('bundles/app/images/believecuba/opiniones/albertomatienzo.jpg') }}"
-                                 alt=""/>
-                            <div>
-                                <h5 class="text-uppercase">Alberto Matienzo</h5>
-                                <h6>1ro de Junio de 2018</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="{{ asset('bundles/app/images/believecuba/opiniones/adrianalejandroramirez.jpg') }}" alt=""/>
-                            <div>
-                                <h5 class="text-uppercase">Adrian Alejandro Ramirez Arroyo</h5>
-                                <h6>7 de Marzo de 2018</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="{{ asset('bundles/app/images/believecuba/opiniones/davidmartinez.jpg') }}" alt=""/>
-                            <div>
-                                <h5 class="text-uppercase">David Martinez</h5>
-                                <h6>6 de Febrero de 2018</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="{{ asset('bundles/app/images/believecuba/opiniones/Jannyguanche.jpg') }}" alt=""/>
-                            <div>
-                                <h5 class="text-uppercase">Janny Guanche</h5>
-                                <h6>16 mayo 2018</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="{{ asset('bundles/app/images/believecuba/opiniones/katiasarmientorivas.jpg') }}" alt=""/>
-                            <div>
-                                <h5 class="text-uppercase">Katia Sarmiento Rivas</h5>
-                                <h6>10 de Abril de 2018</h6>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="{{ asset('bundles/app/images/believecuba/opiniones/flaviarojo.jpg') }}" alt=""/>
-                            <div>
-                                <h5 class="text-uppercase">Flavia Rojo</h5>
-                                <h6>7 julio 2018</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Testimonials Section Ends-->
-
-    <!--What We Do Section Start-->
-    <section id="fotosyvideos" class="section-bg">
-        <div class="container-fluid">
-            <div class="row text-center">
-                <div class="title">
-                    <h2 class="title-center">Fotos</h2>
-                </div>
-            </div>
-            <div class="port-tab">
-                <div class="port-filt-group">
-                    <ul class="portfolioFilter text-center">
-                        <li>
-                            <button data-filter="*" class="btn current">Todas las fotos</button>
-                        </li>
-                        <li>
-                            <button data-filter=".exp" class="btn">Experiencias</button>
-                        </li>
-                        <li>
-                            <button data-filter=".psj" class="btn">Paisajes</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="grid">
-                    <div class="portfolioContainer">
-                        <div class="col-md-2 col-sm-6 col-xs-12 exp grid-item ">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/experiencias/Experiencia1.jpg') }}"
-                                     alt="Experiencias">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 psj grid-item">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/fotos/pic001.jpg') }}"
-                                     alt="Portfolio14">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 exp grid-item ">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/experiencias/Experiencia2.jpg') }}"
-                                     alt="Experiencias">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 psj grid-item">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/fotos/pic002.jpg') }}"
-                                     alt="Portfolio6">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 exp grid-item ">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/experiencias/Experiencia3.jpg') }}"
-                                     alt="Experiencias">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 exp grid-item ">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/experiencias/Experiencia4.jpg') }}"
-                                     alt="Experiencias">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 psj">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/fotos/pic003.jpg') }}"
-                                     alt="Portfolio12">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 exp grid-item ">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/experiencias/Experiencia5.jpg') }}"
-                                     alt="Experiencias">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 exp grid-item ">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/experiencias/Experiencia6.jpg') }}"
-                                     alt="Experiencias">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 exp grid-item">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/experiencias/Experiencia7.jpg') }}"
-                                     alt="Portfolio2">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 psj">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/fotos/pic004.jpg') }}"
-                                     alt="Portfolio12">
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 col-xs-12 exp grid-item">
-                            <div class="text-center port-main">
-                                <img class="img img-fluid"
-                                     src="{{ asset('bundles/app/images/believecuba/experiencias/Experiencia8.jpg') }}"
-                                     alt="Portfolio3">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
-    <!--What We Do Section Ends-->
-
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 offers">
-                    <div class="row text-center">
-                        <div class="title">
-                            <h2 class="title-center">
-                                Today´s Popular Destinations
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="slider-center bg-white" id="todaysdestinations">
-                        <div class="item">
-                            <div class="blog-img">
-                                <img class="img-fluid "
-                                     src="{{ asset('bundles/app/images/believecuba/destinos/NY.jpg') }}"
-                                     alt="blog-img">
-                                <div class="blog-hover-detail d-flex">
-                                    <div class="m-x-auto text-center">
-                                        <div class="card-block text-center">
-                                            <a href="{{ path('offers') }}"
-                                               class="btn btn-warning waves-effect waves-light">
-                                                Ofertas
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="blog-img">
-                                <img class="img-fluid "
-                                     src="{{ asset('bundles/app/images/believecuba/destinos/Paris1.jpg') }}"
-                                     alt="blog-img">
-                                <div class="blog-hover-detail d-flex">
-                                    <div class="m-x-auto text-center">
-                                        <div class="card-block text-center">
-                                            <a href="{{ path('offers') }}"
-                                               class="btn btn-warning waves-effect waves-light">
-                                                Ofertas
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="blog-img">
-                                <img class="img-fluid "
-                                     src="{{ asset('bundles/app/images/believecuba/destinos/Punta_cana.jpg') }}"
-                                     alt="blog-img">
-                                <div class="blog-hover-detail d-flex">
-                                    <div class="m-x-auto text-center">
-                                        <div class="card-block text-center">
-                                            <a href="{{ path('offers') }}"
-                                               class="btn btn-warning waves-effect waves-light">
-                                                Ofertas
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="blog-img">
-                                <img class="img-fluid "
-                                     src="{{ asset('bundles/app/images/believecuba/destinos/Santiago-de-chile.jpg') }}"
-                                     alt="blog-img">
-                                <div class="blog-hover-detail d-flex">
-                                    <div class="m-x-auto text-center">
-                                        <div class="card-block text-center">
-                                            <a href="{{ path('offers') }}"
-                                               class="btn btn-warning waves-effect waves-light">
-                                                Ofertas
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="blog-img">
-                                <img class="img-fluid "
-                                     src="{{ asset('bundles/app/images/believecuba/destinos/Madrid.jpg') }}"
-                                     alt="blog-img">
-                                <div class="blog-hover-detail d-flex">
-                                    <div class="m-x-auto text-center">
-                                        <div class="card-block text-center">
-                                            <a href="{{ path('offers') }}"
-                                               class="btn btn-warning waves-effect waves-light">
-                                                Ofertas
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!--Footer Section Starts-->
-    <footer id="eventos" data-jarallax='{"speed": 0.2}' class="jarallax section-tb footer"
-            style="background-image: url({{ asset('bundles/app/images/landingpage/footer-bg.jpg') }});">
+    <footer id="footer-sec" data-jarallax='{"speed": 0.2}' class="jarallax section-tb footer"
+            style="background-image: url({{ asset('bundles/app/images/believecuba/carousel/logo_carousel_dark.jpg') }});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-about m-b-xs-15">
                     <h3 class="footer-header">Contacto</h3>
                     <ul class="footer_widget">
                         <li class="footer_address">
-                            <i class="icofont icofont-location-pin"></i>
+                            <i class="fa fa-location-arrow"></i>
                             <h5>2840 E Flamingo Rd Suite C
                                 89121 Las Vegas</h5>
                         </li>
                         <li class="footer_contact">
-                            <i class="icofont icofont-ui-cell-phone"></i>
+                            <i class="fa fa-phone"></i>
                             <h5>+1 702-800-1750 </h5>
                         </li>
                         <li class="footer-web">
-                            <i class="icofont icofont-globe"></i>
+                            <i class="fa fa-globe"></i>
                             <h5>www.believecuba.com</h5>
                         </li>
                         <li class="footer_email">
-                            <i class="icofont icofont-plane-ticket"></i>
+                            <i class="fa fa-ticket"></i>
                             <h5>Agencia de turismo</h5>
                         </li>
                         <li class="footer_email">
-                            <i class="icofont icofont-flag"></i>
+                            <i class="fa fa-star"></i>
                             <h5>Página creada el 9 de abril de 2017.
                             </h5>
                         </li>
@@ -804,6 +875,11 @@
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+        <div class="" style="width: 100%">
+            <div class="copyright">
+                <h5 class="text-center">BelieveCuba © {{ 'now' | date('Y') }}</h5>
             </div>
         </div>
     </footer>

@@ -32,13 +32,15 @@ $(document).ready(function() {
 
     });
     $("#todaydeals").owlCarousel({
-        autoplay:false,
+        dots: true,
+        merge: true,
+        nav:true,
         autoplayTimeout:9000,
-        margin:0,
+        margin:16,
         smartSpeed:1000,
-        loop:true,
+        loop:false,
         slideSpeed:300,
-        items:4,
+        items:3,
         // rtl: true, this start a image from right side to left
         singleItem:true,
         responsiveClass:true,
@@ -50,20 +52,20 @@ $(document).ready(function() {
                 items:2,
             },
             1000:{
-                items:4,
+                items:3,
                 loop:false
             }
         }
 
     });
     $("#todaysdestinations").owlCarousel({
-        autoplay:false,
+        nav:true,
         autoplayTimeout:9000,
-        margin:0,
+        margin:16,
         smartSpeed:1000,
-        loop:true,
+        loop:false,
         slideSpeed:300,
-        items:4,
+        items:3,
         // rtl: true, this start a image from right side to left
         singleItem:true,
         responsiveClass:true,
@@ -75,10 +77,11 @@ $(document).ready(function() {
                 items:2,
             },
             1000:{
-                items:4,
+                items:3,
                 loop:false
             }
         }
 
     });
+
 });

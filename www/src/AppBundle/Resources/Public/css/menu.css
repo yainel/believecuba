@@ -27,7 +27,7 @@ File: menu.css
     content: initial;
 }
 .main-header-top {
-    background-color: #1b8bf9;
+    background-color: #D3EA3A;
 }
 .nav-level{
     padding: 10px 15px !important;
@@ -80,11 +80,11 @@ File: menu.css
         color: #f6f6f6
     }
     .main-header-top .navbar .sidebar-toggle {
-        color: #fff;
+        color: #051a49;
         opacity: 0.9;
     }
     .main-header-top .navbar .sidebar-toggle:hover {
-        color: #f6f6f6;
+        color: #051a49;
         opacity: 1;
     }
     .main-header-top .logo {
@@ -107,15 +107,21 @@ File: menu.css
         color: #666;
         transition:all ease-in 0.3s;
     }
+    ul.sidebar-menu {
+        text-align:right;
+    }
+    ul.sidebar-menu>li {
+        text-align:left;
+    }
     .sidebar-menu>li>a:hover {
-        background-color: #1b8bf9;
+        background-color: #f9b015;
         color: #fff;
     }
 
     .sidebar-menu>li.active>a {
         color: #fff;
         font-weight: 600;
-        background: #1b8bf9;
+        background: #f9b015;
     }
     .sidebar-menu .treeview-menu {
         margin: 0 1px;
@@ -243,7 +249,7 @@ File: menu.css
         max-height: 50px;
         border-radius: 0;
         padding: 0;
-        background-color: #1b8bf9;
+        background: linear-gradient(to left,#008EF8 40%,#D3EA3A);
     }
     .main-header-top .sidebar-toggle {
         float: left;
@@ -376,7 +382,7 @@ File: menu.css
         position: absolute;
         top: 0;
         left: 0;
-        background:#fff;
+        background:#fffffff0;
         padding-top: 50px;
         min-height: 100vh;
         width: 230px;
@@ -390,7 +396,6 @@ File: menu.css
     }
     @media (max-width: 767px) {
         .main-sidebar {
-            padding-top: 100px;
             -webkit-transform: translate(-230px, 0);
             -ms-transform: translate(-230px, 0);
             transform: translate(-230px, 0)
@@ -420,10 +425,9 @@ File: menu.css
         align-items: center;
         overflow: hidden;
         white-space: nowrap;
-        background-image: url(../images/extra-profile-bg.png);
+        background-image: url(../images/believecuba/logo-notext.jpg);
         background-size: cover;
         background-blend-mode: overlay;
-        background-color: rgba(0, 0, 0, .34);
     }
     .user-panel .info p {
         color: #fff;
@@ -477,7 +481,6 @@ File: menu.css
         display: block;
         position: relative;
         font-size: 14px;
-        background-color: #fff;
     }
     .sidebar-menu>li>a>i {
         padding-right: 6px;
@@ -1353,6 +1356,7 @@ File: menu.css
         .horizontal-fixed .main-sidebar{
             width:100%;
             min-height:auto;
+            opacity(50%)
         }
         .horizontal-fixed .sidebar-menu .treeview-menu .treeview-menu li a{
             padding-left: 20px;
@@ -1428,14 +1432,14 @@ File: menu.css
         }
 
         .horizontal-fixed .container,.horizontal-fixed .container-fluid{
-            margin-top:110px;
+            /*margin-top:50px;*/
             /*padding-top:30px;*/
         }
         .box-layout .container,.box-layout .container-fluid{
-            margin-top: 50px;
+            /*margin-top: 50px;*/
         }
         .horizontal-fixed #blog .container,.horizontal-fixed #blog .container-fluid{
-            margin-top:0;
+            /*margin-top:0;*/
             /*padding-top:30px;*/
         }
         .horizontal-fixed .blog-details .container,.horizontal-fixed .blog-details .container-fluid{
@@ -1446,7 +1450,10 @@ File: menu.css
             margin-top: 30px;
         }
         .horizontal-fixed.fixed .container-fluid{
-            margin-top: 99px;
+            /*margin-top: 99px;*/
+        }
+        .container-carousel{
+            margin-top: 50px !important;
         }
         .horizontal-fixed .mega-menu{
             display:none;
@@ -1477,7 +1484,7 @@ File: menu.css
             padding-top: 10px;
         }
         ul.mega-list li > a{
-            padding: 3px 5px;        
+            padding: 3px 5px;
             font-size: 13px;
         }
         ul.mega-list li > a:hover{
@@ -1517,7 +1524,7 @@ File: menu.css
             padding: 10px
         }
     }
-    
+
     @media (min-width: 767px) and (max-width: 991px) {
         .sidebar-menu>li>a>i{
             padding-right: 0

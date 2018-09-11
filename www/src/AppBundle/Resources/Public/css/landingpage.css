@@ -57,7 +57,7 @@
      padding: 60px 0;
  }
  .section-tb{
-     padding: 60px 0 0 0;
+     padding: 30px 0 0 0;
  }
  /*Social Icon Start*/
  .socials-icon {
@@ -130,22 +130,6 @@
 
  .navbar-nav .nav-item+.nav-item{
      margin-left: 40px;
- }
- @media (min-width: 320px) {
- .nav {
-     float: left;
- }
-     .navbar-nav .nav-item+.nav-item{
-         margin-left: 0;
-     }
- }
- @media (min-width: 768px) {
-     .navbar-nav .nav-item+.nav-item{
-         margin-left: 40px;
-     }
-     .nav {
-         float: right;
-     }
  }
  /*====== 03 Services css starts ======= */
  .ourpro-icon-wrap {
@@ -566,7 +550,7 @@
      position: relative;
  }
  .blog-details{
-     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+     box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.12);
      padding: 15px;
  }
  .blog-details h6 {
@@ -820,7 +804,7 @@
      border-radius: 0;
  }
  .copyright h5{
-     background-color: #222222;
+     background-color: #07070778;
      color: #fff;
      padding:20px 0;
      margin: 0;
@@ -851,10 +835,7 @@
  .footer-web h5{
      margin-bottom: 0;
  }
- footer p{
-     margin-bottom: 10px;
 
- }
  .footer .fa-angle-double-right{
      color: #fff;
      font-size: 20px;
@@ -1112,8 +1093,24 @@
  /*=======top to bottom button Ends====*/
 
  .blog-details {
-     min-height: 16em;
+     min-height: 8em;
+     border-bottom: solid #f9b015 5px;
  }
  .blog-details p {
      min-height: 6em;
+ }
+
+ section {
+     margin: 50px 0 50px 0;
+ }
+
+ .carousel-item {
+     height: 630px;
+ }
+
+ .sm-carousel {
+     padding-top: 0;
+ }
+ .tab-with-img i {
+     position: relative; !important;
  }

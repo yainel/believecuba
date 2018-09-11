@@ -1537,7 +1537,7 @@
 
     .md-tabs .nav-item, .nav-tabs .slide {
         width: calc(100%);
-        bottom: initial;
+        /*bottom: initial;*/
     }
 
     .nav-tabs {

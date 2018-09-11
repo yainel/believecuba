@@ -214,3 +214,38 @@
   position: relative;
   z-index: 1;
 }
+
+
+/*
+ * Custom Carousel Slide Effect
+ */
+
+.carousel-fade .carousel-item {
+  opacity: 0.9;
+  transition: ease;
+  transition-duration: .10s;
+  transition-property: opacity;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1.2, 1.2);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1.2, 1.2);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+.carousel-item > img {
+  -webkit-animation: zoom 40s;
+  animation: zoom 20s;
+}

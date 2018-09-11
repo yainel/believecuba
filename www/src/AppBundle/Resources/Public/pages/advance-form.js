@@ -371,8 +371,8 @@ $(document).ready(function() {
             previous: "icofont icofont-rounded-left"
         }
     });
-    $("#datetimepicker6").on("dp.change", function(e) {
-        $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+    $("#returndate").on("dp.change", function(e) {
+        $('#pickupdate').data("singleDatePicker").minDate(e.date);
     });
     $("#datetimepicker7").on("dp.change", function(e) {
         $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
@@ -433,16 +433,27 @@ $(document).ready(function() {
             time: false,
             clearButton: true
         });
-        $('#pickupdate').bootstrapMaterialDatePicker({
+        $('#date-servicio').bootstrapMaterialDatePicker({
             time: false,
-            clearButton: true
+            clearButton: true,
+            date: true,
+            shortTime: false,
+            minDate: new Date(),
         });
         $('#returndate').bootstrapMaterialDatePicker({
             time: false,
-            clearButton: true
+            clearButton: true,
+            date: true,
+            shortTime: false,
+            minDate: new Date(),
         });
 
         $('#time').bootstrapMaterialDatePicker({
+            date: false,
+            shortTime: false,
+            format: 'HH:mm'
+        });
+        $('#time-vuelo').bootstrapMaterialDatePicker({
             date: false,
             shortTime: false,
             format: 'HH:mm'
@@ -470,16 +481,49 @@ $(document).ready(function() {
             switchOnClick: true
         });
 
-        $('#date-end').bootstrapMaterialDatePicker({
-            weekStart: 0,
-            format: 'DD/MM/YYYY HH:mm'
-        });
-        $('#date-start').bootstrapMaterialDatePicker({
+        $('#date-end-hoteles').bootstrapMaterialDatePicker({
             weekStart: 0,
             format: 'DD/MM/YYYY HH:mm',
-            shortTime: true
+            shortTime: true,
+            timePicker24Hour: true,
+        });
+        $('#date-start-hoteles').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            format: 'DD/MM/YYYY HH:mm',
+            shortTime: true,
+            timePicker24Hour: true,
         }).on('change', function(e, date) {
-            $('#date-end').bootstrapMaterialDatePicker('setMinDate', date);
+            $('#date-end-hoteles').bootstrapMaterialDatePicker('setMinDate', date);
+        });
+
+        $('#date-end-actividades').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            format: 'DD/MM/YYYY HH:mm',
+            shortTime: true,
+            timePicker24Hour: true,
+        });
+        $('#date-start-actividades').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            format: 'DD/MM/YYYY HH:mm',
+            shortTime: true,
+            timePicker24Hour: true,
+        }).on('change', function(e, date) {
+            $('#date-end-actividades').bootstrapMaterialDatePicker('setMinDate', date);
+        });
+
+        $('#date-end-vuelos').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            format: 'DD/MM/YYYY HH:mm',
+            shortTime: true,
+            timePicker24Hour: true,
+        });
+        $('#date-start-vuelos').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            format: 'DD/MM/YYYY HH:mm',
+            shortTime: true,
+            timePicker24Hour: true,
+        }).on('change', function(e, date) {
+            $('#date-end-vuelos').bootstrapMaterialDatePicker('setMinDate', date);
         });
 
         $('#min-date').bootstrapMaterialDatePicker({
