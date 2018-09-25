@@ -16,11 +16,15 @@
 
     */
  /*====== 01 Custom css starts ======= */
+ html {
+     height: 100%;
+ }
  body{
      font-size: 15px;
      overflow-x: hidden;
      background-color: #fff;
      font-family: 'Roboto', sans-serif;
+     height: 100%;
  }
  h1{
     line-height: 1.8;
@@ -29,14 +33,21 @@
      position: relative;
      color: #1b8bf9;
      text-transform: uppercase;
-     padding-bottom: 50px;
+     padding: 50px;
+     letter-spacing:1px;
+ }
+ h2.title-sec, h2.title-center-inverse{
+     position: relative;
+     color: #fff;
+     text-transform: uppercase;
+     padding: 50px;
      letter-spacing:1px;
  }
  .title-sec:before{
      position: absolute;
      content: "";
      width: 100px;
-     background: #000;
+     background: #0573b9;
      bottom: 35px;
      left: 0;
      height:2px;
@@ -51,6 +62,17 @@
  height: 2px;
  background-color: #000;
  margin: auto;
+ }
+ .title-center-inverse:before{
+     content: "";
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 35px;
+     width: 100px;
+     height: 2px;
+     background-color: #fff;
+     margin: auto;
  }
  .section-bg{
      background-color: #f3f3f3;
@@ -509,7 +531,8 @@
  .pricing-table-items li{
      position: relative;
      padding-left: 40px;
-     margin: 15px 0;
+     /*margin: 15px 0;*/
+     color: #777777;
  }
  .pricing-table-items li i{
      position: absolute;
@@ -812,7 +835,7 @@
      font-weight: 100;
  }
  .subscribe-btn{
-     margin:30px 0;
+     margin:20px 0;
  }
  .subscribe-btn .form-control {
      height: 35px;
@@ -864,7 +887,6 @@
          margin-bottom: 30px;
      }
      .navbar-light .navbar-toggler{
-         background: url("../images/landingpage/menu.png");
      }
      .navbar-toggler{
          border-radius: 0.25rem;
@@ -920,7 +942,6 @@
  }
  @media only screen and (max-width: 767px) {
      .navbar-light .navbar-toggler{
-         background: url("../images/landingpage/menu.png");
      }
      .socials-icon li{
          padding: 0 8px;
@@ -1021,7 +1042,7 @@
  /*Responsive css*/
  @media only screen and (max-width: 1199px){
      .section-bg ,.section-tb{
-         padding: 20px 0;
+        /* padding: 20px 0;*/
      }
      .title-center:before {
                   bottom: 10px;
@@ -1049,6 +1070,9 @@
      .footer li img {
          width: 83px;
          height: 83px;
+     }
+     .reservas {
+         top: 60px;
      }
  }
  @media only screen and (max-width: 600px){
@@ -1095,17 +1119,18 @@
  .blog-details {
      min-height: 8em;
      border-bottom: solid #f9b015 5px;
+     margin-bottom: 50px;
  }
  .blog-details p {
      min-height: 6em;
  }
 
  section {
-     margin: 50px 0 50px 0;
+     margin: 0 0 0 0;
  }
 
- .carousel-item {
-     height: 630px;
+ .carousel-height {
+     min-height: 100%;
  }
 
  .sm-carousel {
@@ -1113,4 +1138,21 @@
  }
  .tab-with-img i {
      position: relative; !important;
+ }
+
+.color-bg {
+    background-color: #0573b9;
+}
+    .color-bg .blog-details{
+        background-color: #fff;
+    }
+    .color-bg .item img{
+        background-color: #fff;
+    }
+
+ .light-bg {
+     background-color: #fff;
+ }
+ .light-bg .title-center:before {
+     background-color: #1b8bf9;
  }

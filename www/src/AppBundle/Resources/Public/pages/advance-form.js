@@ -483,15 +483,13 @@ $(document).ready(function() {
 
         $('#date-end-hoteles').bootstrapMaterialDatePicker({
             weekStart: 0,
-            format: 'DD/MM/YYYY HH:mm',
-            shortTime: true,
-            timePicker24Hour: true,
+            time: false,
+            format: 'DD/MM/YYYY',
         });
         $('#date-start-hoteles').bootstrapMaterialDatePicker({
             weekStart: 0,
-            format: 'DD/MM/YYYY HH:mm',
-            shortTime: true,
-            timePicker24Hour: true,
+            time: false,
+            format: 'DD/MM/YYYY',
         }).on('change', function(e, date) {
             $('#date-end-hoteles').bootstrapMaterialDatePicker('setMinDate', date);
         });
@@ -524,6 +522,21 @@ $(document).ready(function() {
             timePicker24Hour: true,
         }).on('change', function(e, date) {
             $('#date-end-vuelos').bootstrapMaterialDatePicker('setMinDate', date);
+        });
+
+        $('#date-end-autos').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            format: 'DD/MM/YYYY HH:mm',
+            shortTime: true,
+            timePicker24Hour: true,
+        });
+        $('#date-start-autos').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            format: 'DD/MM/YYYY HH:mm',
+            shortTime: true,
+            timePicker24Hour: true,
+        }).on('change', function(e, date) {
+            $('#date-end-autos').bootstrapMaterialDatePicker('setMinDate', date);
         });
 
         $('#min-date').bootstrapMaterialDatePicker({

@@ -1,126 +1,84 @@
-  'use strict';
-$(document).ready(function() {  
-/*======= Portfolio js starts ======= */
- 
-        var $container = $('.portfolioContainer');
+'use strict';
+$(document).ready(function () {
+    /*
+    var $container = $('.portfolioContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+
+    $('.portfolioFilter .car-filter').on('click',function(){
+        var self = this;
+        $('.portfolioFilter .current').removeClass('current');
+        $(self).addClass('current');
+        var selector = $(self).attr('data-filter');
         $container.isotope({
-            filter: '*',
+            filter: selector,
             animationOptions: {
                 duration: 750,
                 easing: 'linear',
                 queue: false
             }
         });
+         return false;
+    });
+    */
+    var _checked = null;
 
-        $('.portfolioFilter li .btn').on('click',function(){
-            $('.portfolioFilter .current').removeClass('current');
-            $(this).addClass('current');
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
+    $(function () {
+
+        var $container = $('.portfolioContainer'),
+            $checkboxes = $('.portfolioFilter input');
+
+        $container.isotope({
+            itemSelector: '.car-item',
+            filter: '*'
         });
 
-    /*======= Portfolio js ends ======= */
-    /*----------------------------------------------------
-     TESTIMONIAL SLIDER
-     ----------------------------------------------------*/
+        //total de elementos al cargar la pagina
+        if ($container.data('isotope').filteredItems.length > 1) {
+            $('div.results-div').children('span').html($container.data('isotope').filteredItems.length + ' Resultados');
+        } else if ($container.data('isotope').filteredItems.length == 1) {
+            $('div.results-div').children('span').html($container.data('isotope').filteredItems.length + ' Resultado');
+        }  else {
+            $('div.results-div').children('span').html(' Ningún Resultado');
+        }
 
-    $('#testimonial-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        autoplay: true,
-        draggable: true,
-        fade: true,
-        asNavFor: '#testimonial-carousel'
-    });
+        $checkboxes.change(function () {
+            var filters = [];
+            _checked = $checkboxes.filter(':checked');
 
-    $('#testimonial-carousel').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        asNavFor: '#testimonial-slider',
-        dots: true,
-        arrows: false,
-        centerMode: true,
-        autoplay: false,
-        focusOnSelect: true,
-        centerPadding: '40px',
-        responsive: [,
-            {
-                breakpoint: 600,
-                settings: {
-                    autoplay: false,
-                    dots: true,
-                    slidesToShow: 1,
-                    centerPadding: '0px',
-                    centerMode: true
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: true
-                }
-            },
-            {
-                breakpoint: 1199,
-                settings: {
-                    centerPadding: '10px'
 
-                }
+            _checked.each(function () {
+                filters.push(this.value);
+            });
+            filters = filters.join('');
+
+            $container.isotope({filter: filters});
+
+            //elementos filtrados
+            if ($container.data('isotope').filteredItems.length > 1) {
+                $('div.results-div').children('span').html($container.data('isotope').filteredItems.length + ' Resultados');
+            } else if ($container.data('isotope').filteredItems.length == 1) {
+                $('div.results-div').children('span').html($container.data('isotope').filteredItems.length + ' Resultado');
+            }  else {
+                $('div.results-div').children('span').html(' Ningún Resultado');
             }
-        ]
-    });
-    //Our Clients start
-    $('.ourclientsslid').slick({
-        infinite: true,
-        slidesToShow: 6,
-        slidesToScroll: 6,
-        dots: false,
-        arrows:false,
-        autoplay: true,
-        autoplaySpeed: 6000,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                    infinite: true,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    dots: false
-                }
+        });
 
-            }
-        ]
+        $('#shuffle').click(function () {
+            $container.isotope('shuffle');
+
+        });
+
     });
-    //Our Clients End
+
     // Add smooth scrolling on all links inside the navbar
-    // Add smooth scrolling on all links inside the navbar
-    $("#navbarResponsive a").on('click', function(event) {
+    $("#navbarResponsive a").on('click', function (event) {
 
         // Prevent default anchor click behavior
         event.preventDefault();
@@ -132,7 +90,7 @@ $(document).ready(function() {
         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
             scrollTop: $(hash).offset().top
-        }, 800, function(){
+        }, 800, function () {
 
             // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
@@ -141,20 +99,20 @@ $(document).ready(function() {
 //    End Smooth Scrolling
 });
 
-  /*------------------------------------------
-   Scroll Up Button
-   ------------------------------------------*/
-  $(window).scroll(function () {
-      if ($(this).scrollTop() > 600) {
-          $('.scrollup').fadeIn();
-      } else {
-          $('.scrollup').fadeOut();
-      }
-  });
+/*------------------------------------------
+ Scroll Up Button
+ ------------------------------------------*/
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 600) {
+        $('.scrollup').fadeIn();
+    } else {
+        $('.scrollup').fadeOut();
+    }
+});
 
-  $('.scrollup').click(function () {
-      $("html, body").animate({
-          scrollTop: 0
-      }, 600);
-      return false;
-  });
+$('.scrollup').click(function () {
+    $("html, body").animate({
+        scrollTop: 0
+    }, 600);
+    return false;
+});

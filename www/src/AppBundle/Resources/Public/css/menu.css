@@ -27,7 +27,7 @@ File: menu.css
     content: initial;
 }
 .main-header-top {
-    background-color: #D3EA3A;
+    background-color: #0072bc;
 }
 .nav-level{
     padding: 10px 15px !important;
@@ -80,7 +80,7 @@ File: menu.css
         color: #f6f6f6
     }
     .main-header-top .navbar .sidebar-toggle {
-        color: #051a49;
+        color: #fff;
         opacity: 0.9;
     }
     .main-header-top .navbar .sidebar-toggle:hover {
@@ -104,7 +104,7 @@ File: menu.css
         color: #fff
     }
     .sidebar-menu>li>a {
-        color: #666;
+        color: #777;
         transition:all ease-in 0.3s;
     }
     ul.sidebar-menu {
@@ -114,8 +114,7 @@ File: menu.css
         text-align:left;
     }
     .sidebar-menu>li>a:hover {
-        background-color: #f9b015;
-        color: #fff;
+        color: #f7941d;
     }
 
     .sidebar-menu>li.active>a {
@@ -249,7 +248,6 @@ File: menu.css
         max-height: 50px;
         border-radius: 0;
         padding: 0;
-        background: linear-gradient(to left,#008EF8 40%,#D3EA3A);
     }
     .main-header-top .sidebar-toggle {
         float: left;
@@ -358,7 +356,8 @@ File: menu.css
     }
     @media (max-width: 767px) {
         .main-header-top {
-            position: relative
+            position: fixed;
+            width: 100%;
         }
         .main-header-top .logo {
             width: 100%;
@@ -367,7 +366,8 @@ File: menu.css
         .main-header-top .navbar {
             width: 100%;
             float: none;
-            margin: 0
+            margin: 0;
+            background: #0573b9;
         }
     }
     @media (max-width: 768px) {
@@ -385,7 +385,6 @@ File: menu.css
         background:#fffffff0;
         padding-top: 50px;
         min-height: 100vh;
-        width: 230px;
         z-index: 810;
         box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
         transition: -webkit-transform 0.3s ease-in-out, width 0.3s ease-in-out;
@@ -477,10 +476,11 @@ File: menu.css
         padding: 0
     }
     .sidebar-menu>li>a {
-        padding: 12px 5px 12px 15px;
+        padding: 12px 5px 12px 5px;
         display: block;
         position: relative;
         font-size: 14px;
+        text-align: center;
     }
     .sidebar-menu>li>a>i {
         padding-right: 6px;
@@ -1355,7 +1355,7 @@ File: menu.css
         /* Top bar menu */
         .horizontal-fixed .main-sidebar{
             width:100%;
-            min-height:auto;
+            min-height: inherit;
             opacity(50%)
         }
         .horizontal-fixed .sidebar-menu .treeview-menu .treeview-menu li a{
@@ -1391,6 +1391,11 @@ File: menu.css
         }
         .horizontal-fixed.fixed .sidebar-menu>li>a {
             padding: 13px 13px 13px 15px;
+        }
+        .horizontal-fixed.fixed .sidebar-menu li {
+            text-align: center;
+        }
+        .horizontal-fixed.fixed .sidebar-menu>li>a span  {
         }
         .horizontal-fixed .main-sidebar .sidebar-menu ul.treeview-menu ul.treeview-menu {
             left: 100%;
@@ -1455,6 +1460,10 @@ File: menu.css
         .container-carousel{
             margin-top: 50px !important;
         }
+        .container-carousel .nav-tabs{
+            border-bottom: 1px solid #f7941dc2 !important;
+        }
+
         .horizontal-fixed .mega-menu{
             display:none;
         }

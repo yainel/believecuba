@@ -1,3 +1,21 @@
+@media (max-width: 700px) {
+    .owl-next {
+        position: relative;
+        top: -335px;
+        left: 240px;
+        background: #008EF8;
+    }
+    .owl-prev {
+        position: relative;
+        top: -335px;
+        left: -240px;
+        background: #008EF8;
+    }
+    .reservas {
+        padding-top: 60px;
+    }
+}
+
 @media (max-width: 544px) {
     #admin-nav{
         display:block;
@@ -322,6 +340,18 @@
         padding: 2px;
         width: 40px;
     }
+    .owl-next {
+        position: relative;
+        top: -280px;
+        left: 100px;
+        background: #008EF8;
+    }
+    .owl-prev {
+        position: relative;
+        top: -280px;
+        left: -100px;
+        background: #008EF8;
+    }
     .cd-timeline-content .cd-date{
         left: 141%;
     }
@@ -513,7 +543,6 @@
         font-size: 35px;
     }
     .prod-item .prod-info {
-        padding: 20px 0 10px;
     }
     .list-group-item {
         display: inline-block;
@@ -1810,10 +1839,17 @@
         font-size: 20px;
     }
 
-    .owl-theme .owl-controls .owl-nav div {
-        padding: 0;
-        height: 30px;
-        width: 30px;
+    .owl-next {
+        position: relative;
+        top: -332px;
+        left: 100px;
+        background: #008EF8;
+    }
+    .owl-prev {
+        position: relative;
+        top: -332px;
+        left: -100px;
+        background: #008EF8;
     }
 
     .dtr-data span {

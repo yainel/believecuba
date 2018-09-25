@@ -70,7 +70,7 @@ i{
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 3px 1px -2px rgba(0, 0, 0, .08), 0 1px 5px 0 rgba(0, 0, 0, .08);
 }
 .sub-title {
-    border-bottom: 1px solid rgba(204, 204, 204, 0.35);
+    border-bottom: 1px solid rgba(204, 204, 204, 0.09);
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-weight: 400;
@@ -131,6 +131,13 @@ ul {
     border: none;
     box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05), 0 -2px 1px -2px rgba(0, 0, 0, 0.04), 0 0 0 -1px rgba(0, 0, 0, 0.05);
 }
+.card.background-card {
+    background-color: #0072bc;
+}
+.card.background-card.car-photo {
+    background-color: #fff;
+}
+
 textarea {
     resize: none;
 }
@@ -851,9 +858,9 @@ textarea {
     right: 0;
 }
 .md-tabs .nav-item.open .nav-link, .md-tabs .nav-item.open .nav-link:focus, .md-tabs .nav-item.open .nav-link:hover, .md-tabs .nav-link.active, .md-tabs .nav-link.active:focus, .md-tabs .nav-link.active:hover {
-    color: #1b8bf9;
+    color: #fff;
     border: none;
-    background-color: transparent;
+    background-color: #f7941d;
     border-radius: 0;
 }
 .md-tabs .nav-item a{
@@ -879,16 +886,15 @@ textarea {
     border: none;
 }
 .md-tabs .nav-item{
-    background-color: #fffffff0;
-    width: calc(100% / 4);
+    background-color: #08141fde;
+    width: calc(100% / 6);
     text-align: center;
 }
 .md-tabs .nav-link{
-    color: #1b8bf9;
+    color: #fff;
 }
 .nav-tabs .slide{
-    background: #1b8bf9;
-    width: calc(100% / 4);
+    width: calc(100% / 6);
     height: 4px;
     position: absolute;
     -webkit-transition: left 0.3s ease-out;
@@ -1426,15 +1432,35 @@ textarea {
 }
 .owl-next {
     position: relative;
+    top: -320px;
+    left: 680px;
+    background: #008EF8;
 }
+.owl-prev {
+    position: relative;
+    top: -320px;
+    left: -680px;
+    background: #008EF8;
+}
+
 .owl-theme .owl-controls .owl-nav div {
     border-radius: 30px;
     display: inline-block;
     font-size: 0;
-    height: 50px;
     margin: 5px;
     padding: 7px;
     width: 50px;
+    border: solid;
+}
+.owl-theme .owl-controls .owl-nav div:hover {
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 0;
+    margin: 5px;
+    padding: 7px;
+    width: 50px;
+    border: solid;
+    background: #D3EA3A;
 }
 .owl-theme .owl-controls .owl-nav div.owl-prev::before,.owl-theme .owl-controls .owl-nav div.owl-next::before {
     content: "\eb5e";
@@ -1450,8 +1476,6 @@ textarea {
 }
 .owl-theme .owl-controls {
     text-align: center;
-    background-color: #f9b015;
-    border-top: solid 5px #fff;
     color: #fff;
 }
 .slider-center .owl-theme .owl-controls {
@@ -1518,21 +1542,7 @@ textarea {
 .btn-error:hover{
     color:#777;
 }
-.error-500 h1 {
-    background: url("../images/500%402x.png") no-repeat center;
-}
-.error-503 h1 {
-    background: url("../images/503%402x.png") no-repeat center;
-}
-.error-404 h1 {
-    background: url("../images/404%402x.png") no-repeat center;
-}
-.error-400 h1 {
-    background: url("../images/400%402x.png") no-repeat center;
-}
-.error-403 h1 {
-    background: url("../images/403%402x.png") no-repeat center;
-}
+
 
 /*======================
   Breadcrumb
@@ -3168,7 +3178,6 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
 }
 /**========= Color Check-box css ======**/
 .checkbox-color{
-    display: inline-block;
     margin-right: 20px;
     cursor: pointer;
 }
@@ -3176,6 +3185,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
     display: inline-block;
     position: relative;
     padding-left: 5px;
+    cursor: pointer;
 }
 .checkbox-color label::before {
     content: "";
@@ -3986,15 +3996,6 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
     Coming soon page css start
 ======================= */
 
-.coming {
-    background: url('../images/masterhome.jpg')no-repeat;
-    background-size: cover;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
 /**====== Comming soon css end ======**/
 
 /**  =====================
@@ -5627,8 +5628,14 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
     z-index: 1;
 }
 .prod-item .prod-info{
-    background: #fff;
-    padding: 30px 0 20px;
+    background: #0072bc;
+    padding: 30px 20px;
+}
+.prod-item .prod-buttons{
+    background: #f8a13a;
+}
+.prod-item .prod-info p{
+    color: #fff;
 }
 .prod-item .br-widget{
     min-height: inherit;
@@ -5642,7 +5649,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
     font-size:13px;
     text-transform: uppercase;
     border-radius: 2px 0 0 2px;
-    background: #f57c00;
+    background: #f7941dde;
     color: #fff;
     letter-spacing: 1px;
     font-weight: 600;
@@ -5870,7 +5877,6 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
     border-radius: 50%;
 }
 .user-block-2{
-    background-image: url(../images/widget/user-block-2.jpg);
     background-size: cover;
     padding: 20px 0;
     color: #fff;
@@ -5993,7 +5999,6 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
 /*Clock css*/
 
 #clock {
-    background-image: url("../images/widget/clock-bg.png");
     height: 160px;
     position: relative;
     width: 160px;
@@ -6320,7 +6325,6 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
 
 /*Weather block css*/
 .weather-bg{
-    background-image: url(../images/widget/weather-bg.jpg);
     background-size: cover;
     padding: 20px 0;
     color: #fff;
@@ -6486,7 +6490,6 @@ svg#sun{
 
 /*Contact card css*/
 .contact-card{
-    background-image: url(../images/widget/contact-card.jpg);
     background-size: cover;
     color: #fff;
 }
@@ -8678,7 +8681,6 @@ form .messages{
 
 }
 #task-container li.complete:before{
-    background:url("../images/complete.png") no-repeat;
     position: absolute;
     top:5px;
     right:5px;
@@ -8755,8 +8757,6 @@ form .messages{
 }
 .color-picker a.handle {
     border: 1px solid #0e7ae8;
-    border-right-color: transperant;
-    border-left-color: none;
     position: absolute;
     top: 0;
     right: 239px;
@@ -8863,16 +8863,15 @@ form .messages{
 /*====== Color css ends ======= */
 
 .reservas {
-    position: absolute;
     width: 100%;
     z-index: 99;
-    top: 130px;
+    padding-top: 140px;
     left: 1px;
     right: 1px;
 }
 
 .tab-content>.active {
-    background: #1b8bf9d4;
+    background: #08141fde;
 }
 
 .tab-pane {
@@ -8880,10 +8879,10 @@ form .messages{
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: #f9b015;
+    background-color: #f7941d;
     color: white;
 }
 
 .carousel-inner {
-    border-bottom: groove 1px #f9b015;
+    border-bottom: groove 1px #f7941d;
 }

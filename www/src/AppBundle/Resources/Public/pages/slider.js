@@ -32,8 +32,7 @@ $(document).ready(function() {
 
     });
     $("#todaydeals").owlCarousel({
-        dots: true,
-        merge: true,
+        dots: false,
         nav:true,
         autoplayTimeout:9000,
         margin:16,
@@ -78,6 +77,31 @@ $(document).ready(function() {
             },
             1000:{
                 items:3,
+                loop:false
+            }
+        }
+
+    });
+    $("#recomendedcars").owlCarousel({
+        nav:true,
+        autoplayTimeout:9000,
+        margin:16,
+        smartSpeed:1000,
+        loop:false,
+        slideSpeed:300,
+        items:4,
+        // rtl: true, this start a image from right side to left
+        singleItem:true,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:2,
+            },
+            1000:{
+                items:4,
                 loop:false
             }
         }
