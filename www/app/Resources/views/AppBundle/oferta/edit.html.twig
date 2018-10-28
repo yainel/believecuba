@@ -1,0 +1,89 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="row">
+        {{ form_start(edit_form) }}
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Añadir nueva Oferta</h5>
+                    <p>Formulario de adición de ofertas.</p>
+                </div>
+                <div class="card-block menu-snaps">
+                    <div class="form-group">
+                        <div class="checkbox-color checkbox-info">
+                            {{ form_widget(edit_form.activa) }}
+                            <label class="form-control-label" for="appbundle_oferta_activa"> Activa</label>
+                        </div>
+                        <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Título</label>
+                        {{ form_widget(edit_form.titulo, {'attr': {'class': 'form-control', 'placeholder': 'Título de la oferta'}}) }}
+                        <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Descripción</label>
+                        {{ form_widget(edit_form.descripcion, {'attr': {'class': 'form-control', 'placeholder': 'Descripción de la oferta'}}) }}
+                        <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Fecha de Inicio</label>
+                        <div class="form-control-wrapper">
+                            {{ form_widget(edit_form.fechainicio, {'attr': {'class': 'form-control floating-label date-start-ofertas', 'placeholder': 'Seleccione'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Fecha de terminación</label>
+                        <div class="form-control-wrapper">
+                            {{ form_widget(edit_form.fechafin, {'attr': {'class': 'form-control floating-label date-end-ofertas' , 'placeholder': 'Seleccione'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Imagen</label><br>
+
+                        {{ form_widget(edit_form.imagen, {'attr': {'class': 'form-control form-file'}}) }}
+                        <a href="#clickme" class="btn btn-primary btn-sm">
+                            <i class="fa fa-file-image-o"></i> Seleccionar una imagen
+                        </a>
+                        <small class="form-text text-muted">Haga click en el botón para buscar una imagen para la oferta.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text"> </h5>
+                    <p> Vista previa de la imagen</p>
+                </div>
+                <div class="card-block text-center">
+                    <div class="form-group">
+                        <img class="mime-car img-thumbnail" src="{{ asset(photos_directory~edit_form.imagen.vars.data.filename)}}" alt="blog-img">
+                    </div>
+                </div>
+                <div class="widget-income-footer">
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-20">Editar</button>
+                    <a class="btn btn-default waves-effect waves-light m-r-20" href="{{ path('oferta_index') }}">Ver listado</a>
+                    <a class="btn btn-warning waves-effect waves-light m-r-20" href="{{ path('oferta_fastest_delete', { 'id': edit_form.vars.data.id }) }}"> Eliminar</a>
+                </div>
+            </div>
+        </div>
+        {{ form_end(edit_form) }}
+    </div>
+{% endblock content %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(function () {
+            $('a[href="#clickme"]').on('click', function () {
+                $('body').find('input[id$="_oferta_imagen"]').trigger('click').change(function (event) {
+                    $('body').find('img.mime-car').attr('src', '').attr('hidden', 1);
+                    var tmppath = URL.createObjectURL(event.target.files[0]);
+                    $('body').find('img.mime-car').attr('src', tmppath).removeAttr('hidden');
+                });
+            });
+        });
+    </script>
+{% endblock %}

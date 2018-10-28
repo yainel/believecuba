@@ -53,20 +53,24 @@
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/owl.carousel.css') }}">
             <!-- swiper css -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/swiper.min.css') }}">
+            <!-- Sweetalert CSS -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/sweetalert/css/sweetalert.css') }}">
             <!-- Date Picker css -->
-            <link rel="stylesheet" href="{{ asset('bundles/app/plugins/datepicker/css/bootstrap-material-datetimepicker.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/datepicker/css/bootstrap-material-datetimepicker.css') }}" />
             <!-- Style.css -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/main.css') }}">
             <!-- Responsive.css-->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/responsive.css') }}">
             <!-- Landing Page -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/landingpage.css') }}">
+            <!-- Modal animation CSS -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/plugins/modal/css/component.css') }}">
         {% endblock %}
     </head>
 
     <body class="horizontal-fixed fixed" data-spy="scroll" data-target=".navbar" data-offset="50">
         <header class="main-header-top hidden-print">
-            <a href="#" class="logo hidden-sm-down hidden-xs-down navbar-sticky-top">
+            <a href="{{ path('landingpage') }}" class="logo hidden-sm-down hidden-xs-down navbar-sticky-top">
                 <img class="img-fluid able-logo"
                      src="{{ asset('bundles/app/images/believecuba/logo-h.png') }}" alt="Theme-logo">
             </a>
@@ -106,6 +110,7 @@
                     </div>
                 </div>
                 <ul class="sidebar-menu">
+                    <li><a href="{{ path('landingpage') }}"><h4><i class="fa fa-home"></i></h4><span> Inicio </span></a></li>
                     <li><a href="{{ path('offers') }}"><h4><i class="fa fa-car"></i></h4><span> Autos </span></a></li>
                     <li><a href="#"><h4><i class="fa fa-hotel"></i></h4><span> Hoteles </span></a></li>
                     <li><a href="#"><h4><i class="fa fa-plane"></i></h4><span> Vuelos </span></a></li>
@@ -227,7 +232,6 @@
         <script type="text/javascript" src="{{ asset('bundles/app/js/slick.min.js') }}"></script>
         <!-- Custom js -->
         <script type="text/javascript" src="{{ asset('bundles/app/pages/product-detail.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/app/pages/elements.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/pages/list-custom.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/js/jarallax.js') }}"></script>
         <!-- Isotope js What We Do -->
@@ -260,13 +264,18 @@
         <script type="text/javascript" src="{{ asset('bundles/app/js/owl.carousel.min.js') }}"></script>
         <!-- Slider -->
         <script type="text/javascript" src="{{ asset('bundles/app/pages/slider.js') }}"></script>
-        <!-- Model animation js -->
-        <script type="text/javascript" src="{{ asset('bundles/app/plugins/modal/js/modalEffects.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/app/pages/advance-form.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('bundles/app/pages/advance-form.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/js/main.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/pages/modal.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/pages/elements.js') }}"></script>
+
         <!-- Custom landing page js -->
         <script type="text/javascript" src="{{ asset('bundles/app/pages/landing-page.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/js/common-pages.js') }}"></script>
+        <!-- Model animation js -->
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/modal/js/classie.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/plugins/modal/js/modalEffects.js') }}"></script>
+
         <script src="{{ asset('bundles/app/js/menu-horizontal.js') }}"></script>
         <script>
             $(window).on('load',function(){
@@ -274,7 +283,8 @@
             });
         </script>
 
-        <script>/*
+        <script>
+            /*
             (function () {
                 var options = {
                     whatsapp: "+1 702-800-1750", // WhatsApp number
@@ -293,7 +303,24 @@
                 s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
                 var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
             })();
-        */</script>
+        */
+
+        </script>
+
+        <script type="text/javascript">
+            $(function () {
+                $('.returnfields').hide();
+
+                //show it when the checkbox is clicked
+                $('input[name="difflocation"]').on('click', function () {
+                    if ($(this).prop('checked')) {
+                        $('.returnfields').fadeIn();
+                    } else {
+                        $('.returnfields').hide();
+                    }
+                });
+            });
+        </script>
 
     {% endblock %}
     </body>

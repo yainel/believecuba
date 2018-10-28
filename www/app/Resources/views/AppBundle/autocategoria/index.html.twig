@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Autocategorias list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for autoCategorium in autoCategorias %}
+            <tr>
+                <td><a href="{{ path('autocategoria_show', { 'id': autoCategorium.id }) }}">{{ autoCategorium.id }}</a></td>
+                <td>{{ autoCategorium.nombre }}</td>
+                <td>{{ autoCategorium.descripcion }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('autocategoria_show', { 'id': autoCategorium.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('autocategoria_edit', { 'id': autoCategorium.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('autocategoria_new') }}">Create a new autoCategorium</a>
+        </li>
+    </ul>
+{% endblock %}

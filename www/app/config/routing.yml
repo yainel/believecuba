@@ -1,3 +1,27 @@
+app_solicitud:
+    resource: "@AppBundle/Controller/SolicitudController.php"
+    type:     annotation
+
+app_oferta:
+    resource: "@AppBundle/Controller/OfertaController.php"
+    type:     annotation
+
+app_auto_modelo:
+    resource: "@AppBundle/Controller/AutoModeloController.php"
+    type:     annotation
+
+app_auto_categoria:
+    resource: "@AppBundle/Controller/AutoCategoriaController.php"
+    type:     annotation
+
+app_provincia:
+    resource: "@AppBundle/Controller/ProvinciaController.php"
+    type:     annotation
+
+app_oficina:
+    resource: "@AppBundle/Controller/OficinaController.php"
+    type:     annotation
+
 usuario:
     resource: "@UsuarioBundle/Controller/"
     type:     annotation

@@ -138,7 +138,7 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-6 col-md-3 col-lg-3">
-                                    <div class="sub-title sub-title-light"><i class="fa fa-building"></i> Lugar de Entrega</div>
+                                    <div class="sub-title sub-title-light"><i class="fa fa-building"></i> Oficina de Recogida</div>
                                     <select class="js-example-basic-single">
                                         <option value="">Entrega</option>
                                         <option value="AL">La Habana</option>
@@ -148,25 +148,57 @@
                                         <option value="WY">Viñales</option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="row m-b-30 advance-elements">
                                 <div class="col-sm-6 col-md-3 col-lg-3">
                                     <div class="sub-title sub-title-light"><i class="fa fa-calendar"></i> Fecha de Recogida</div>
                                     <div class="form-control-wrapper">
-                                        <input type="text" id="date-start-autos" class="form-control floating-label" placeholder="Llegada">
+                                        <input type="text" id="date-start-autos" class="form-control floating-label" placeholder="Recogida">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-3 col-lg-3">
-                                    <div class="sub-title sub-title-light"><i class="fa fa-calendar-check-o"></i> Fecha de Entrega</div>
+                                    <div class="sub-title sub-title-light"><i class="fa fa-calendar-check-o"></i> Fecha de Regreso</div>
                                     <div class="form-control-wrapper">
-                                        <input type="text" id="date-end-autos" class="form-control floating-label" placeholder="Salida">
+                                        <input type="text" id="date-end-autos" class="form-control floating-label" placeholder="Regreso">
                                     </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-30 advance-elements">
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light">
+                                        <div class="checkbox-color checkbox-warning p-l-2">
+                                            <input value=".economico" id="categoria1" type="checkbox" name="difflocation">
+                                            <label for="categoria1" class="txt-white">
+                                                Distinto lugar de Regreso
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-b-30 advance-elements returnfields">
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-building"></i> Lugar de Regreso</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="AL">La Habana</option>
+                                        <option value="WY">Santiago</option>
+                                        <option value="WY">Varadero</option>
+                                        <option value="WY">Trinidad</option>
+                                        <option value="WY">Viñales</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 col-md-3 col-lg-3">
+                                    <div class="sub-title sub-title-light"><i class="fa fa-building"></i> Oficina de Regreso</div>
+                                    <select class="js-example-basic-single">
+                                        <option value="AL">La Habana</option>
+                                        <option value="WY">Santiago</option>
+                                        <option value="WY">Varadero</option>
+                                        <option value="WY">Trinidad</option>
+                                        <option value="WY">Viñales</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 text-right">
                                     <div class="sub-title sub-title-light"></div>
-                                    <a href="{{ path('offers') }}" class="btn btn-default waves-effect waves-light"><i class="fa fa-check"></i> Buscar Autos</a>
+                                    <a href="{{ path('offers') }}" class="btn btn-default waves-effect waves-light"><i class="fa fa-check"></i> Seleccionar un Auto</a>
                                 </div>
                             </div>
                         </div>
@@ -580,140 +612,43 @@
                         <h2 class="title-center" id="palante">Principales ofertas</h2>
                     </div>
                 </div>
+
                 <div class="slider-center bg-white" id="todaydeals">
+                    {% for oferta in ofertas %}
                     <div class="item">
                         <div class="blog-img">
                             <img class="img-fluid "
-                                 src="{{ asset('bundles/app/images/believecuba/destinos/cancun.jpg') }}"
+                                 src="{{ asset(photos_directory~oferta.imagen) }}"
                                  alt="blog-img">
                             <div class="blog-hover-detail d-flex">
                                 <div class="m-x-auto text-center">
                                     <div class="card-block text-center">
-                                        <a href="#"
-                                           class="btn btn-warning waves-effect waves-light">
-                                            Detalles
-                                        </a>
+                                        <button type="button" class="btn btn-inverse-warning waves-effect md-trigger" data-modal="modal-1">Detalles</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="blog-details">
-                            <h6>Trámites Migratorios</h6>
-                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración Variable</span><span><i
-                                            class="fa fa-money"></i> Precio Variable</span></div>
-                            <p> Gestionamos los trámites migratorios necesarios en la organización de su viaje. </p>
+                            <h6>{{ oferta.titulo }}</h6>
+
+                            <p> {{ oferta.descripcion }} </p>
                             <div class="text-right">
-                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
+                                <a href="{{ path('solicitud_new', { 'id': oferta.id }) }}" class="btn btn-warning waves-effect waves-light">Book now</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="blog-img">
-                            <img class="img-fluid "
-                                 src="{{ asset('bundles/app/images/believecuba/destinos/Madrid.jpg') }}"
-                                 alt="blog-img">
-                            <div class="blog-hover-detail d-flex">
-                                <div class="m-x-auto text-center">
-                                    <div class="card-block text-center">
-                                        <a href="#"
-                                           class="btn btn-warning waves-effect waves-light">
-                                            Detalles
-                                        </a>
-                                    </div>
+                        <!-- Modal section-->
+                        <div class="md-modal md-effect-1" id="modal-1">
+                            <div class="md-content">
+                                <h3>Detalles de la oferta</h3>
+                                <div>
+                                    <p>{{ oferta.detalles }}</p>
+                                    <p>{{ oferta.detalles }}</p>
+                                    <button type="button" class="btn btn-default waves-effect md-close">Cerrar</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="blog-details">
-                            <h6>Paquetes Vacacionales</h6>
-                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
-                                            class="fa fa-money"></i> Precio Variable</span></div>
-                            <p> Creamos el paquete vacacional perfecto para cada cliente, comparando precios de hoteles,
-                                vuelos, excursiones, shows y eventos para hacer de sus vacaciones una aventura
-                                inolvidable.</p>
-                            <div class="text-right">
-                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
-                            </div>
-                        </div>
                     </div>
-                    <div class="item">
-                        <div class="blog-img">
-                            <img class="img-fluid "
-                                 src="{{ asset('bundles/app/images/believecuba/destinos/dubai.jpg') }}"
-                                 alt="blog-img">
-                            <div class="blog-hover-detail d-flex">
-                                <div class="m-x-auto text-center">
-                                    <div class="card-block text-center">
-                                        <a href="#"
-                                           class="btn btn-warning waves-effect waves-light">
-                                            Detalles
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-details">
-                            <h6>Renta de Autos</h6>
-                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
-                                            class="fa fa-money"></i> Precio Variable</span></div>
-                            <p> Ofrecemos renta en todas las categorías.</p>
-                            <div class="text-right">
-                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="blog-img">
-                            <img class="img-fluid "
-                                 src="{{ asset('bundles/app/images/believecuba/destinos/havana.jpg') }}"
-                                 alt="blog-img">
-                            <div class="blog-hover-detail d-flex">
-                                <div class="m-x-auto text-center">
-                                    <div class="card-block text-center">
-                                        <a href="#"
-                                           class="btn btn-warning waves-effect waves-light">
-                                            Detalles
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-details">
-                            <h6>Hoteles</h6>
-                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
-                                            class="fa fa-money"></i> Precio Variable</span></div>
-                            <p> Brindamos reservas de Hoteles con grandes descuentos en más de 120.000 destinos en todo
-                                el mundo.</p>
-                            <div class="text-right">
-                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="blog-img">
-                            <img class="img-fluid "
-                                 src="{{ asset('bundles/app/images/believecuba/destinos/lasvegas.jpg') }}"
-                                 alt="blog-img">
-                            <div class="blog-hover-detail d-flex">
-                                <div class="m-x-auto text-center">
-                                    <div class="card-block text-center">
-                                        <a href="#"
-                                           class="btn btn-warning waves-effect waves-light">
-                                            Detalles
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-details">
-                            <h6>Vuelos</h6>
-                            <div class="date-blog m-b-10"><span><i class="fa fa-times"></i> Duración 30 Minutos</span><span><i
-                                            class="fa fa-money"></i> Precio Variable</span></div>
-                            <p> Reservas de boletos aéreos para vuelos nacionales e internacionales.</p>
-                            <div class="text-right">
-                                <a href="#" class="btn btn-warning waves-effect waves-light">Book now</a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <!-- end of slider-center -->
             </div>
@@ -872,5 +807,4 @@
             <!-- end of row -->
         </div>
     </section>
-
 {% endblock content %}

@@ -1,0 +1,65 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Solicitud</h5>
+                    <p>Datos del solicitante</p>
+                </div>
+                <div class="card-block menu-snaps">
+                    <div class="form-group">
+                        <h6 class="form-control-label">Nombre y Apellidos</h6>
+                        {{ solicitud.nombrecompleto }}
+                    </div>
+                    <div class="form-group">
+                        <h6 class="form-control-label">Teléfono</h6>
+                        {{ solicitud.telefono }}
+                    </div>
+                    <div class="form-group">
+                        <h6 class="form-control-label">Correo Electrónico</h6>
+                        {{ solicitud.correo }}
+                    </div>
+                    <div class="form-group">
+                        <h6 class="form-control-label">Fecha</h6>
+                        <div class="form-control-wrapper">
+                            {{ solicitud.fecha | date('D d M Y') }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h6 class="form-control-label">Detalles</h6>
+                        {{ solicitud.detalles }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Oferta Solicitada</h5>
+                    <p> Datos principales de la Oferta solicitada</p>
+                </div>
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3 col-lg-3">
+                            <img class="img-rounded"
+                                 src="{{ asset(photos_directory~solicitud.oferta.imagen) }}"
+                                 alt="blog-img"
+                                 width="100%">
+                            <a class="btn btn-default waves-effect waves-light m-t-20 col-md-12" href="{{ path('oferta_show', { 'id': solicitud.oferta.id }) }}"> Ver Detalles</a>
+                        </div>
+                        <div class="col-sm-12 col-md-9 col-lg-9">
+                            <h6>{{ solicitud.oferta.titulo }}</h6>
+                            <p> {{ solicitud.oferta.descripcion }} </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-income-footer">
+                    <a class="btn btn-default waves-effect waves-light m-r-20" href="{{ path('solicitud_index') }}"> Ver listado</a>
+                    <a class="btn btn-warning waves-effect waves-light m-r-20" href=""> Establecer como confirmada</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

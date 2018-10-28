@@ -1,0 +1,76 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">Oferta</h5>
+                    <p>Vista previa de la oferta.</p>
+                </div>
+                <div class="card-block menu-snaps">
+                    <div class="form-group">
+                        <h6 class="form-control-label">Título</h6>
+                        {{ oferta.titulo }}
+                    </div>
+                    <div class="form-group">
+                        <h6 class="form-control-label">Descripción</h6>
+                        {{ oferta.descripcion }}
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <h6 class="form-control-label">Estado de la Oferta</h6>
+                            <div class="form-group">
+                                {% if oferta.activa %}
+                                    <i class="icofont icofont-verification-check icofont-1x text-success"> </i> Activa
+                                {% else %}
+                                    <i class="icofont icofont-verification-check text-danger"> </i> No activa
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                <h6 class="form-control-label">Fecha de Inicio</h6>
+                                <div class="form-control-wrapper">
+                                    {{ oferta.fechainicio | date('D d M Y') }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                <h6 class="form-control-label">Fecha de terminación</h6>
+                                <div class="form-control-wrapper">
+                                    {{ oferta.fechafin | date('D d M Y') }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p class="form-control-label">Detalles</p>
+                        {{ oferta.detalles }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-header-text">  </h5>
+                    <p> Vista previa de la imagen</p>
+                </div>
+                <div class="card-block text-center">
+                    <div class="form-group">
+                        <img class="img-thumbnail " src="{{ asset(photos_directory~oferta.imagen) }}" alt="blog-img">
+                    </div>
+                </div>
+                <div class="widget-income-footer">
+                    <a hidden href="{{ path('oferta_edit', { 'id': oferta.id }) }}" class="btn btn-success waves-effect waves-light m-r-20">Editar</a>
+                    <a class="btn btn-default waves-effect waves-light m-r-20" href="{{ path('oferta_index') }}"> Ver listado</a>
+                    <a class="btn btn-warning waves-effect waves-light m-r-20" href="{{ path('oferta_fastest_delete', { 'id': oferta.id }) }}"> Eliminar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

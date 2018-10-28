@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/panel", name="panel")
+     * @Route("/config", name="config_index")
      */
     public function panelAction(Request $request)
     {
@@ -21,7 +21,13 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('AppBundle/index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $ofertas = $em->getRepository('AppBundle:Oferta')->findAll();
+
+        return $this->render('AppBundle/index.html.twig', array(
+            'ofertas' => $ofertas,
+        ));
     }
 
     /**

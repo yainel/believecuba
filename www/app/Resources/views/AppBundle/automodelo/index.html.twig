@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Automodelos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Activo</th>
+                <th>Cantidadpuertas</th>
+                <th>Cantidadasientos</th>
+                <th>Cantidadmaleteros</th>
+                <th>Aireacondicionado</th>
+                <th>Capacidadlitros</th>
+                <th>Foto</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for autoModelo in autoModelos %}
+            <tr>
+                <td><a href="{{ path('automodelo_show', { 'id': autoModelo.id }) }}">{{ autoModelo.id }}</a></td>
+                <td>{{ autoModelo.nombre }}</td>
+                <td>{{ autoModelo.descripcion }}</td>
+                <td>{% if autoModelo.activo %}Yes{% else %}No{% endif %}</td>
+                <td>{{ autoModelo.cantidadpuertas }}</td>
+                <td>{{ autoModelo.cantidadasientos }}</td>
+                <td>{{ autoModelo.cantidadmaleteros }}</td>
+                <td>{{ autoModelo.aireacondicionado }}</td>
+                <td>{{ autoModelo.capacidadlitros }}</td>
+                <td>{{ autoModelo.foto }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('automodelo_show', { 'id': autoModelo.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('automodelo_edit', { 'id': autoModelo.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('automodelo_new') }}">Create a new autoModelo</a>
+        </li>
+    </ul>
+{% endblock %}

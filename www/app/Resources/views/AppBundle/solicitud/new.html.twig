@@ -1,0 +1,157 @@
+{% extends "landing.html.twig" %}
+
+{% block content %}
+    <div class="carousel-height">
+        <div class="container-carousel hidden-sm-down" style="position: fixed; z-index: auto">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="bs4-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item">
+                                <img src="{{ asset('bundles/app/images/believecuba/carousel/disneyworld.jpg') }}"
+                                     alt="Second slide" class="img-full">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('bundles/app/images/believecuba/carousel/paris.jpg') }}"
+                                     alt="Third slide" class="img-full">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('bundles/app/images/believecuba/carousel/cuidadluces.jpg') }}"
+                                     alt="Fourth slide" class="img-full">
+                            </div>
+                            <div class="carousel-item active">
+                                <img src="{{ asset('bundles/app/images/believecuba/carousel/logo_carousel.jpg') }}"
+                                     alt="First slide" class="img-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden-md-up sm-carousel" style="position: fixed;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="{{ asset('bundles/app/images/believecuba/carousel/logo_carousel-sm.jpg') }}" class="img">
+                </div>
+            </div>
+        </div>
+
+        <div class="container reservas">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="card-block tab-icon tab-with-img">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs md-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab">
+                                    <div class="hidden-sm-down">
+                                        <i class="fa fa-th-list"></i>
+                                        Solicitud
+                                    </div>
+                                    <div class="hidden-md-up">
+                                        <i class="fa fa-th-list fa-2x"></i>
+                                    </div>
+                                </a>
+                                <div class="slide"></div>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1" role="tabpanel">
+                                {{ form_start(form) }}
+                                <div class="row m-b-30">
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <div class="sub-title sub-title-light"><i class="fa fa-th-list"></i> Envíenos sus datos de contacto.</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5 col-lg-5">
+                                        <div class="row m-b-30 advance-elements">
+                                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <div class="sub-title sub-title-light"><i class="fa fa-user"></i> Nombre y Apellidos</div>
+                                                    {{ form_widget(form.nombrecompleto, {'attr': {'class': 'form-control', 'placeholder': 'Nombre completo y apellidos'}}) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row m-b-30 advance-elements">
+                                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <div class="sub-title sub-title-light"><i class="fa fa-envelope"></i> Correo Electrónico</div>
+                                                    {{ form_widget(form.correo, {'attr': {'class': 'form-control', 'placeholder': 'Correo Electrónico'}}) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row m-b-30 advance-elements">
+                                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <div class="sub-title sub-title-light"><i class="fa fa-phone"></i> Teléfono</div>
+                                                    {{ form_widget(form.telefono, {'attr': {'class': 'form-control', 'placeholder': 'Número de Teléfono'}}) }}
+                                                    {{ form_widget(form.fecha) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row m-b-50 advance-elements">
+                                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <div class="sub-title sub-title-light"><i class="fa fa-info"></i> Detalles</div>
+                                                    {{ form_widget(form.detalles, {'attr': {'class': 'form-control', 'placeholder': 'Detalles', 'rows': '15'}}) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-7 col-lg-7">
+                                        <div class="item bg-white">
+                                            <div class="blog-img">
+                                                <img class="img-fluid "
+                                                     src="{{ asset(photos_directory~oferta.imagen) }}"
+                                                     alt="blog-img">
+                                                <div class="blog-hover-detail d-flex">
+                                                    <div class="m-x-auto text-center">
+                                                        <div class="card-block text-center">
+                                                            <button type="button" class="btn btn-inverse-warning waves-effect md-trigger" data-modal="modal-1">Detalles</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="blog-details">
+                                                <h6>{{ oferta.titulo }}</h6>
+                                                <p> {{ oferta.descripcion }} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12 text-right">
+                                        <div class="sub-title sub-title-light"></div>
+                                        <button type="submit" class="btn btn-warning waves-effect waves-light">
+                                            <i class="icofont icofont-bubble-right"></i>
+                                            <span class="m-l-10">Enviar Solicitud</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal section-->
+    <div class="md-modal md-effect-1" id="modal-1">
+        <div class="md-content">
+            <h3>Detalles de la oferta</h3>
+            <div>
+                <p>{{ oferta.detalles }}</p>
+                <p>{{ oferta.detalles }}</p>
+                <button type="button" class="btn btn-default waves-effect md-close">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+

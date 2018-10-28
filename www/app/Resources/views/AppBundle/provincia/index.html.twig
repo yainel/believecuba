@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="card-header-text">Provincias</h6>
+                            <p class="hidden-sm-down">Listado de las provincias con oficinas disponibles.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="{{ path('provincia_new') }}" class="btn btn-primary waves-effect waves-light v-middle f-right">
+                                <i class="icofont icofont-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-block">
+                    <table id="simpletable" class="table dt-responsive table-striped table-bordered nowrap table-hover">
+                        <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>Nombre</th>
+                            <th></th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        {% for provincia in provincias %}
+                            <tr>
+                                <td>{{ provincia.nombre }}</td>
+                                <td class="action-icon">
+                                    <a href="{{ path('provincia_edit', { 'id': provincia.id }) }}" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                    <a href="{{ path('provincia_delete', { 'id': provincia.id }) }}" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

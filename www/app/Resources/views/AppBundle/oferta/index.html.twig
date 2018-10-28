@@ -1,0 +1,69 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="card-header-text">Ofertas</h6>
+                            <p class="hidden-sm-down">Las ofertas activas se mostrarán en el portal como principales ofertas</p>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="{{ path('oferta_new') }}" class="btn btn-primary waves-effect waves-light v-middle f-right">
+                                <i class="icofont icofont-plus m-r-5"></i> Nueva Oferta
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-block">
+                    <table id="simpletable" class="table dt-responsive table-striped table-bordered nowrap table-hover">
+                        <thead>
+                        <tr>
+                            <th>Activa</th>
+                            <th>Imagen</th>
+                            <th>Título</th>
+                            <th>Fecha inicio</th>
+                            <th>Fecha fin</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>Activa</th>
+                            <th>Imagen</th>
+                            <th>Título</th>
+                            <th>Fecha inicio</th>
+                            <th>Fecha fin</th>
+                            <th></th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        {% for oferta in ofertas %}
+                            <tr>
+                                <td class="text-center v-middle">
+                                    {% if oferta.activa %}
+                                        <i class="icofont icofont-3x icofont-check text-success"> </i>
+                                    {% else %}
+                                        <i class="icofont icofont-2x icofont-not-allowed text-danger"> </i>
+                                    {% endif %}
+                                </td>
+                                <td class="v-middle"><img class="img-rounded" src="{{ asset(photos_directory~oferta.imagen) }}" width="5%"  alt="no-img"></td>
+                                <td class="v-middle">{{ oferta.titulo }}</td>
+                                <td class="v-middle">{{ oferta.fechainicio | date('d/m/Y') }}</td>
+                                <td class="v-middle">{{ oferta.fechafin | date('d/m/Y') }}</td>
+                                <td class="v-middle action-icon text-center">
+                                    <a href="{{ path('oferta_show', { 'id': oferta.id }) }}" class="crm-action-edit"><i class="icofont icofont-ui-v-card"></i></a>
+                                    <a hidden href="{{ path('oferta_edit', { 'id': oferta.id }) }}" class="crm-action-edit"><i class="icofont icofont-ui-edit"></i></a>
+                                    <a href="{{ path('oferta_fastest_delete', { 'id': oferta.id }) }}" class="crm-action-delete"><i class="icofont icofont-ui-delete"></i></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

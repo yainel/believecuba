@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Automodelo</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ autoModelo.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ autoModelo.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ autoModelo.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Activo</th>
+                <td>{% if autoModelo.activo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Cantidadpuertas</th>
+                <td>{{ autoModelo.cantidadpuertas }}</td>
+            </tr>
+            <tr>
+                <th>Cantidadasientos</th>
+                <td>{{ autoModelo.cantidadasientos }}</td>
+            </tr>
+            <tr>
+                <th>Cantidadmaleteros</th>
+                <td>{{ autoModelo.cantidadmaleteros }}</td>
+            </tr>
+            <tr>
+                <th>Aireacondicionado</th>
+                <td>{{ autoModelo.aireacondicionado }}</td>
+            </tr>
+            <tr>
+                <th>Capacidadlitros</th>
+                <td>{{ autoModelo.capacidadlitros }}</td>
+            </tr>
+            <tr>
+                <th>Foto</th>
+                <td>{{ autoModelo.foto }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('automodelo_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('automodelo_edit', { 'id': autoModelo.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
