@@ -19,7 +19,6 @@ class SolicitudType extends AbstractType
             ->add('telefono')
             ->add('correo')
             ->add('detalles')
-            ->add('confirmada')
             ->add('fecha', DateTimeType::class, array(
                 'label' => false,
                 'attr' => array(

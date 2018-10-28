@@ -1,123 +1,203 @@
-CREATE DATABASE  IF NOT EXISTS `believecuba` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `believecuba`;
--- MySQL dump 10.13  Distrib 5.7.22, for Linux (x86_64)
---
--- Host: localhost    Database: believecuba
--- ------------------------------------------------------
--- Server version	5.7.23
+/*
+ Navicat Premium Data Transfer
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+ Source Server         : Docker
+ Source Server Type    : MySQL
+ Source Server Version : 50724
+ Source Host           : localhost:3306
+ Source Schema         : believecuba
 
---
--- Table structure for table `seguridad_grupo`
---
+ Target Server Type    : MySQL
+ Target Server Version : 50724
+ File Encoding         : 65001
 
-DROP TABLE IF EXISTS `seguridad_grupo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `seguridad_grupo` (
+ Date: 28/10/2018 01:11:11
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for auto_categoria
+-- ----------------------------
+DROP TABLE IF EXISTS `auto_categoria`;
+CREATE TABLE `auto_categoria`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
-  `roles` longtext COLLATE utf8_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
-  `description` longtext COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `UNIQ_599A728B5E237E06` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `nombre` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `descripcion` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
 
---
--- Dumping data for table `seguridad_grupo`
---
+-- ----------------------------
+-- Table structure for auto_modelo
+-- ----------------------------
+DROP TABLE IF EXISTS `auto_modelo`;
+CREATE TABLE `auto_modelo`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `descripcion` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `activo` tinyint(1) NOT NULL,
+  `cantidadpuertas` int(11) NOT NULL,
+  `cantidadasientos` int(11) NOT NULL,
+  `cantidadmaleteros` int(11) NOT NULL,
+  `aireacondicionado` int(11) NOT NULL,
+  `capacidadlitros` int(11) NOT NULL,
+  `foto` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
 
-LOCK TABLES `seguridad_grupo` WRITE;
-/*!40000 ALTER TABLE `seguridad_grupo` DISABLE KEYS */;
-INSERT INTO `seguridad_grupo` VALUES (8,'Administrador','a:8:{i:0;s:15:\"MODULO_PERSONAL\";i:1;s:24:\"MODULO_CONTROL_PRESENCIA\";i:2;s:14:\"MODULO_CUADROS\";i:3;s:27:\"MODULO_SEGURIDAD_INDUSTRIAL\";i:4;s:22:\"MODULO_ATENCION_HOMBRE\";i:5;s:19:\"MODULO_SISTEMA_PAGO\";i:6;s:21:\"MODULO_EVAL_DESEMPENO\";i:7;s:14:\"MODULO_SISTEMA\";}','Todos los módulos del sistema.'),(9,'Personal','a:2:{i:0;s:15:\"MODULO_PERSONAL\";i:1;s:19:\"MODULO_SISTEMA_PAGO\";}','Control de Personal y Salarios.');
-/*!40000 ALTER TABLE `seguridad_grupo` ENABLE KEYS */;
-UNLOCK TABLES;
+-- ----------------------------
+-- Table structure for oferta
+-- ----------------------------
+DROP TABLE IF EXISTS `oferta`;
+CREATE TABLE `oferta`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `activa` tinyint(1) NOT NULL,
+  `imagen` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `titulo` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `descripcion` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `fechainicio` datetime(0) NOT NULL,
+  `fechafin` datetime(0) NOT NULL,
+  `detalles` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
 
---
--- Table structure for table `seguridad_grupo_usuario`
---
+-- ----------------------------
+-- Records of oferta
+-- ----------------------------
+INSERT INTO `oferta` VALUES (6, 1, '23b4b0e9401a12dd660d4ba90f36b162.jpeg', 'Titulo f ipsum dolor sit amet dolor duis blandit', 'Descripcion f ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', '2018-10-24 00:00:00', '2018-10-31 00:00:00', 'Detalles f et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.');
+INSERT INTO `oferta` VALUES (7, 0, '5616082875d9338d69360dd9e0828c7b.jpeg', 'Titulo e ipsum dolor sit amet dolor duis blandit', 'Descripcion e ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', '2018-10-26 00:00:00', '2018-10-27 00:00:00', 'Detalles e et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.');
+INSERT INTO `oferta` VALUES (8, 1, '9fb0c5de1c50d80290d41804fb16cb0a.jpeg', 'Titulo d ipsum dolor sit amet dolor duis blandit', 'Descripcion d ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', '2018-10-30 00:00:00', '2018-10-31 00:00:00', 'Detalles d et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.');
+INSERT INTO `oferta` VALUES (9, 1, '16f0159ca642867ec0ad24d11db73149.jpeg', 'Titulo c ipsum dolor sit amet dolor duis blandit', 'Descripcion c ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', '2018-10-26 00:00:00', '2018-10-26 00:00:00', 'Detalles c et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.');
+INSERT INTO `oferta` VALUES (10, 1, 'd3268a85a14bb84dded8e7d3949998bb.jpeg', 'Titulo b ipsum dolor sit amet dolor duis blandit', 'Descripcion b ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', '2018-10-26 00:00:00', '2018-10-27 00:00:00', 'Detalles b et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.');
+INSERT INTO `oferta` VALUES (11, 1, '0d6fcac905e682d88bd0cefd6a1c62bc.jpeg', 'Titulo a ipsum dolor sit amet dolor duis blandit', 'Descripcion a ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', '2018-10-09 00:00:00', '2018-10-09 00:00:00', 'Detalles a et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.');
+INSERT INTO `oferta` VALUES (12, 1, '373cda5088c98308b458d04d415cbfdb.jpeg', 'Ultima Oferta', 'Descripcion de la oltuma oferta creada para probar si registra la fecha correctamente.', '2018-10-30 00:00:00', '2018-10-31 00:00:00', 'Descripcion de la oltuma oferta creada para probar si registra la fecha correctamente. Con mas datos porque son los datalles, tienen que salir mas datos, que se puede hacer?. La filosofia de la maldita web 2.0');
 
+-- ----------------------------
+-- Table structure for oficina
+-- ----------------------------
+DROP TABLE IF EXISTS `oficina`;
+CREATE TABLE `oficina`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Activa` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Table structure for provincia
+-- ----------------------------
+DROP TABLE IF EXISTS `provincia`;
+CREATE TABLE `provincia`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `UNIQ_D39AF2133A909126`(`nombre`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Table structure for seguridad_grupo
+-- ----------------------------
+DROP TABLE IF EXISTS `seguridad_grupo`;
+CREATE TABLE `seguridad_grupo`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(180) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `roles` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
+  `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `UNIQ_599A728B5E237E06`(`name`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of seguridad_grupo
+-- ----------------------------
+INSERT INTO `seguridad_grupo` VALUES (8, 'Administrador', 'a:8:{i:0;s:15:\"MODULO_PERSONAL\";i:1;s:24:\"MODULO_CONTROL_PRESENCIA\";i:2;s:14:\"MODULO_CUADROS\";i:3;s:27:\"MODULO_SEGURIDAD_INDUSTRIAL\";i:4;s:22:\"MODULO_ATENCION_HOMBRE\";i:5;s:19:\"MODULO_SISTEMA_PAGO\";i:6;s:21:\"MODULO_EVAL_DESEMPENO\";i:7;s:14:\"MODULO_SISTEMA\";}', 'Todos los módulos del sistema.');
+INSERT INTO `seguridad_grupo` VALUES (9, 'Personal', 'a:2:{i:0;s:15:\"MODULO_PERSONAL\";i:1;s:19:\"MODULO_SISTEMA_PAGO\";}', 'Control de Personal y Salarios.');
+
+-- ----------------------------
+-- Table structure for seguridad_grupo_usuario
+-- ----------------------------
 DROP TABLE IF EXISTS `seguridad_grupo_usuario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `seguridad_grupo_usuario` (
+CREATE TABLE `seguridad_grupo_usuario`  (
   `user_id` int(11) NOT NULL,
   `group_id` int(11) NOT NULL,
-  PRIMARY KEY (`user_id`,`group_id`),
-  KEY `IDX_AA759131A76ED395` (`user_id`),
-  KEY `IDX_AA759131FE54D947` (`group_id`),
-  CONSTRAINT `FK_AA759131A76ED395` FOREIGN KEY (`user_id`) REFERENCES `seguridad_usuario` (`id`),
-  CONSTRAINT `FK_AA759131FE54D947` FOREIGN KEY (`group_id`) REFERENCES `seguridad_grupo` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  PRIMARY KEY (`user_id`, `group_id`) USING BTREE,
+  INDEX `IDX_AA759131A76ED395`(`user_id`) USING BTREE,
+  INDEX `IDX_AA759131FE54D947`(`group_id`) USING BTREE,
+  CONSTRAINT `FK_AA759131A76ED395` FOREIGN KEY (`user_id`) REFERENCES `seguridad_usuario` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `FK_AA759131FE54D947` FOREIGN KEY (`group_id`) REFERENCES `seguridad_grupo` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
 
---
--- Dumping data for table `seguridad_grupo_usuario`
---
+-- ----------------------------
+-- Records of seguridad_grupo_usuario
+-- ----------------------------
+INSERT INTO `seguridad_grupo_usuario` VALUES (2, 8);
+INSERT INTO `seguridad_grupo_usuario` VALUES (2, 9);
+INSERT INTO `seguridad_grupo_usuario` VALUES (4, 8);
+INSERT INTO `seguridad_grupo_usuario` VALUES (5, 9);
+INSERT INTO `seguridad_grupo_usuario` VALUES (7, 8);
+INSERT INTO `seguridad_grupo_usuario` VALUES (7, 9);
 
-LOCK TABLES `seguridad_grupo_usuario` WRITE;
-/*!40000 ALTER TABLE `seguridad_grupo_usuario` DISABLE KEYS */;
-INSERT INTO `seguridad_grupo_usuario` VALUES (2,8),(2,9),(3,8),(3,9),(5,9),(7,8),(7,9);
-/*!40000 ALTER TABLE `seguridad_grupo_usuario` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `seguridad_usuario`
---
-
+-- ----------------------------
+-- Table structure for seguridad_usuario
+-- ----------------------------
 DROP TABLE IF EXISTS `seguridad_usuario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `seguridad_usuario` (
+CREATE TABLE `seguridad_usuario`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
-  `username_canonical` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
-  `email_canonical` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(180) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `username_canonical` varchar(180) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(180) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email_canonical` varchar(180) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `enabled` tinyint(1) NOT NULL,
-  `salt` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `last_login` datetime DEFAULT NULL,
-  `confirmation_token` varchar(180) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `password_requested_at` datetime DEFAULT NULL,
-  `roles` longtext COLLATE utf8_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
-  `nombre_completo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `carne_identidad` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `UNIQ_89D1E84992FC23A8` (`username_canonical`),
-  UNIQUE KEY `UNIQ_89D1E849A0D96FBF` (`email_canonical`),
-  UNIQUE KEY `UNIQ_89D1E849C05FB297` (`confirmation_token`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `salt` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `last_login` datetime(0) NULL DEFAULT NULL,
+  `confirmation_token` varchar(180) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `password_requested_at` datetime(0) NULL DEFAULT NULL,
+  `roles` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
+  `nombre_completo` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `carne_identidad` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `UNIQ_89D1E84992FC23A8`(`username_canonical`) USING BTREE,
+  UNIQUE INDEX `UNIQ_89D1E849A0D96FBF`(`email_canonical`) USING BTREE,
+  UNIQUE INDEX `UNIQ_89D1E849C05FB297`(`confirmation_token`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
 
---
--- Dumping data for table `seguridad_usuario`
---
+-- ----------------------------
+-- Records of seguridad_usuario
+-- ----------------------------
+INSERT INTO `seguridad_usuario` VALUES (2, 'nane', 'nane', 'yainel@atiss.une.cu', 'yainel@atiss.une.cu', 1, NULL, '$2y$13$kz8XlXgqgR65MNj63AqVY.ioIUdrn14z39SmS0vpUiqJhTFHQOVqy', '2018-08-04 22:00:23', NULL, NULL, 'a:0:{}', 'Yainel García Alfonso', '86052315807');
+INSERT INTO `seguridad_usuario` VALUES (4, 'nemecio', 'nemecio', 'nemecio@correo.co', 'nemecio@correo.co', 1, NULL, '$2y$13$GZP8QXC9tMHBZmNGq1Gbke4vj8JyEwKPQX1PAyZ5pm2YFFjZ9CcJO', NULL, NULL, NULL, 'a:0:{}', 'Nemecio capote', '56842398561');
+INSERT INTO `seguridad_usuario` VALUES (5, 'elpidio', 'elpidio', 'palmiche@atiss.une.cu', 'palmiche@atiss.une.cu', 0, NULL, '$2y$13$d0UU7NFk40bCGOHQiaAgWufnRrpFHk.1VoaizKF.j6WhXrlVQmn2C', NULL, NULL, NULL, 'a:0:{}', 'Elpidio Valdés', '54873129566');
+INSERT INTO `seguridad_usuario` VALUES (7, 'believecuba', 'believecuba', 'believecuba@facebook.com', 'believecuba@facebook.com', 1, NULL, '$2y$13$.6uiAeF9l1.7bQ4aU.wREO3I73bE.ykjjVq5OMiH7sQBSoKf4BMg.', '2018-08-06 03:12:11', NULL, NULL, 'a:0:{}', 'believecuba', '00000000000');
 
-LOCK TABLES `seguridad_usuario` WRITE;
-/*!40000 ALTER TABLE `seguridad_usuario` DISABLE KEYS */;
-INSERT INTO `seguridad_usuario` VALUES (2,'nane','nane','yainel@atiss.une.cu','yainel@atiss.une.cu',1,NULL,'$2y$13$kz8XlXgqgR65MNj63AqVY.ioIUdrn14z39SmS0vpUiqJhTFHQOVqy','2018-08-04 22:00:23',NULL,NULL,'a:0:{}','Yainel García Alfonso','86052315807'),(3,'pepe','pepe','pepe@atiss.une.cu','pepe@atiss.une.cu',1,NULL,'$2y$13$fOWbSTg.urdr8.JD5//rquR.Qlsjcz5wyem77BL14U7jmpYuoLJMm','2018-06-04 14:20:34',NULL,NULL,'a:0:{}','Pepe González','175698214592'),(4,'nemecio','nemecio','nemecio@atiss.une.cu','nemecio@atiss.une.cu',1,NULL,'$2y$13$GZP8QXC9tMHBZmNGq1Gbke4vj8JyEwKPQX1PAyZ5pm2YFFjZ9CcJO',NULL,NULL,NULL,'a:0:{}','Nemecio capote','56842398561'),(5,'elpidio','elpidio','palmiche@atiss.une.cu','palmiche@atiss.une.cu',0,NULL,'$2y$13$d0UU7NFk40bCGOHQiaAgWufnRrpFHk.1VoaizKF.j6WhXrlVQmn2C',NULL,NULL,NULL,'a:0:{}','Elpidio Valdés','54873129566'),(7,'believecuba','believecuba','believecuba@facebook.com','believecuba@facebook.com',1,NULL,'$2y$13$.6uiAeF9l1.7bQ4aU.wREO3I73bE.ykjjVq5OMiH7sQBSoKf4BMg.','2018-08-06 03:12:11',NULL,NULL,'a:0:{}','believecuba','00000000000');
-/*!40000 ALTER TABLE `seguridad_usuario` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+-- ----------------------------
+-- Table structure for solicitud
+-- ----------------------------
+DROP TABLE IF EXISTS `solicitud`;
+CREATE TABLE `solicitud`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombrecompleto` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `telefono` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `correo` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `fecha` datetime(0) NOT NULL,
+  `detalles` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `oferta_id` int(11) NULL DEFAULT NULL,
+  `confirmada` tinyint(1) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `IDX_96D27CC0FAFBF624`(`oferta_id`) USING BTREE,
+  CONSTRAINT `FK_96D27CC0FAFBF624` FOREIGN KEY (`oferta_id`) REFERENCES `oferta` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+-- ----------------------------
+-- Records of solicitud
+-- ----------------------------
+INSERT INTO `solicitud` VALUES (1, 'Yainel Garcia Alfonso', '55689745236', 'correo@gmail.com', '2013-01-01 00:00:00', 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', 7, 0);
+INSERT INTO `solicitud` VALUES (2, 'Florencio del Toro', '54545454578787', 'florencio@correo.cu', '2013-01-01 00:00:00', 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', 6, 1);
+INSERT INTO `solicitud` VALUES (3, 'Nemecio Capote Perez', '12312312332343122', 'nemecio@gmail.com', '2013-01-01 00:00:00', 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', 8, 0);
+INSERT INTO `solicitud` VALUES (4, 'Crodobaldo Valerio', '5555555555', 'crodo@domain.com', '2013-01-01 00:00:00', 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', 9, 0);
+INSERT INTO `solicitud` VALUES (5, 'Carlo Anchelotti', '96959595959595', 'carlito@domain.it', '2013-01-01 00:00:00', 'Algo aqui para comprobar si los detalles cogen los campos raw. \r\nAlgo aqui para comprobar si los detalles cogen los campos raw. \r\nAlgo aqui para comprobar si los detalles cogen los campos raw. \r\nAlgo aqui para comprobar si los detalles cogen los campos raw.\r\n\r\n\r\nEg: wewewe', 7, 0);
+INSERT INTO `solicitud` VALUES (6, 'Cholo Simeone', '323232323232', 'cholo@correo.es', '2013-01-01 00:00:00', '$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta\r\n\r\n\r\n\r\n$oferta', NULL, 0);
+INSERT INTO `solicitud` VALUES (7, 'Pepito Tey', '45896325687', 'pepe@correo.tl', '2013-01-01 00:00:00', 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas\r\n\r\nEtiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas\r\n\r\nEtiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas\r\n\r\nasdasd', NULL, NULL);
 
--- Dump completed on 2018-08-05 23:39:37
+SET FOREIGN_KEY_CHECKS = 1;

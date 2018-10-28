@@ -623,33 +623,33 @@
                             <div class="blog-hover-detail d-flex">
                                 <div class="m-x-auto text-center">
                                     <div class="card-block text-center">
-                                        <button type="button" class="btn btn-inverse-warning waves-effect md-trigger" data-modal="modal-1">Detalles</button>
+                                        <button type="button" class="btn btn-inverse-warning waves-effect md-trigger" data-modal="modal-{{ oferta.id }}">Detalles</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="blog-details">
                             <h6>{{ oferta.titulo }}</h6>
-
                             <p> {{ oferta.descripcion }} </p>
                             <div class="text-right">
                                 <a href="{{ path('solicitud_new', { 'id': oferta.id }) }}" class="btn btn-warning waves-effect waves-light">Book now</a>
                             </div>
                         </div>
-                        <!-- Modal section-->
-                        <div class="md-modal md-effect-1" id="modal-1">
-                            <div class="md-content">
-                                <h3>Detalles de la oferta</h3>
-                                <div>
-                                    <p>{{ oferta.detalles }}</p>
-                                    <p>{{ oferta.detalles }}</p>
-                                    <button type="button" class="btn btn-default waves-effect md-close">Cerrar</button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     {% endfor %}
                 </div>
+                {% for oferta in ofertas %}
+                    <!-- Modal section-->
+                    <div class="md-modal md-effect-1" id="modal-{{ oferta.id }}">
+                        <div class="md-content">
+                            <h3>Detalles de la oferta</h3>
+                            <div>
+                                <p>{{ oferta.detalles }}</p>
+                                <button type="button" class="btn btn-default waves-effect md-close">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
                 <!-- end of slider-center -->
             </div>
         </div>

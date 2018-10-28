@@ -29,3 +29,15 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: tiger
       MYSQL_DATABASE: believecuba
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: 'yga-phpmyadmin'
+      links:
+        - mysql
+      environment:
+        PMA_HOST: mysql
+        PMA_PORT: 3306
+      ports:
+        - '8080:80'
+      volumes: 
+        - /sessions
