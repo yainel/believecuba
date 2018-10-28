@@ -6,7 +6,7 @@ services:
       context: ./bin/webserver
     container_name: 'yga-webserver'
     restart: 'always'
-    #restart: 'always'
+    restart: 'always'
     ports:
       - "80:80"
     links:
@@ -20,7 +20,7 @@ services:
     build: ./bin/mysql
     container_name: 'yga-mysql'
     restart: 'always'
-    #restart: 'always'
+    command: --init-file /www/sql/believecuba.sql
     ports:
       - "3306:3306"
     volumes:
