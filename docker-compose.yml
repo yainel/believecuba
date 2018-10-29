@@ -20,7 +20,7 @@ services:
     build: ./bin/mysql
     container_name: 'yga-mysql'
     restart: 'always'
-    command: --init-file /www/sql/believecuba.sql
+    #command: --init-file ./var/www/sql/believecuba.sql
     ports:
       - "3306:3306"
     volumes:
@@ -38,6 +38,6 @@ services:
         PMA_HOST: mysql
         PMA_PORT: 3306
       ports:
-        - '8080:80'
+        - '2427:80'
       volumes: 
         - /sessions
