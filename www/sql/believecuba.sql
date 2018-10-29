@@ -18,9 +18,7 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 DROP DATABASE `believecuba`;
-
 CREATE DATABASE believecuba;
-
 -- ----------------------------
 -- Table structure for auto_categoria
 -- ----------------------------
