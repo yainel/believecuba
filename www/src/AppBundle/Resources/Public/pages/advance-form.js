@@ -494,6 +494,19 @@ $(document).ready(function() {
             $('#date-end-hoteles').bootstrapMaterialDatePicker('setMinDate', date);
         });
 
+        $('.date-end-ofertas').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            time: false,
+            format: 'DD/MM/YYYY',
+        });
+        $('.date-start-ofertas').bootstrapMaterialDatePicker({
+            weekStart: 0,
+            time: false,
+            format: 'DD/MM/YYYY',
+        }).on('change', function(e, date) {
+            $('.date-end-ofertas').bootstrapMaterialDatePicker('setMinDate', date);
+        });
+
         $('#date-end-actividades').bootstrapMaterialDatePicker({
             weekStart: 0,
             format: 'DD/MM/YYYY HH:mm',
