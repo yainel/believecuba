@@ -46,11 +46,11 @@
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab">
                                     <div class="hidden-sm-down">
-                                        <i class="fa fa-th-list"></i>
+                                        <i class="fa fa-envelope"></i>
                                         Solicitud
                                     </div>
                                     <div class="hidden-md-up">
-                                        <i class="fa fa-th-list fa-2x"></i>
+                                        <i class="fa fa-envelope fa-2x"></i>
                                     </div>
                                 </a>
                                 <div class="slide"></div>
@@ -62,7 +62,7 @@
                                 {{ form_start(form) }}
                                 <div class="row m-b-30">
                                     <div class="col-sm-12 col-md-12 col-lg-12">
-                                        <div class="sub-title sub-title-light"><i class="fa fa-th-list"></i> Envíenos sus datos de contacto.</div>
+                                        <div class="sub-title sub-title-light"><i class="fa fa-send"></i> Envíenos sus datos de contacto.</div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -96,7 +96,7 @@
                                             <div class="col-sm-12 col-md-12 col-lg-12">
                                                 <div class="form-group">
                                                     <div class="sub-title sub-title-light"><i class="fa fa-info"></i> Detalles</div>
-                                                    {{ form_widget(form.detalles, {'attr': {'class': 'form-control', 'placeholder': 'Detalles', 'rows': '15'}}) }}
+                                                    {{ form_widget(form.detalles, {'attr': {'class': 'ckeditor', 'name': 'detalles'}}) }}
                                                 </div>
                                             </div>
                                         </div>
@@ -137,6 +137,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center p-y-3 p-x-3" style="background-color: #f57c00e6; color:white;">
+                <h4>Puede escribirnos a: <strong> booking@believecuba.com </strong></h4>
             </div>
         </div>
     </div>
