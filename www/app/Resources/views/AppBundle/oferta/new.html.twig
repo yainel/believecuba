@@ -6,24 +6,29 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-header-text">Añadir nueva Oferta</h5>
-                    <p>Formulario de adición de ofertas.</p>
+                    <div class="row">
+                        <div class="col-md-12 v-middle">
+                            <i class="fa fa-plus fa-3x f-left p-r-1 hidden-md-down hidden-lg-down"></i>
+                            <h6 class="card-header-text">Añadir nueva Oferta</h6>
+                            <p class="hidden-xm-down hidden-sm-down">Formulario de adición de ofertas.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-block menu-snaps">
                     <div class="form-group">
-                        <label class="form-control-label">Título</label>
+                        <label class="form-control-label"><i class="fa fa-file-text"></i> Título</label>
                         {{ form_widget(form.titulo, {'attr': {'class': 'form-control', 'placeholder': 'Título de la oferta'}}) }}
                         <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
                     </div>
                     <div class="form-group">
-                        <label class="form-control-label">Descripción</label>
+                        <label class="form-control-label"><i class="fa fa-file-text"></i> Descripción</label>
                         {{ form_widget(form.descripcion, {'attr': {'class': 'form-control', 'placeholder': 'Descripción de la oferta'}}) }}
                         <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-6 ">
                             <div class="form-group">
-                                <label class="form-control-label">Fecha de Inicio</label>
+                                <label class="form-control-label"><i class="fa fa-calendar"></i> Fecha de Inicio</label>
                                 <div class="form-control-wrapper">
                                     {{ form_widget(form.fechainicio, {'attr': {'class': 'form-control floating-label date-start-ofertas', 'placeholder': 'Seleccione'}}) }}
                                 </div>
@@ -32,7 +37,7 @@
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6 ">
                             <div class="form-group">
-                                <label class="form-control-label">Fecha de terminación</label>
+                                <label class="form-control-label"><i class="fa fa-calendar"></i> Fecha de terminación</label>
                                 <div class="form-control-wrapper">
                                     {{ form_widget(form.fechafin, {'attr': {'class': 'form-control floating-label date-end-ofertas' , 'placeholder': 'Seleccione'}}) }}
                                 </div>
@@ -43,7 +48,7 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-6 ">
                             <div class="form-group">
-                                <label class="form-control-label">Estado de la Oferta</label><br>
+                                <label class="form-control-label"><i class="fa fa-thumbs-o-up"></i> Estado de la Oferta</label><br>
                                 <div class="checkbox-color checkbox-info p-l-5">
                                     {{ form_widget(form.activa) }}
                                     <label class="form-control-label" for="appbundle_oferta_activa"> Activa</label>
@@ -52,16 +57,16 @@
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6 ">
                             <div class="form-group">
-                                <label class="form-control-label">Imagen</label><br>
+                                <label class="form-control-label"><i class="fa fa-picture-o"></i> Imagen</label><br>
                                 {{ form_widget(form.imagen, {'attr': {'class': 'form-control form-file'}}) }}
                                 <a href="#clickme" class="btn btn-default btn-sm col-md-12">
-                                    <i class="fa fa-file-image-o"></i> Click para seleccionar una imagen
+                                    <i class="fa fa-paperclip"></i> Click para seleccionar una imagen
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-control-label">Detalles</label>
+                        <label class="form-control-label"><i class="fa fa-file-text"></i> Detalles</label>
                         {{ form_widget(form.detalles, {'attr': {'class': 'ckeditor'}}) }}
                         <small class="form-text text-muted">Dejar este spam para mensajes de info/error.</small>
                     </div>
@@ -71,8 +76,13 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-header-text"> </h5>
-                    <p> Vista previa de la imagen</p>
+                    <div class="row">
+                        <div class="col-md-12 v-middle">
+                            <i class="fa fa-picture-o fa-3x f-left p-r-1 hidden-md-down hidden-lg-down"></i>
+                            <h6 class="card-header-text">Imagen de la Oferta</h6>
+                            <p class="hidden-xm-down hidden-sm-down">Vista previa de la imagen</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-block text-center">
                     <div class="form-group">
@@ -80,9 +90,9 @@
                     </div>
                 </div>
                 <div class="widget-income-footer">
-                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-30">Añadir oferta</button>
-                    <button type="reset" class="btn btn-default waves-effect waves-light m-r-30">Cancelar</button>
-                    <a class="btn btn-default waves-effect waves-light m-r-30" href="{{ path('oferta_index') }}">Volver al listado</a>
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-30"><i class="fa fa-plus"></i> Añadir oferta</button>
+                    <button type="reset" class="btn btn-default waves-effect waves-light m-r-30"><i class="fa fa-undo"></i> Cancelar</button>
+                    <a class="btn btn-default waves-effect waves-light m-r-30" href="{{ path('oferta_index') }}"><i class="fa fa-list"></i> Volver al listado</a>
                 </div>
             </div>
         </div>

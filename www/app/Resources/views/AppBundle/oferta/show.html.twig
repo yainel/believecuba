@@ -5,22 +5,27 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-header-text">Oferta</h5>
-                    <p>Vista previa de la oferta.</p>
+                    <div class="row">
+                        <div class="col-md-12 v-middle">
+                            <i class="fa fa-picture-o fa-3x f-left p-r-1 hidden-md-down hidden-lg-down"></i>
+                            <h6 class="card-header-text">Oferta</h6>
+                            <p class="hidden-xm-down hidden-sm-down">Vista previa de la oferta seleccionada</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-block menu-snaps">
-                    <div class="form-group">
-                        <h6 class="form-control-label">Título</h6>
+                    <div class="form-group sub-title">
+                        <h6 class="form-control-label ">Título</h6>
                         {{ oferta.titulo }}
                     </div>
-                    <div class="form-group">
+                    <div class="form-group sub-title">
                         <h6 class="form-control-label">Descripción</h6>
                         {{ oferta.descripcion }}
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-4">
-                            <h6 class="form-control-label">Estado de la Oferta</h6>
-                            <div class="form-group">
+                            <div class="form-group sub-title">
+                            <h6 class="form-control-label"> Estado de la Oferta</h6>
                                 {% if oferta.activa %}
                                     <i class="icofont icofont-verification-check icofont-1x text-success"> </i> Activa
                                 {% else %}
@@ -29,26 +34,25 @@
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
-                            <div class="form-group">
-                                <h6 class="form-control-label">Fecha de Inicio</h6>
+                            <div class="form-group sub-title">
+                                <h6 class="form-control-label"> Fecha de Inicio</h6>
                                 <div class="form-control-wrapper">
                                     {{ oferta.fechainicio | date('D d M Y') }}
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
-                            <div class="form-group">
-                                <h6 class="form-control-label">Fecha de terminación</h6>
+                            <div class="form-group sub-title">
+                                <h6 class="form-control-label"> Fecha de terminación</h6>
                                 <div class="form-control-wrapper">
                                     {{ oferta.fechafin | date('D d M Y') }}
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <p class="form-control-label">Detalles</p>
-                        {{ oferta.detalles }}
+                    <div class="form-group sub-title">
+                        <h6 class="form-control-label"> Detalles</h6>
+                        {{ oferta.detalles | raw }}
                     </div>
 
                 </div>
@@ -57,8 +61,13 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-header-text">  </h5>
-                    <p> Vista previa de la imagen</p>
+                    <div class="row">
+                        <div class="col-md-12 v-middle">
+                            <i class="fa fa-picture-o fa-3x f-left p-r-1 hidden-md-down hidden-lg-down"></i>
+                            <h6 class="card-header-text">Imagen de la Oferta</h6>
+                            <p class="hidden-xm-down hidden-sm-down">Vista previa de la imagen</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-block text-center">
                     <div class="form-group">
@@ -66,9 +75,9 @@
                     </div>
                 </div>
                 <div class="widget-income-footer">
-                    <a hidden href="{{ path('oferta_edit', { 'id': oferta.id }) }}" class="btn btn-success waves-effect waves-light m-r-20">Editar</a>
-                    <a class="btn btn-default waves-effect waves-light m-r-20" href="{{ path('oferta_index') }}"> Ver listado</a>
-                    <a class="btn btn-warning waves-effect waves-light m-r-20" href="{{ path('oferta_fastest_delete', { 'id': oferta.id }) }}"> Eliminar</a>
+                    <a hidden href="{{ path('oferta_edit', { 'id': oferta.id }) }}" class="btn btn-success waves-effect waves-light m-r-20"><i class="fa fa-pencil"></i> Editar Oferta</a>
+                    <a class="btn btn-warning waves-effect waves-light m-r-20" href="{{ path('oferta_fastest_delete', { 'id': oferta.id }) }}"><i class="fa fa-trash"></i> Eliminar Oferta</a>
+                    <a class="btn btn-default waves-effect waves-light m-r-20" href="{{ path('oferta_index') }}"><i class="fa fa-list"></i> Volver al Listado</a>
                 </div>
             </div>
         </div>

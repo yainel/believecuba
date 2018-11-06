@@ -5,31 +5,44 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-header-text">Solicitud</h5>
-                    <p>Datos del solicitante</p>
+                    <div class="row">
+                        <div class="col-md-12 v-middle">
+                            <i class="fa fa-sticky-note fa-3x f-left p-r-1 hidden-md-down hidden-lg-down"></i>
+                            <h6 class="card-header-text">Solicitud</h6>
+                            <p class="hidden-xm-down hidden-sm-down">Datos enviados por el solicitante.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-block menu-snaps">
-                    <div class="form-group">
+                    <div class="form-group sub-title">
                         <h6 class="form-control-label">Nombre y Apellidos</h6>
                         {{ solicitud.nombrecompleto }}
                     </div>
-                    <div class="form-group">
-                        <h6 class="form-control-label">Teléfono</h6>
+                    <div class="form-group sub-title">
+                        <h6 class="form-control-labele">Teléfono</h6>
                         {{ solicitud.telefono }}
                     </div>
-                    <div class="form-group">
+                    <div class="form-group sub-title">
                         <h6 class="form-control-label">Correo Electrónico</h6>
                         {{ solicitud.correo }}
                     </div>
-                    <div class="form-group">
+                    <div class="form-group sub-title">
                         <h6 class="form-control-label">Fecha</h6>
                         <div class="form-control-wrapper">
                             {{ solicitud.fecha | date('D d M Y') }}
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group sub-title">
                         <h6 class="form-control-label">Detalles</h6>
-                        {{ solicitud.detalles }}
+                        {{ solicitud.detalles | raw }}
+                    </div>
+                    <div class="form-group sub-title">
+                        <h6 class="form-control-label">Estado de la Solicitud</h6>
+                        {% if solicitud.confirmada %}
+                            <i class="fa fa-check-square-o text-plain"></i> Confirmada
+                        {% else %}
+                            <i class="text-danger"></i> Sin confirmar
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -37,8 +50,13 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-header-text">Oferta Solicitada</h5>
-                    <p> Datos principales de la Oferta solicitada</p>
+                    <div class="row">
+                        <div class="col-md-12 v-middle">
+                            <i class="fa fa-newspaper-o fa-3x f-left p-r-1 hidden-md-down hidden-lg-down"></i>
+                            <h6 class="card-header-text">Oferta solicitada</h6>
+                            <p class="hidden-xm-down hidden-sm-down">Oferta seleccionada por el solicitante.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-block">
                     <div class="row">
@@ -47,17 +65,19 @@
                                  src="{{ asset(photos_directory~solicitud.oferta.imagen) }}"
                                  alt="blog-img"
                                  width="100%">
-                            <a class="btn btn-default waves-effect waves-light m-t-20 col-md-12" href="{{ path('oferta_show', { 'id': solicitud.oferta.id }) }}"> Ver Detalles</a>
+                            <a class="btn btn-default waves-effect waves-light m-t-20 col-md-12" href="{{ path('oferta_show', { 'id': solicitud.oferta.id }) }}"><i class="fa fa-search-plus"></i> Ver Oferta</a>
                         </div>
                         <div class="col-sm-12 col-md-9 col-lg-9">
-                            <h6>{{ solicitud.oferta.titulo }}</h6>
-                            <p> {{ solicitud.oferta.descripcion }} </p>
+                            <h6>Título:</h6>
+                            <h6 class="sub-title">{{ solicitud.oferta.titulo }}</h6>
+                            <h6>Descripción:</h6>
+                            <p class="sub-title"> {{ solicitud.oferta.descripcion }} </p>
                         </div>
                     </div>
                 </div>
                 <div class="widget-income-footer">
-                    <a class="btn btn-default waves-effect waves-light m-r-20" href="{{ path('solicitud_index') }}"> Ver listado</a>
-                    <a class="btn btn-warning waves-effect waves-light m-r-20" href=""> Establecer como confirmada</a>
+                    <a class="btn btn-warning waves-effect waves-light m-r-20" href=""><i class="fa fa-check"></i> Marcar como confirmada</a>
+                    <a class="btn btn-default waves-effect waves-light m-r-20" href="{{ path('solicitud_index') }}"><i class="fa fa-list"></i> Ver listado</a>
                 </div>
             </div>
         </div>

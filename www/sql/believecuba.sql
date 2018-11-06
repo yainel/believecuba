@@ -11,15 +11,16 @@
  Target Server Version : 50724
  File Encoding         : 65001
 
- Date: 28/10/2018 01:11:11
+ Date: 05/11/2018 21:23:34
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
-DROP DATABASE `believecuba`;
-CREATE DATABASE believecuba;
+DROP DATABASE `believecuba`; 
+CREATE DATABASE believecuba; 
 USE believecuba;
+
 -- ----------------------------
 -- Table structure for auto_categoria
 -- ----------------------------
@@ -63,7 +64,7 @@ CREATE TABLE `oferta`  (
   `fechafin` datetime(0) NOT NULL,
   `detalles` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of oferta
@@ -74,7 +75,9 @@ INSERT INTO `oferta` VALUES (8, 1, '9fb0c5de1c50d80290d41804fb16cb0a.jpeg', 'Tit
 INSERT INTO `oferta` VALUES (9, 1, '16f0159ca642867ec0ad24d11db73149.jpeg', 'Titulo c ipsum dolor sit amet dolor duis blandit', 'Descripcion c ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', '2018-10-26 00:00:00', '2018-10-26 00:00:00', 'Detalles c et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.');
 INSERT INTO `oferta` VALUES (10, 1, 'd3268a85a14bb84dded8e7d3949998bb.jpeg', 'Titulo b ipsum dolor sit amet dolor duis blandit', 'Descripcion b ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', '2018-10-26 00:00:00', '2018-10-27 00:00:00', 'Detalles b et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.');
 INSERT INTO `oferta` VALUES (11, 1, '0d6fcac905e682d88bd0cefd6a1c62bc.jpeg', 'Titulo a ipsum dolor sit amet dolor duis blandit', 'Descripcion a ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', '2018-10-09 00:00:00', '2018-10-09 00:00:00', 'Detalles a et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.');
-INSERT INTO `oferta` VALUES (12, 1, '373cda5088c98308b458d04d415cbfdb.jpeg', 'Ultima Oferta', 'Descripcion de la oltuma oferta creada para probar si registra la fecha correctamente.', '2018-10-30 00:00:00', '2018-10-31 00:00:00', 'Descripcion de la oltuma oferta creada para probar si registra la fecha correctamente. Con mas datos porque son los datalles, tienen que salir mas datos, que se puede hacer?. La filosofia de la maldita web 2.0');
+INSERT INTO `oferta` VALUES (12, 1, '128adf72752397d42349fc3588e9844d.jpeg', 'Frenada larga', 'Lorem Ipsun cuidado agro lorem Ipsun cuidado agro Ipsun cuidado agro lorem Ipsun cuidado agro Ipsun cuidado agro lorem Ipsun cuidado agro Ipsun cuidado agro lorem Ipsun cuidado agro', '2018-10-29 00:00:00', '2018-10-29 00:00:00', 'Ipsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agroIpsun cuidado agro lorem Ipsun cuidado agro');
+INSERT INTO `oferta` VALUES (13, 1, '63758ee4139a079008abdf2c2c621d90.jpeg', 'Oferta para probar estilos', 'Symfony automatically ships with a default directory structure. ... also need to change the extra.symfony-web-dir option in the composer.json file', '2018-10-31 00:00:00', '2018-11-06 00:00:00', '<p><strong>Symfony</strong>&nbsp;automatically ships with a&nbsp;<strong>default directory</strong>&nbsp;structure also need to&nbsp;<strong>change</strong>&nbsp;the extra.<strong>symfony</strong>-<strong>web</strong>-<strong>dir</strong>&nbsp;option in the composer.json</p>\r\n\r\n<ol>\r\n	<li><em>Rojo</em></li>\r\n	<li><strong>Verde</strong></li>\r\n	<li><s>Azul</s></li>\r\n	<li><em>Amarillo</em></li>\r\n</ol>\r\n\r\n<blockquote>\r\n<p><strong>Symfony</strong>&nbsp;automatically ships with a&nbsp;<strong>default directory</strong>&nbsp;structure. ... also need to&nbsp;<strong>change</strong>&nbsp;the extra.<strong>symfony</strong>-<strong>web</strong>-<strong>dir</strong>&nbsp;option in the <u>composer.json</u> file</p>\r\n</blockquote>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>Algo aqui de prueba</li>\r\n</ul>\r\n\r\n<p><strong>Change</strong>&nbsp;the extra.<strong>symfony</strong>-<strong>web</strong>-<strong>dir</strong>&nbsp;option in the <em>composer.json</em> file</p>\r\n\r\n<p>&nbsp;</p>');
+INSERT INTO `oferta` VALUES (14, 1, 'be2ef9b9d192b6a64290e56ef14c2600.jpeg', 'Oferta para probar estilos', 'Symfony automatically ships with a default directory structure. ... also need to change the extra.symfony-web-dir option in the composer.json file', '2018-10-31 00:00:00', '2018-11-06 00:00:00', '<p><strong>Symfony</strong>&nbsp;automatically ships with a&nbsp;<strong>default directory</strong>&nbsp;structure also need to&nbsp;<strong>change</strong>&nbsp;the extra.<strong>symfony</strong>-<strong>web</strong>-<strong>dir</strong>&nbsp;option in the composer.json</p>\r\n\r\n<ol>\r\n	<li><em>Rojo</em></li>\r\n	<li><strong>Verde</strong></li>\r\n	<li><s>Azul</s></li>\r\n	<li><em>Amarillo</em></li>\r\n</ol>\r\n\r\n<blockquote>\r\n<p><strong>Symfony</strong>&nbsp;automatically ships with a&nbsp;<strong>default directory</strong>&nbsp;structure. ... also need to&nbsp;<strong>change</strong>&nbsp;the extra.<strong>symfony</strong>-<strong>web</strong>-<strong>dir</strong>&nbsp;option in the <u>composer.json</u> file</p>\r\n</blockquote>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>Algo aqui de prueba</li>\r\n</ul>\r\n\r\n<p><strong>Change</strong>&nbsp;the extra.<strong>symfony</strong>-<strong>web</strong>-<strong>dir</strong>&nbsp;option in the <em>composer.json</em> file</p>\r\n\r\n<p>&nbsp;</p>');
 
 -- ----------------------------
 -- Table structure for oficina
@@ -190,7 +193,7 @@ CREATE TABLE `solicitud`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `IDX_96D27CC0FAFBF624`(`oferta_id`) USING BTREE,
   CONSTRAINT `FK_96D27CC0FAFBF624` FOREIGN KEY (`oferta_id`) REFERENCES `oferta` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of solicitud
@@ -200,7 +203,9 @@ INSERT INTO `solicitud` VALUES (2, 'Florencio del Toro', '54545454578787', 'flor
 INSERT INTO `solicitud` VALUES (3, 'Nemecio Capote Perez', '12312312332343122', 'nemecio@gmail.com', '2013-01-01 00:00:00', 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', 8, 0);
 INSERT INTO `solicitud` VALUES (4, 'Crodobaldo Valerio', '5555555555', 'crodo@domain.com', '2013-01-01 00:00:00', 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', 9, 0);
 INSERT INTO `solicitud` VALUES (5, 'Carlo Anchelotti', '96959595959595', 'carlito@domain.it', '2013-01-01 00:00:00', 'Algo aqui para comprobar si los detalles cogen los campos raw. \r\nAlgo aqui para comprobar si los detalles cogen los campos raw. \r\nAlgo aqui para comprobar si los detalles cogen los campos raw. \r\nAlgo aqui para comprobar si los detalles cogen los campos raw.\r\n\r\n\r\nEg: wewewe', 7, 0);
-INSERT INTO `solicitud` VALUES (6, 'Cholo Simeone', '323232323232', 'cholo@correo.es', '2013-01-01 00:00:00', '$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta$oferta\r\n\r\n\r\n\r\n$oferta', NULL, 0);
-INSERT INTO `solicitud` VALUES (7, 'Pepito Tey', '45896325687', 'pepe@correo.tl', '2013-01-01 00:00:00', 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas\r\n\r\nEtiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas\r\n\r\nEtiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas\r\n\r\nasdasd', NULL, NULL);
+INSERT INTO `solicitud` VALUES (6, 'Cholo Simeone', '323232323232', 'cholo@correo.es', '2013-01-01 00:00:00', 'Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.', 8, 0);
+INSERT INTO `solicitud` VALUES (7, 'Prueba local', '5675675678567567', 'local@correo.co', '2013-01-01 00:00:00', '<p><strong>Probando </strong>en el servidor <em>local&nbsp;</em></p>\r\n\r\n<ol>\r\n	<li><strong>Primero</strong></li>\r\n	<li><em>Segundo</em></li>\r\n	<li><u>Tercero</u></li>\r\n</ol>\r\n\r\n<blockquote>\r\n<p><s>Probando 123</s></p>\r\n</blockquote>', 8, NULL);
+INSERT INTO `solicitud` VALUES (8, 'we we we', '12312312332343122', 'correo@gmail.com', '2013-01-01 00:00:00', '<p><em>Prueba </em>y <strong>Error</strong></p>', 7, NULL);
+INSERT INTO `solicitud` VALUES (9, 'Vladimir Putin', '54545454578787', 'putin@correo.ru', '2013-01-01 00:00:00', '<blockquote>\r\n<p>Prueba&nbsp;</p>\r\n</blockquote>\r\n\r\n<p><strong>Cuidado agro lorem Ipsun cuidado agro Ipsun cuidado agro lorem Ipsun</strong></p>\r\n\r\n<p><em>Cuidado agro lorem Ipsun cuidado agro Ipsun cuidado agro lorem Ipsun</em></p>', 12, NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

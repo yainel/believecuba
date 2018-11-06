@@ -2,13 +2,13 @@
 $(document).ready(function() {
     /*owl carosel slider */
     $("#idslidercenter").owlCarousel({
-        dots: true,
+        dots: false,
         nav:true,
         autoplay:true,
         autoplayTimeout:9000,
         margin:0,
         smartSpeed:1000,
-        loop:true,
+        loop:false,
         slideSpeed:300,
         items:4,
         // rtl: true, this start a image from right side to left
@@ -34,6 +34,7 @@ $(document).ready(function() {
     $("#todaydeals").owlCarousel({
         dots: false,
         nav:true,
+        autoplay:true,
         autoplayTimeout:9000,
         margin:16,
         smartSpeed:1000,
@@ -59,6 +60,7 @@ $(document).ready(function() {
     });
     $("#todaysdestinations").owlCarousel({
         nav:true,
+        autoplay:true,
         autoplayTimeout:9000,
         margin:16,
         smartSpeed:1000,
