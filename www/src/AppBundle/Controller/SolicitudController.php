@@ -48,8 +48,8 @@ class SolicitudController extends Controller
         $oferta = $em->getRepository('AppBundle:Oferta')->findOneBy(array('id' => $id));
 
         if ($form->isSubmitted() && $form->isValid()) {
-            //$em = $this->getDoctrine()->getManager();
 
+            $solicitud->setOferta($oferta);
             $em->persist($solicitud);
             $em->flush();
 

@@ -6,7 +6,6 @@ services:
       context: ./bin/webserver
     container_name: 'yga-webserver'
     restart: 'always'
-    restart: 'always'
     ports:
       - "80:80"
     links:

@@ -8861,3 +8861,9 @@ form .messages{
     background-image: linear-gradient(#565f69, #08141f00) !important;
 }
 
+.tr-buscar th:first-child {
+    visibility: hidden;
+}
+.tr-buscar th:last-child {
+    visibility: hidden;
+}

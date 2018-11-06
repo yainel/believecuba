@@ -80,6 +80,7 @@
  }
  .section-tb{
      padding: 30px 0 0 0;
+     border-top: solid 1px #f79f1a;
  }
  /*Social Icon Start*/
  .socials-icon {

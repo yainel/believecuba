@@ -35,7 +35,7 @@ body {
     font-size: 15px;
     overflow-x: hidden;
     background-color: #E5E5E5;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
 }
 a,
 a:hover,
@@ -1432,14 +1432,14 @@ textarea {
 }
 .owl-next {
     position: relative;
-    top: -320px;
-    left: 680px;
+    top: -297px;
+    left: 840px;
     background: #008EF8;
 }
 .owl-prev {
     position: relative;
-    top: -320px;
-    left: -680px;
+    top: -297px;
+    left: -840px;
     background: #008EF8;
 }
 
@@ -1448,7 +1448,7 @@ textarea {
     display: inline-block;
     font-size: 0;
     margin: 5px;
-    padding: 7px;
+    padding: 5px;
     width: 50px;
     border: solid;
 }

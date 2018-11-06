@@ -1,13 +1,13 @@
 @media (max-width: 700px) {
     .owl-next {
         position: relative;
-        top: -335px;
+        top: -300px;
         left: 240px;
         background: #008EF8;
     }
     .owl-prev {
         position: relative;
-        top: -335px;
+        top: -300px;
         left: -240px;
         background: #008EF8;
     }
@@ -1841,13 +1841,13 @@
 
     .owl-next {
         position: relative;
-        top: -332px;
+        top: -294px;
         left: 100px;
         background: #008EF8;
     }
     .owl-prev {
         position: relative;
-        top: -332px;
+        top: -294px;
         left: -100px;
         background: #008EF8;
     }

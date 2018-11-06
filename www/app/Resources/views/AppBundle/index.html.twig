@@ -5,7 +5,7 @@
         <div class="container-carousel hidden-sm-down" style="position: fixed; z-index: -9999">
             <div class="row">
                 <div class="col-md-12">
-                    <div id="bs4-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div id="bs4-carousel" class="carousel" data-ride="carousel" data-interval="50000">
                         <div class="carousel-inner" role="listbox">
                             <div class="carousel-item">
                                 <img src="{{ asset('bundles/app/images/believecuba/carousel/disneyworld.jpg') }}"
@@ -609,7 +609,7 @@
             <div class="col-md-12">
                 <div class="row text-center">
                     <div class="title">
-                        <h2 class="title-center" id="palante">Principales ofertas</h2>
+                        <h2 class="title-center" id="palante"> Principales ofertas</h2>
                     </div>
                 </div>
 
@@ -631,8 +631,11 @@
                         <div class="blog-details">
                             <h6>{{ oferta.titulo }}</h6>
                             <p> {{ oferta.descripcion }} </p>
-                            <div class="text-right">
-                                <a href="{{ path('solicitud_new', { 'id': oferta.id }) }}" class="btn btn-warning waves-effect waves-light">Book now</a>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="button" class="btn btn-inverse-warning waves-effect md-trigger f-left" data-modal="modal-{{ oferta.id }}">Detalles</button>
+                                    <a href="{{ path('solicitud_new', { 'id': oferta.id }) }}" class="btn btn-warning waves-effect waves-light f-right">Book now</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -642,10 +645,17 @@
                     <!-- Modal section-->
                     <div class="md-modal md-effect-1" id="modal-{{ oferta.id }}">
                         <div class="md-content">
-                            <h3>Detalles de la oferta</h3>
-                            <div>
-                                <p>{{ oferta.detalles }}</p>
-                                <button type="button" class="btn btn-default waves-effect md-close">Cerrar</button>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>Detalles de la oferta</h3>
+                                    <p>{{ oferta.detalles | raw }}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-default waves-effect md-close">Cerrar</button>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <a href="{{ path('solicitud_new', { 'id': oferta.id }) }}" class="btn btn-warning waves-effect waves-light">Book now</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -807,4 +817,5 @@
             <!-- end of row -->
         </div>
     </section>
+
 {% endblock content %}

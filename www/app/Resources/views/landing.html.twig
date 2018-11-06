@@ -27,8 +27,6 @@
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/icon/simple-line-icons/css/simple-line-icons.css') }}">
             <!-- Required Fremwork -->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/bootstrap.min.css') }}">
-            <!-- Jarallax Demo -->
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/jarallax-demo.css') }}">
             <!-- slick.css-->
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/slick.css') }}">
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/slick-theme.css') }}">
@@ -78,9 +76,14 @@
                 <a href="#" data-toggle="offcanvas" class="sidebar-toggle hidden-md-up"></a>
                 <div class="navbar-custom-menu">
                     <ul class="top-nav">
-                        <li class="">
+                        <li class="hidden-sm-up hidden-xm-up text-center">
+                            <a style="padding: 0;" href="{{ path('landingpage') }}" class="logo">
+                                <img class="img-fluid able-logo" src="{{ asset('bundles/app/images/believecuba/logo-responsive-h.png') }}" alt="Theme-logo">
+                            </a>
+                        </li>
+                        <li class="hidden-sm-down">
                             <a href="#" class="drop icon-circle">
-                                <i class="fa fa-inbox"></i> booking@believecuba.com
+                                <i class="fa fa-inbox"></i> bookingx@believecuba.com
                             </a>
                         </li>
                         <li class="hidden-sm-down">
@@ -93,7 +96,7 @@
                                 <i class="fa fa-sign-in"></i> Entrar / Registrarse
                             </a>
                         </li>
-                        <li class="">
+                        <li class="hidden-sm-down">
                             <a href="#" class="drop">
                                 <i class="icofont language"></i> English
                             </a>
@@ -127,7 +130,7 @@
 
         {% block content %} {% endblock %}
 
-        <footer id="footer-sec" data-jarallax='{"speed": 0.2}' class="jarallax section-tb footer"
+        <footer id="footer-sec" class="section-tb footer"
                 style="background-image: url({{ asset('bundles/app/images/believecuba/carousel/logo_carousel_dark.jpg') }});">
             <div class="container">
                 <div class="row">
@@ -233,7 +236,6 @@
         <!-- Custom js -->
         <script type="text/javascript" src="{{ asset('bundles/app/pages/product-detail.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/pages/list-custom.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('bundles/app/js/jarallax.js') }}"></script>
         <!-- Isotope js What We Do -->
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/isotope/js/jquery.isotope.js') }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/app/plugins/isotope/js/isotope.pkgd.min.js') }}"></script>
